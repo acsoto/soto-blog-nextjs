@@ -7,6 +7,8 @@ import { getAllTags } from '@/lib/tags'
 import kebabCase from '@/lib/utils/kebabCase'
 import fs from 'fs'
 import path from 'path'
+import Divider from '@/components/Divider'
+import PostCard from '@/components/PostCard'
 
 const root = process.cwd()
 
@@ -49,7 +51,19 @@ export default function Tag({ posts, tag }) {
         title={`${tag} - ${siteMetadata.author}`}
         description={`${tag} tags - ${siteMetadata.author}`}
       />
-      <ListLayout posts={posts} title={title} />
+      <h1 className={'btn-outline btn-primary btn my-3 gap-2 text-3xl font-bold'}>
+        {title}
+        <div className="badge">{posts.length}</div>
+      </h1>
+      <Divider />
+      {/*<ListLayout posts={posts} title={title} />*/}
+      <ol className={'flex flex-col space-y-6'} style={{ listStyle: `none` }}>
+        {posts.map((post) => (
+          <li key={post.slug}>
+            <PostCard post={post} />
+          </li>
+        ))}
+      </ol>
     </>
   )
 }
