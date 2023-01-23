@@ -53,7 +53,9 @@ export default function PostLayout({ frontMatter, authorDetails, children }) {
               <img className="rounded-xl" src={image} alt="" />
             </div>
           </header>
-          <div className="prose max-w-none pt-10 pb-8 dark:prose-dark">{children}</div>
+          <div className="prose max-w-none pt-10 pb-8 prose-img:rounded-xl dark:prose-dark">
+            {children}
+          </div>
           <Divider />
         </div>
       </article>
