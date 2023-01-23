@@ -6,6 +6,7 @@ import SectionContainer from './SectionContainer'
 import Footer from './Footer'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
+import Image from 'next/image'
 
 const LayoutWrapper = ({ children }) => {
   return (
@@ -14,10 +15,14 @@ const LayoutWrapper = ({ children }) => {
         <header className="flex items-center justify-between py-10">
           <div>
             <Link href="/" aria-label={siteMetadata.headerTitle}>
-              <div className="flex items-center justify-between">
-                <div className="mr-3">
-                  <Logo />
-                </div>
+              <div className="flex items-center justify-between gap-3">
+                <Image
+                  className="rounded-md"
+                  src="/static/images/logo.png"
+                  alt="logo"
+                  width={36}
+                  height={36}
+                />
                 {typeof siteMetadata.headerTitle === 'string' ? (
                   <div className="hidden h-6 text-2xl font-semibold sm:block">
                     {siteMetadata.headerTitle}

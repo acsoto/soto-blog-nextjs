@@ -1,7 +1,7 @@
 const siteMetadata = {
-  title: 'SOTO Blog',
+  title: 'SOTO-BLOG',
   author: 'SOTO',
-  headerTitle: 'SOTO-BLOG',
+  headerTitle: 'SOTO',
   description: 'A blog created with Next.js and Tailwind.css',
   language: 'en-us',
   theme: 'system', // system, dark or light
