@@ -1,6 +1,5 @@
 import { TagSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
-import ListLayout from '@/layouts/ListLayout'
 import generateRss from '@/lib/generate-rss'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import { getAllTags } from '@/lib/tags'
@@ -51,10 +50,10 @@ export default function Tag({ posts, tag }) {
         title={`${tag} - ${siteMetadata.author}`}
         description={`${tag} tags - ${siteMetadata.author}`}
       />
-      <h1 className={'btn-outline btn-primary btn my-3 gap-2 text-3xl font-bold'}>
-        {title}
-        <div className="badge">{posts.length}</div>
-      </h1>
+      <span className="overflow-hidden rounded-md text-lg font-bold shadow-sm">
+        <span className="bg-gray-100 px-2 py-1 dark:bg-gray-700">{title}</span>
+        <span className="bg-soto-100 px-2 py-1 dark:bg-soto-200">{posts.length}</span>
+      </span>
       <Divider />
       {/*<ListLayout posts={posts} title={title} />*/}
       <ol className={'flex flex-col space-y-6'} style={{ listStyle: `none` }}>
