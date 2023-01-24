@@ -5,7 +5,7 @@ const PostCard = ({ post }) => {
   const { slug, date, title, summary, tags, image } = post
   return (
     <Link href={`/blog/${slug}`}>
-      <article className="container overflow-hidden rounded-3xl shadow-lg hover:bg-gray-100">
+      <article className="container overflow-hidden rounded-3xl shadow-lg hover:bg-gray-100 dark:hover:bg-gray-800">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={image} className="" alt="" />
         <div className="p-5">
@@ -19,7 +19,12 @@ const PostCard = ({ post }) => {
             </span>
             {tags &&
               tags.map((tag) => (
-                <div key={tag} className={'rounded-md bg-gray-200 px-3 text-sm text-gray-700'}>
+                <div
+                  key={tag}
+                  className={
+                    'rounded-md bg-gray-200 px-3 text-sm text-gray-700 dark:bg-gray-800 dark:text-gray-400'
+                  }
+                >
                   {tag}
                 </div>
               ))}

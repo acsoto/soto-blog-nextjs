@@ -4,7 +4,6 @@ import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 
 import PostCard from '@/components/PostCard'
-import Divider from '@/components/Divider'
 
 const MAX_DISPLAY = 5
 
@@ -23,7 +22,7 @@ export default function Home({ posts }) {
         <br />
         This is a place where I share my life, thoughts, and other stuff that might be interesting.
       </p>
-      <Divider />
+      <div className="divider"></div>
       <ul className={'flex flex-col space-y-6'} style={{ listStyle: `none` }}>
         {posts.slice(0, MAX_DISPLAY).map((post) => {
           const { slug } = post
@@ -36,13 +35,9 @@ export default function Home({ posts }) {
       </ul>
 
       {posts.length > MAX_DISPLAY && (
-        <div className="flex justify-end text-base font-medium leading-6">
-          <Link
-            href="/blog"
-            className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-            aria-label="all posts"
-          >
-            All Posts &rarr;
+        <div className="my-4 flex justify-center">
+          <Link href="/archive" className="text-soto-100 hover:text-soto-200" aria-label="More">
+            More &rarr;
           </Link>
         </div>
       )}

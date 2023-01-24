@@ -5,7 +5,6 @@ import { BlogSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import kebabCase from '@/lib/utils/kebabCase'
-import Divider from '@/components/Divider'
 
 const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
 
@@ -56,7 +55,7 @@ export default function PostLayout({ frontMatter, authorDetails, children }) {
           <div className="prose max-w-none pt-10 pb-8 prose-img:rounded-xl dark:prose-dark">
             {children}
           </div>
-          <Divider />
+          <div className="divider"></div>
         </div>
       </article>
     </SectionContainer>

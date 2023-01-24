@@ -1,10 +1,8 @@
 import Link from '@/components/Link'
 import { PageSEO } from '@/components/SEO'
-import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllTags } from '@/lib/tags'
 import kebabCase from '@/lib/utils/kebabCase'
-import Divider from '@/components/Divider'
 
 export async function getStaticProps() {
   const tags = await getAllTags('blog')
@@ -17,7 +15,7 @@ export default function Tags({ tags }) {
   return (
     <>
       <PageSEO title={`Tags - ${siteMetadata.author}`} description="SOTO-BLOG Tags" />
-      <Divider />
+      <div className="divider"></div>
       <div className="flex flex-wrap gap-4">
         {sortedTags.map((t) => {
           return (

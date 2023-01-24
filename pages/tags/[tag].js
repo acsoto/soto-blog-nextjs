@@ -6,7 +6,6 @@ import { getAllTags } from '@/lib/tags'
 import kebabCase from '@/lib/utils/kebabCase'
 import fs from 'fs'
 import path from 'path'
-import Divider from '@/components/Divider'
 import PostCard from '@/components/PostCard'
 
 const root = process.cwd()
@@ -54,7 +53,7 @@ export default function Tag({ posts, tag }) {
         <span className="bg-gray-100 px-2 py-1 dark:bg-gray-700">{title}</span>
         <span className="bg-soto-100 px-2 py-1 dark:bg-soto-200">{posts.length}</span>
       </span>
-      <Divider />
+      <div className="divider"></div>
       {/*<ListLayout posts={posts} title={title} />*/}
       <ol className={'flex flex-col space-y-6'} style={{ listStyle: `none` }}>
         {posts.map((post) => (

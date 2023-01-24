@@ -1,8 +1,6 @@
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import { PageSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
-import Divider from '@/components/Divider'
-import PostCard from '@/components/PostCard'
 import Link from '@/components/Link'
 
 export async function getStaticProps() {
@@ -33,8 +31,7 @@ export default function Home({ posts }) {
       {Array.from(timeMap.keys()).map((year) => {
         return (
           <div key={year} className="mx-auto flex flex-col lg:w-3/4">
-            <Divider />
-            <div className="text-center text-2xl font-bold">{year}</div>
+            <div className="divider text-xl">{year}</div>
             {Array.from(timeMap.get(year).keys()).map((month) => (
               <div key={month} className="container my-3 rounded-xl p-5 shadow-xl">
                 <div>
@@ -47,11 +44,15 @@ export default function Home({ posts }) {
                         return (
                           <Link
                             key={post.slug}
-                            className={'text-md hover:text-lg'}
+                            className={'text-bold text-lg hover:text-xl'}
                             href={`/blog/${post.slug}`}
                           >
-                            <span className={'mr-3 text-gray-400'}>{post.date.split('T')[0]}</span>
-                            <span className={'text-soto-200'}>{post.title}</span>
+                            <span className={'mr-3 text-gray-300 dark:text-opacity-50'}>
+                              {post.date.split('T')[0]}
+                            </span>
+                            <span className={'text-soto-200 dark:text-opacity-80'}>
+                              {post.title}
+                            </span>
                             <br />
                           </Link>
                         )

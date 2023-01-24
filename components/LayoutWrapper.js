@@ -15,7 +15,7 @@ const LayoutWrapper = ({ children }) => {
         <header className="flex items-center justify-between py-10">
           <div>
             <Link href="/" aria-label={siteMetadata.headerTitle}>
-              <div className="flex items-center justify-between gap-3">
+              <div className="flex items-center justify-between gap-3 ">
                 <Image
                   className="rounded-md"
                   src="/static/images/logo.png"
@@ -24,7 +24,7 @@ const LayoutWrapper = ({ children }) => {
                   height={36}
                 />
                 {typeof siteMetadata.headerTitle === 'string' ? (
-                  <div className="hidden h-6 text-2xl font-semibold sm:block">
+                  <div className="hidden px-2 text-2xl font-bold sm:block">
                     {siteMetadata.headerTitle}
                   </div>
                 ) : (
@@ -36,11 +36,7 @@ const LayoutWrapper = ({ children }) => {
           <div className="flex items-center text-base leading-5">
             <div className="hidden sm:block">
               {headerNavLinks.map((link) => (
-                <Link
-                  key={link.title}
-                  href={link.href}
-                  className="p-1 font-medium text-gray-900 dark:text-gray-100 sm:p-4"
-                >
+                <Link key={link.title} href={link.href} className="btn-ghost btn font-bold sm:p-4">
                   {link.title}
                 </Link>
               ))}
