@@ -7,7 +7,7 @@ const PostCard = ({ post }) => {
     <Link href={`/blog/${slug}`}>
       <article className="mx-auto overflow-hidden rounded-xl shadow-md hover:bg-gray-100 dark:hover:bg-gray-800">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={image} className="aspect-video object-cover" alt="" />
+        <img src={image} className="aspect-video w-full object-cover" alt="" />
         <div className="p-3">
           <h2 className="text-xl font-bold">{title || slug}</h2>
           <section className="text-gray-500">
