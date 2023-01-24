@@ -55,7 +55,6 @@ export default function PostLayout({ frontMatter, authorDetails, children }) {
           <div className="prose max-w-none pt-10 pb-8 prose-img:rounded-xl dark:prose-dark">
             {children}
           </div>
-          <div className="divider"></div>
         </div>
       </article>
     </SectionContainer>

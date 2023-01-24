@@ -5,11 +5,9 @@ const PostCard = ({ post }) => {
   const { slug, date, title, summary, tags, image } = post
   return (
     <Link href={`/blog/${slug}`}>
-      <article className="mx-auto overflow-hidden rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 lg:h-96">
+      <article className="mx-auto overflow-hidden rounded-xl shadow-md hover:bg-gray-100 dark:hover:bg-gray-800">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <figure className="overflow-hidden rounded-xl lg:h-48">
-          <img src={image} className="object-cover" alt="" />
-        </figure>
+        <img src={image} className="aspect-[4/3] object-cover" alt="" />
         <div className="p-3">
           <h2 className="text-xl font-bold">{title || slug}</h2>
           <section className="text-gray-500">

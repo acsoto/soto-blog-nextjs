@@ -26,7 +26,10 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const allPosts = await getAllFilesFrontMatter('blog')
   const filteredPosts = allPosts.filter(
-    (post) => post.draft !== true && post.tags.map((t) => kebabCase(t)).includes(params.tag)
+    (post) =>
+      post.draft !== true &&
+      post.tags !== null &&
+      post.tags.map((t) => kebabCase(t)).includes(params.tag)
   )
 
   // rss
@@ -58,7 +61,7 @@ export default function Tag({ posts, tag }) {
       </span>
       <div className="divider"></div>
       {/*<ListLayout posts={posts} title={title} />*/}
-      <ol className={'grid space-y-6 lg:grid-cols-2'} style={{ listStyle: `none` }}>
+      <ol className={'grid gap-6 lg:grid-cols-2'} style={{ listStyle: `none` }}>
         {posts.map((post) => (
           <li key={post.slug}>
             <PostCard post={post} />
