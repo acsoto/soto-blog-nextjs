@@ -32,29 +32,31 @@ export default function Home({ posts }) {
       <PageSEO title={`Archive - ${siteMetadata.author}`} description={siteMetadata.description} />
       {Array.from(timeMap.keys()).map((year) => {
         return (
-          <div key={year} className="flex w-full flex-col border-opacity-50">
-            <div className="divider text-xl font-bold">{year}</div>
+          <div key={year} className="mx-auto flex flex-col lg:w-3/4">
+            <Divider />
+            <div className="text-center text-2xl font-bold">{year}</div>
             {Array.from(timeMap.get(year).keys()).map((month) => (
-              <div key={month} className="card my-3 bg-base-100 shadow-xl">
-                <div className="card-body">
-                  <span className={'text-primary text-3xl font-bold'}>{month}</span>
-                  {timeMap
-                    .get(year)
-                    .get(month)
-                    .map((post) => {
-                      return (
-                        <Link
-                          key={post.slug}
-                          className={'text-lg hover:text-xl'}
-                          href={`/blog/${post.slug}`}
-                        >
-                          <span className={'mr-3 text-primary-content/25'}>
-                            {new Date(post.date).toLocaleDateString()}
-                          </span>
-                          <span className={'text-primary-content/75'}>{post.title}</span>
-                        </Link>
-                      )
-                    })}
+              <div key={month} className="container my-3 rounded-xl p-5 shadow-xl">
+                <div>
+                  <div className="mb-2 text-2xl font-bold text-soto-100">{month}</div>
+                  <div>
+                    {timeMap
+                      .get(year)
+                      .get(month)
+                      .map((post) => {
+                        return (
+                          <Link
+                            key={post.slug}
+                            className={'text-md hover:text-lg'}
+                            href={`/blog/${post.slug}`}
+                          >
+                            <span className={'mr-3 text-gray-400'}>{post.date.split('T')[0]}</span>
+                            <span className={'text-soto-200'}>{post.title}</span>
+                            <br />
+                          </Link>
+                        )
+                      })}
+                  </div>
                 </div>
               </div>
             ))}
