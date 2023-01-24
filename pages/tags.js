@@ -16,17 +16,19 @@ export default function Tags({ tags }) {
   const sortedTags = Object.keys(tags).sort((a, b) => tags[b] - tags[a])
   return (
     <>
-      <PageSEO title={`Tags - ${siteMetadata.author}`} description="Things I blog about" />
+      <PageSEO title={`Tags - ${siteMetadata.author}`} description="SOTO-BLOG Tags" />
       <Divider />
       <div className="flex flex-wrap gap-4">
         {sortedTags.map((t) => {
           return (
-            <div key={t} className="btn-outline btn-primary btn gap-2 text-lg font-bold">
+            <span key={t} className="overflow-hidden rounded-md text-lg font-bold shadow-sm">
               <Link href={`/tags/${kebabCase(t)}`}>
-                {t}
-                <div className="badge ml-2">{tags[t]}</div>
+                <span className="bg-gray-100 p-2 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600">
+                  {t}
+                </span>
+                <span className="bg-soto-100 p-2 dark:bg-soto-200">{tags[t]}</span>
               </Link>
-            </div>
+            </span>
           )
         })}
       </div>
