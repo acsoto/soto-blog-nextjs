@@ -19,12 +19,13 @@ export default function Tags({ tags }) {
       <div className="flex flex-wrap gap-4">
         {sortedTags.map((t) => {
           return (
-            <span key={t} className="overflow-hidden rounded-md text-lg font-bold shadow-sm">
+            <span
+              key={t}
+              className="overflow-hidden rounded-md border-2 font-bold hover:bg-gray-500 lg:text-xl"
+            >
               <Link href={`/tags/${kebabCase(t)}`}>
-                <span className="bg-gray-100 p-2 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600">
-                  {t}
-                </span>
-                <span className="bg-soto-100 p-2 dark:bg-soto-200">{tags[t]}</span>
+                <span className="p-2 text-soto-100">{t}</span>
+                <span className="bg-gray-100 p-2 text-gray-500 dark:bg-gray-800">{tags[t]}</span>
               </Link>
             </span>
           )

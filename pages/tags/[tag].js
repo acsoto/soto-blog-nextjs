@@ -49,13 +49,16 @@ export default function Tag({ posts, tag }) {
         title={`${tag} - ${siteMetadata.author}`}
         description={`${tag} tags - ${siteMetadata.author}`}
       />
-      <span className="overflow-hidden rounded-md text-lg font-bold shadow-sm">
-        <span className="bg-gray-100 px-2 py-1 dark:bg-gray-700">{title}</span>
-        <span className="bg-soto-100 px-2 py-1 dark:bg-soto-200">{posts.length}</span>
+      <span
+        className={
+          'rounded-md border-2 bg-gradient-to-r from-lime-500 to-yellow-400 bg-clip-text px-2 text-sm font-bold text-transparent'
+        }
+      >
+        {title}
       </span>
       <div className="divider"></div>
       {/*<ListLayout posts={posts} title={title} />*/}
-      <ol className={'flex flex-col space-y-6'} style={{ listStyle: `none` }}>
+      <ol className={'grid space-y-6 lg:grid-cols-2'} style={{ listStyle: `none` }}>
         {posts.map((post) => (
           <li key={post.slug}>
             <PostCard post={post} />

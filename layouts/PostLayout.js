@@ -20,7 +20,7 @@ export default function PostLayout({ frontMatter, authorDetails, children }) {
       />
       <ScrollTopAndComment />
       <article>
-        <div className="xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
+        <div className="mx-auto lg:w-5/6 xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
           <header className="pt-6 xl:pb-6">
             <div className="space-y-5 text-center">
               <div>
@@ -40,7 +40,7 @@ export default function PostLayout({ frontMatter, authorDetails, children }) {
                     <Link
                       key={tag}
                       className={
-                        'rounded-md bg-gray-200 px-3 text-sm text-gray-700 hover:bg-gray-300'
+                        'rounded-md border-2 bg-gradient-to-r from-lime-500 to-yellow-400 bg-clip-text px-2 text-sm font-bold text-transparent hover:text-gray-500'
                       }
                       href={`/tags/${kebabCase(tag)}`}
                     >
