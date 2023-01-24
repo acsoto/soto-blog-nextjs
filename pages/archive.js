@@ -2,6 +2,7 @@ import { getAllFilesFrontMatter } from '@/lib/mdx'
 import { PageSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
 import Link from '@/components/Link'
+import Divider from '@/components/Divider'
 
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter('blog')
@@ -32,11 +33,11 @@ export default function Home({ posts }) {
         {Array.from(timeMap.keys()).map((year) => {
           return (
             <div key={year} className="mx-auto flex flex-col">
-              <div className="text- divider text-xl font-bold text-gray-500 dark:text-opacity-50">
-                {year}
-              </div>
+              <Divider>
+                <span className="text-xl font-bold text-gray-500 dark:text-opacity-50">{year}</span>
+              </Divider>
               {Array.from(timeMap.get(year).keys()).map((month) => (
-                <div key={month} className="container my-3 rounded-xl p-5 shadow-xl">
+                <div key={month} className="container my-3 rounded-xl p-5">
                   <div>
                     <div className="mb-2 text-2xl font-bold text-gray-600 dark:text-opacity-50 ">
                       {month}
