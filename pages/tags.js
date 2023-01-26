@@ -22,7 +22,7 @@ export default function Tags({ tags }) {
           return (
             <span
               key={t}
-              className="overflow-hidden rounded-md border-2 text-2xl font-bold hover:bg-gray-100 dark:hover:bg-gray-800"
+              className="overflow-hidden rounded-md border-2 text-2xl font-bold hover:bg-gray-100 dark:hover:bg-opacity-10"
             >
               <Link href={`/tags/${kebabCase(t)}`}>
                 <span className="p-2 text-soto-100">{t}</span>

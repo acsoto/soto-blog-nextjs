@@ -28,9 +28,16 @@ module.exports = {
         sans: ['Helvetica', 'Tahoma', 'Arial', ...defaultTheme.fontFamily.sans],
       },
       colors: {
+        dark: '#22272E',
         primary: colors.teal,
         gray: colors.neutral,
-        soto: { 100: '#ABB581', 200: '#5D6833', 300: '#6F90B5', 500: '#303030' },
+        soto: {
+          100: '#ABB581',
+          200: '#5D6833',
+          300: '#6F90B5',
+          400: '#ADBAC7',
+          500: '#303030',
+        },
       },
       typography: (theme) => ({
         DEFAULT: {

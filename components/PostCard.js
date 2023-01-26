@@ -6,7 +6,7 @@ const PostCard = ({ post }) => {
   const { slug, date, title, summary, tags, image } = post
   return (
     <Link href={`/blog/${slug}`}>
-      <article className="mx-auto overflow-hidden rounded-xl shadow-md hover:bg-gray-100 dark:hover:bg-gray-800">
+      <article className="mx-auto overflow-hidden rounded-xl shadow-md hover:bg-gray-100 dark:hover:bg-opacity-10">
         <Image
           src={image}
           className="aspect-video w-full object-cover"

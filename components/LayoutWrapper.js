@@ -38,7 +38,7 @@ const LayoutWrapper = ({ children }) => {
                 <Link
                   key={link.title}
                   href={link.href}
-                  className="rounded-xl font-bold hover:bg-gray-100 hover:dark:bg-gray-800 sm:p-4"
+                  className="rounded-xl font-bold hover:bg-gray-100 dark:hover:bg-opacity-10 sm:p-4"
                 >
                   {link.title}
                 </Link>

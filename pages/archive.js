@@ -37,7 +37,7 @@ export default function Archive({ posts }) {
               <ol key={year} className="relative border-l border-gray-200 dark:border-gray-700">
                 {Array.from(timeMap.get(year).keys()).map((month) => (
                   <li key={month} className="mb-10 ml-6">
-                    <span className="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-soto-100 ring-8 ring-white dark:ring-gray-900">
+                    <span className="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-soto-100 ring-8 ring-white dark:ring-dark">
                       <svg
                         aria-hidden="true"
                         className="h-3 w-3 text-soto-200"
