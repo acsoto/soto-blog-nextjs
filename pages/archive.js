@@ -10,7 +10,7 @@ export async function getStaticProps() {
   return { props: { posts } }
 }
 
-export default function Home({ posts }) {
+export default function Archive({ posts }) {
   const timeMap = new Map()
   for (const post of posts) {
     if (post.date !== null) {

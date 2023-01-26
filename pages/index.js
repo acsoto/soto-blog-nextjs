@@ -34,11 +34,11 @@ export default function Home({ posts }) {
       </ul>
 
       {posts.length > MAX_DISPLAY && (
-        <div className="my-4 flex justify-center">
+        <Divider>
           <Link href="/archive" className="text-soto-100 hover:text-soto-200" aria-label="More">
-            More &rarr;
+            More
           </Link>
-        </div>
+        </Divider>
       )}
     </>
   )

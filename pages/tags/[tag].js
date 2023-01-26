@@ -7,6 +7,7 @@ import kebabCase from '@/lib/utils/kebabCase'
 import fs from 'fs'
 import path from 'path'
 import PostCard from '@/components/PostCard'
+import Divider from '@/components/Divider'
 
 const root = process.cwd()
 
@@ -59,7 +60,7 @@ export default function Tag({ posts, tag }) {
       >
         {title}
       </span>
-      <div className="divider"></div>
+      <Divider />
       {/*<ListLayout posts={posts} title={title} />*/}
       <ol className={'grid gap-6 lg:grid-cols-2'} style={{ listStyle: `none` }}>
         {posts.map((post) => (
