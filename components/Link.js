@@ -7,7 +7,7 @@ const CustomLink = ({ href, ...rest }) => {
 
   if (isInternalLink) {
     return (
-      <Link legacyBehavior href={href}>
+      <Link href={href}>
         <a {...rest} />
       </Link>
     )
