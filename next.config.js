@@ -84,4 +84,14 @@ module.exports = withBundleAnalyzer({
 
     return config
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'pic.mcac.cc',
+        port: '',
+        pathname: '/**',
+      },
+    ],
+  },
 })

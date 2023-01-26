@@ -1,13 +1,19 @@
 import Link from '@/components/Link'
 import formatDate from '@/lib/utils/formatDate'
+import Image from 'next/image'
 
 const PostCard = ({ post }) => {
   const { slug, date, title, summary, tags, image } = post
   return (
     <Link href={`/blog/${slug}`}>
       <article className="mx-auto overflow-hidden rounded-xl shadow-md hover:bg-gray-100 dark:hover:bg-gray-800">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={image} className="aspect-video w-full object-cover" alt="" />
+        <Image
+          src={image}
+          className="aspect-video w-full object-cover"
+          width="348"
+          height="195"
+          alt=""
+        />
         <div className="p-3">
           <h2 className="text-xl font-bold">{title || slug}</h2>
           <section className="text-gray-500">
@@ -16,7 +22,7 @@ const PostCard = ({ post }) => {
           <span className="text-sm text-gray-600">
             <time dateTime={date}>{formatDate(date)}</time>
           </span>
-          <p className="mt-3 flex flex-row space-x-3">
+          <div className="mt-3 flex flex-row space-x-3">
             {tags &&
               tags.map((tag) => (
                 <div
@@ -28,7 +34,7 @@ const PostCard = ({ post }) => {
                   {tag}
                 </div>
               ))}
-          </p>
+          </div>
         </div>
       </article>
     </Link>

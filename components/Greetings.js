@@ -40,7 +40,7 @@ const Greetings = () => {
       <h1 className="bg-gradient-to-r from-lime-500 to-yellow-400 bg-clip-text text-7xl font-extrabold text-transparent">
         Hi Friends,
       </h1>
-      <p className={'my-3 leading-6 text-gray-500 lg:w-3/4'}>
+      <div className={'my-3 leading-6 text-gray-500 lg:w-3/4'}>
         Welcome! I’m <b>Zhou Zihang</b>. 🥳
         <br />
         SOTO is a convenient way to refer to me on social media.
@@ -85,7 +85,7 @@ const Greetings = () => {
           <span>RSS feed:</span>
           <SocialIcon kind="rss" href="/feed.xml" size="6" />
         </div>
-      </p>
+      </div>
     </>
   )
 }
