@@ -20,7 +20,7 @@ export default function PostLayout({ frontMatter, authorDetails, children }) {
       />
       <ScrollTopAndComment />
       <article>
-        <div className="mx-auto lg:w-5/6 xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
+        <div className="mx-auto xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
           <header className="pt-6 xl:pb-6">
             <div className="space-y-5 text-center">
               <div>
