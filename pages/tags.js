@@ -26,7 +26,9 @@ export default function Tags({ tags }) {
             >
               <Link href={`/tags/${kebabCase(t)}`}>
                 <span className="p-2 text-soto-100">{t.toUpperCase()}</span>
-                <span className="bg-gray-100 p-2 dark:bg-gray-700">{tags[t]}</span>
+                <span className="bg-gray-100 p-2 text-gray-500 dark:bg-gray-700 dark:text-soto-400">
+                  {tags[t]}
+                </span>
               </Link>
             </span>
           )
