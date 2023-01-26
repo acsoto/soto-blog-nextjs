@@ -63,7 +63,7 @@ export default function Archive({ posts }) {
                           return (
                             <Link
                               key={post.slug}
-                              className={'text-lg font-bold hover:text-xl'}
+                              className={'text-lg font-bold duration-300 hover:text-xl'}
                               href={`/blog/${post.slug}`}
                             >
                               <span className={'mr-3 text-gray-300 dark:text-opacity-50'}>

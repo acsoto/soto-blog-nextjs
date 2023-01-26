@@ -37,10 +37,10 @@ const Greetings = () => {
 
   return (
     <>
-      <h1 className="bg-gradient-to-r from-lime-500 to-yellow-400 bg-clip-text text-7xl font-extrabold text-transparent">
+      <h1 className="bg-gradient-to-r from-lime-500 to-yellow-400 bg-clip-text text-7xl font-extrabold text-transparent dark:to-blue-500">
         Hi Friends,
       </h1>
-      <div className={'my-3 leading-6 text-gray-500 lg:w-3/4'}>
+      <div className={'my-3 leading-6 text-gray-500 dark:text-soto-400 lg:w-3/5'}>
         Welcome! I’m <b>Zhou Zihang</b>. 🥳
         <br />
         SOTO is a convenient way to refer to me on social media.
@@ -77,6 +77,8 @@ const Greetings = () => {
         </div>
         <br />
         Happy reading!
+        <br />
+        <br />
         <div className="flex flex-row gap-2">
           <span>Contact me:</span>
           <SocialIcon kind="instagram" href={siteMetadata.instagram} size="6" />

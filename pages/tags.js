@@ -22,11 +22,11 @@ export default function Tags({ tags }) {
           return (
             <span
               key={t}
-              className="overflow-hidden rounded-md border-2 text-2xl font-bold hover:bg-gray-100 dark:hover:bg-opacity-10"
+              className="overflow-hidden rounded-md border-2 text-2xl font-bold duration-300 hover:scale-110"
             >
               <Link href={`/tags/${kebabCase(t)}`}>
-                <span className="p-2 text-soto-100">{t}</span>
-                <span className="bg-gray-100 p-2 text-gray-500 dark:bg-gray-800">{tags[t]}</span>
+                <span className="p-2 text-soto-100">{t.toUpperCase()}</span>
+                <span className="bg-gray-100 p-2 dark:bg-gray-700">{tags[t]}</span>
               </Link>
             </span>
           )
