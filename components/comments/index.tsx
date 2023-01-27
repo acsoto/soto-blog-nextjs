@@ -1,5 +1,11 @@
 import siteMetadata from '@/data/siteMetadata'
 import dynamic from 'next/dynamic'
+import { CoreContent } from '@/lib/utils/contentlayer'
+import type { Blog } from 'contentlayer/generated'
+
+interface Props {
+  frontMatter: CoreContent<Blog>
+}
 
 const UtterancesComponent = dynamic(
   () => {
@@ -20,7 +26,7 @@ const DisqusComponent = dynamic(
   { ssr: false }
 )
 
-const Comments = ({ frontMatter }) => {
+const Comments = ({ frontMatter }: Props) => {
   const comment = siteMetadata?.comment
   if (!comment || Object.keys(comment).length === 0) return <></>
   return (

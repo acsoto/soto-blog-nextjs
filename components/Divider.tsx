@@ -1,4 +1,6 @@
-const Divider = ({ children }) => {
+import type { ReactNode } from 'react'
+
+const Divider = ({ children }: { children?: ReactNode }) => {
   if (children) {
     return (
       <div className="inline-flex w-full items-center justify-center">
