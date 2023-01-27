@@ -1,8 +1,9 @@
 import Link from '@/components/Link'
 import formatDate from '@/lib/utils/formatDate'
 import Image from 'next/image'
+import { FrontMatter } from '@/types/md'
 
-const PostCard = ({ post }) => {
+const PostCard = ({ post }: { post: FrontMatter }) => {
   const { slug, date, title, summary, tags, image } = post
   return (
     <Link href={`/blog/${slug}`}>

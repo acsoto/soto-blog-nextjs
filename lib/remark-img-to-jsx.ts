@@ -1,15 +1,17 @@
 import { visit } from 'unist-util-visit'
 import sizeOf from 'image-size'
 import fs from 'fs'
+import { UnistImageNode, UnistNodeType, UnistTreeType } from '@/types/node'
 
 export default function remarkImgToJsx() {
-  return (tree) => {
+  return (tree: UnistTreeType) => {
     visit(
       tree,
       // only visit p tags that contain an img element
-      (node) => node.type === 'paragraph' && node.children.some((n) => n.type === 'image'),
-      (node) => {
-        const imageNode = node.children.find((n) => n.type === 'image')
+      (node: UnistNodeType) =>
+        node.type === 'paragraph' && node.children.some((n) => n.type === 'image'),
+      (node: UnistNodeType) => {
+        const imageNode = node.children.find((n) => n.type === 'image') as UnistImageNode
 
         // only local files
         if (fs.existsSync(`${process.cwd()}/public${imageNode.url}`)) {

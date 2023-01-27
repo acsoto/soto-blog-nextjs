@@ -13,6 +13,7 @@ export const MDXComponents = {
   a: CustomLink,
   pre: Pre,
   BlogNewsletterForm: BlogNewsletterForm,
+  // @ts-ignore
   wrapper: ({ components, layout, ...rest }) => {
     const Layout = require(`../layouts/${layout}`).default
     return <Layout {...rest} />
@@ -29,5 +30,6 @@ interface MdxLayoutRendererProps {
 export const MDXLayoutRenderer = ({ layout, mdxSource, ...rest }: MdxLayoutRendererProps) => {
   const MDXLayout = useMemo(() => getMDXComponent(mdxSource), [mdxSource])
 
+  // @ts-ignore
   return <MDXLayout layout={layout} components={MDXComponents} {...rest} />
 }

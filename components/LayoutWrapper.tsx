@@ -6,8 +6,9 @@ import Footer from './Footer'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
 import Image from 'next/image'
+import { ReactNode } from 'react'
 
-const LayoutWrapper = ({ children }) => {
+const LayoutWrapper = ({ children }: { children: ReactNode }) => {
   return (
     <SectionContainer>
       <div className="flex h-screen flex-col justify-between">

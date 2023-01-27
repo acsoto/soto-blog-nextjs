@@ -25,11 +25,13 @@ const Greetings = () => {
     }
 
     // elRef refers to the <span> rendered below
+    // @ts-ignore
     typed.current = new Typed(el.current, options)
 
     return () => {
       // Make sure to destroy Typed instance during cleanup
       // to prevent memory leaks
+      // @ts-ignore
       typed.current.destroy()
     }
   }, [])
