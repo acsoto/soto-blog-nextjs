@@ -5,6 +5,7 @@ import { BlogSeo } from '@/components/SEO'
 import { siteMetadata } from '@/data/siteMetadata'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import kebabCase from '@/lib/utils/kebabCase'
+import formatDate from '@/lib/utils/formatDate'
 
 export default function PostLayout({ frontMatter, authorDetails, children }) {
   const { slug, date, title, image, tags } = frontMatter
@@ -20,29 +21,31 @@ export default function PostLayout({ frontMatter, authorDetails, children }) {
       <article>
         <div className="mx-auto xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
           <header className="pt-6 xl:pb-6">
-            <div className="space-y-5 text-center">
+            <div className="text-center">
               <div>
                 <PageTitle>{title}</PageTitle>
               </div>
-              <dl className="flex flex-row justify-center space-x-3">
+              <dl className="my-3 flex flex-col justify-center gap-3 lg:flex-row">
                 <div>
                   <dt className="sr-only">Published on</dt>
                   <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                    <time dateTime={date}>{new Date(date).toDateString()}</time>
+                    <time dateTime={date}>{formatDate(new Date(date))}</time>
                   </dd>
                 </div>
-                {tags &&
-                  tags.map((tag) => (
-                    <Link
-                      key={tag}
-                      className={
-                        'rounded-md border-2 bg-gradient-to-r from-lime-500 to-yellow-400 bg-clip-text px-2 text-sm font-bold text-transparent hover:text-gray-500'
-                      }
-                      href={`/tags/${kebabCase(tag)}`}
-                    >
-                      {tag}
-                    </Link>
-                  ))}
+                <div className="flex flex-row justify-center space-x-3">
+                  {tags &&
+                    tags.map((tag) => (
+                      <Link
+                        key={tag}
+                        className={
+                          'rounded-md border-2 bg-gradient-to-r from-lime-500 to-yellow-400 bg-clip-text px-2 text-sm font-bold text-transparent hover:text-gray-500'
+                        }
+                        href={`/tags/${kebabCase(tag)}`}
+                      >
+                        {tag}
+                      </Link>
+                    ))}
+                </div>
               </dl>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img className="rounded-xl" src={image} alt="" />
