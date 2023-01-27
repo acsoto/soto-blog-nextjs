@@ -20,6 +20,7 @@ import rehypeKatex from 'rehype-katex'
 import rehypeCitation from 'rehype-citation'
 import rehypePrismPlus from 'rehype-prism-plus'
 import rehypePresetMinify from 'rehype-preset-minify'
+import { TOC } from '@/types/node'
 
 const root = process.cwd()
 
@@ -54,7 +55,7 @@ export async function getFileBySlug(type, slug) {
     process.env.ESBUILD_BINARY_PATH = path.join(root, 'node_modules', 'esbuild', 'bin', 'esbuild')
   }
 
-  let toc = []
+  let toc: TOC[] = []
 
   const { code, frontmatter } = await bundleMDX({
     source,

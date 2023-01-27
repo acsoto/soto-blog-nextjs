@@ -6,6 +6,7 @@ import { siteMetadata } from '@/data/siteMetadata'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import kebabCase from '@/lib/utils/kebabCase'
 import formatDate from '@/lib/utils/formatDate'
+import Image from 'next/image'
 
 export default function PostLayout({ frontMatter, authorDetails, children }) {
   const { slug, date, title, image, tags } = frontMatter
@@ -47,8 +48,7 @@ export default function PostLayout({ frontMatter, authorDetails, children }) {
                     ))}
                 </div>
               </dl>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img className="rounded-xl" src={image} alt="" />
+              <Image className="rounded-xl" src={image} width={1600} height={900} alt="" />
             </div>
           </header>
           <div className="prose max-w-none pt-10 pb-8 prose-img:rounded-xl dark:prose-dark">
