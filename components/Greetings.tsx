@@ -1,8 +1,7 @@
 import React from 'react'
 import Typed from 'typed.js'
-import Link from '@/components/Link'
 import SocialIcon from '@/components/social-icons'
-import siteMetadata from '@/data/siteMetadata'
+import { siteMetadata } from '@/data/siteMetadata'
 const Greetings = () => {
   // Create reference to store the DOM element containing the animation
   const el = React.useRef(null)
@@ -81,11 +80,11 @@ const Greetings = () => {
         <br />
         <div className="flex flex-row gap-2">
           <span>Contact me:</span>
-          <SocialIcon kind="instagram" href={siteMetadata.instagram} size="6" />
-          <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} size="6" />
-          <SocialIcon kind="github" href={siteMetadata.github} size="6" />
+          <SocialIcon kind="instagram" href={siteMetadata.instagram} size={6} />
+          <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} size={6} />
+          <SocialIcon kind="github" href={siteMetadata.github} size={6} />
           <span>RSS feed:</span>
-          <SocialIcon kind="rss" href="/feed.xml" size="6" />
+          <SocialIcon kind="rss" href="/feed.xml" size={6} />
         </div>
       </div>
     </>

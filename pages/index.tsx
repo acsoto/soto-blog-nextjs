@@ -1,6 +1,6 @@
 import Link from '@/components/Link'
-import { PageSEO } from '@/components/SEO'
-import siteMetadata from '@/data/siteMetadata'
+import { PageSeo } from '@/components/SEO'
+import { siteMetadata } from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 
 import PostCard from '@/components/PostCard'
@@ -18,7 +18,7 @@ export async function getStaticProps() {
 export default function Home({ posts }) {
   return (
     <>
-      <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
+      <PageSeo title={siteMetadata.title} description={siteMetadata.description} />
       <Greetings />
       <h1 className="mt-10 text-2xl font-bold">Recent Posts</h1>
       <Divider />

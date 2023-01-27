@@ -1,5 +1,5 @@
-import { TagSEO } from '@/components/SEO'
-import siteMetadata from '@/data/siteMetadata'
+import { PageSeo } from '@/components/SEO'
+import { siteMetadata } from '@/data/siteMetadata'
 import generateRss from '@/lib/generate-rss'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import { getAllTags } from '@/lib/tags'
@@ -49,7 +49,7 @@ export default function Tag({ posts, tag }) {
   const title = tag[0].toUpperCase() + tag.split(' ').join('-').slice(1)
   return (
     <>
-      <TagSEO
+      <PageSeo
         title={`${tag} - ${siteMetadata.author}`}
         description={`${tag} tags - ${siteMetadata.author}`}
       />

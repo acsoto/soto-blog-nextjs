@@ -1,6 +1,6 @@
 import Link from '@/components/Link'
-import { PageSEO } from '@/components/SEO'
-import siteMetadata from '@/data/siteMetadata'
+import { PageSeo } from '@/components/SEO'
+import { siteMetadata } from '@/data/siteMetadata'
 import { getAllTags } from '@/lib/tags'
 import kebabCase from '@/lib/utils/kebabCase'
 import Divider from '@/components/Divider'
@@ -15,7 +15,7 @@ export default function Tags({ tags }) {
   const sortedTags = Object.keys(tags).sort((a, b) => tags[b] - tags[a])
   return (
     <>
-      <PageSEO title={`Tags - ${siteMetadata.author}`} description="SOTO-BLOG Tags" />
+      <PageSeo title={`Tags - ${siteMetadata.author}`} description="SOTO-BLOG Tags" />
       <Divider />
       <div className="flex flex-wrap gap-4">
         {sortedTags.map((t) => {

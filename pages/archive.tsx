@@ -1,8 +1,9 @@
 import { getAllFilesFrontMatter } from '@/lib/mdx'
-import { PageSEO } from '@/components/SEO'
-import siteMetadata from '@/data/siteMetadata'
+import { PageSeo } from '@/components/SEO'
+import { siteMetadata } from '@/data/siteMetadata'
 import Link from '@/components/Link'
 import Divider from '@/components/Divider'
+import { FrontMatter } from '@/types/md'
 
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter('blog')
@@ -11,11 +12,11 @@ export async function getStaticProps() {
 }
 
 export default function Archive({ posts }) {
-  const timeMap = new Map()
+  const timeMap: Map<string, Map<string, Array<FrontMatter>>> = new Map()
   for (const post of posts) {
     if (post.date !== null) {
-      const year = new Date(post.date).getFullYear()
-      const month = new Date(post.date).toDateString().split(' ')[1]
+      const year: string = new Date(post.date).getFullYear().toString()
+      const month: string = new Date(post.date).toDateString().split(' ')[1]
       if (!timeMap.has(year)) {
         timeMap.set(year, new Map())
       }
@@ -28,11 +29,11 @@ export default function Archive({ posts }) {
 
   return (
     <>
-      <PageSEO title={`Archive - ${siteMetadata.author}`} description={siteMetadata.description} />
+      <PageSeo title={`Archive - ${siteMetadata.author}`} description={siteMetadata.description} />
       <div>
         {Array.from(timeMap.keys()).map((year) => {
           return (
-            <>
+            <div key={year}>
               <Divider>{year}</Divider>
               <ol key={year} className="relative border-l border-gray-200 dark:border-gray-700">
                 {Array.from(timeMap.get(year).keys()).map((month) => (
@@ -80,7 +81,7 @@ export default function Archive({ posts }) {
                   </li>
                 ))}
               </ol>
-            </>
+            </div>
           )
         })}
       </div>

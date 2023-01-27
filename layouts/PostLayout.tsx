@@ -1,19 +1,17 @@
 import Link from '@/components/Link'
 import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'
-import { BlogSEO } from '@/components/SEO'
-import siteMetadata from '@/data/siteMetadata'
+import { BlogSeo } from '@/components/SEO'
+import { siteMetadata } from '@/data/siteMetadata'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import kebabCase from '@/lib/utils/kebabCase'
-
-const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
 
 export default function PostLayout({ frontMatter, authorDetails, children }) {
   const { slug, date, title, image, tags } = frontMatter
 
   return (
     <SectionContainer>
-      <BlogSEO
+      <BlogSeo
         url={`${siteMetadata.siteUrl}/blog/${slug}`}
         authorDetails={authorDetails}
         {...frontMatter}
@@ -30,9 +28,7 @@ export default function PostLayout({ frontMatter, authorDetails, children }) {
                 <div>
                   <dt className="sr-only">Published on</dt>
                   <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                    <time dateTime={date}>
-                      {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
-                    </time>
+                    <time dateTime={date}>{new Date(date).toDateString()}</time>
                   </dd>
                 </div>
                 {tags &&
