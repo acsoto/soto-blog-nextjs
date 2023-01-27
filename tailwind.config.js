@@ -33,7 +33,10 @@ module.exports = {
         sans: ['Helvetica', 'Tahoma', 'Arial', ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        dark: '#22272E',
+        dark: {
+          DEFAULT: '#22272E',
+          100: '#282C31',
+        },
         primary: colors.teal,
         gray: colors.neutral,
         soto: {
