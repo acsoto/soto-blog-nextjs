@@ -6,9 +6,11 @@ import TOCInline from './TOCInline'
 import Pre from './Pre'
 import { BlogNewsletterForm } from './NewsletterForm'
 import { FrontMatter, PageLayout } from '@/types/md'
+import Script from 'next/script'
 
 export const MDXComponents = {
   Image,
+  Script,
   TOCInline,
   a: CustomLink,
   pre: Pre,

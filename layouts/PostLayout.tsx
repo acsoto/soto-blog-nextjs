@@ -51,7 +51,7 @@ export default function PostLayout({ frontMatter, authorDetails, children }) {
               <Image className="rounded-xl" src={image} width={1600} height={900} alt="" />
             </div>
           </header>
-          <div className="prose max-w-none pt-10 pb-8 prose-img:rounded-xl dark:prose-dark">
+          <div className="prose max-w-none pt-10 pb-8 prose-img:rounded-xl dark:prose-dark lg:prose-lg">
             {children}
           </div>
         </div>

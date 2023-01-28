@@ -6,16 +6,12 @@ module.exports = {
     optimizeUniversalDefaults: true,
   },
   content: [
-    './pages/**/*.js',
-    './components/**/*.js',
-    './layouts/**/*.js',
-    './lib/**/*.js',
     './data/**/*.mdx',
+    './data/**/*.md',
     './pages/**/*.tsx',
     './components/**/*.tsx',
     './layouts/**/*.tsx',
     './lib/**/*.ts',
-    './data/**/*.mdx',
   ],
   darkMode: 'class',
   theme: {
@@ -30,7 +26,7 @@ module.exports = {
         14: '3.5rem',
       },
       fontFamily: {
-        sans: ['Helvetica', 'Tahoma', 'Arial', ...defaultTheme.fontFamily.sans],
+        sans: ['Helvetica', 'Arial', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         dark: {
