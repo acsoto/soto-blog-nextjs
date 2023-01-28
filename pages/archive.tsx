@@ -35,7 +35,7 @@ export default function Archive({ posts }) {
           return (
             <div key={year}>
               <Divider>{year}</Divider>
-              <ol key={year} className="relative border-l border-gray-200 dark:border-gray-700">
+              <ol className="relative ml-3 border-l border-gray-200 dark:border-gray-700">
                 {Array.from(timeMap.get(year).keys()).map((month) => (
                   <li key={month} className="mb-10 ml-6">
                     <span className="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-soto-100 ring-8 ring-white dark:ring-dark">
@@ -62,19 +62,20 @@ export default function Archive({ posts }) {
                         .get(month)
                         .map((post) => {
                           return (
-                            <Link
-                              key={post.slug}
-                              className={'text-lg font-bold duration-300 hover:text-xl'}
-                              href={`/blog/${post.slug}`}
-                            >
+                            <div className="text-lg font-bold" key={post.slug}>
                               <span className={'mr-3 text-gray-300 dark:text-opacity-50'}>
                                 {post.date.split('T')[0]}
                               </span>
-                              <span className={'text-soto-100 dark:text-opacity-80'}>
-                                {post.title}
-                              </span>
-                              <br />
-                            </Link>
+                              <Link href={`/blog/${post.slug}`}>
+                                <span
+                                  className={
+                                    'text-soto-100 hover:text-soto-200 dark:text-opacity-80'
+                                  }
+                                >
+                                  {post.title}
+                                </span>
+                              </Link>
+                            </div>
                           )
                         })}
                     </div>
