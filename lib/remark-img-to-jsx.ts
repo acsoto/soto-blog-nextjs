@@ -3,6 +3,7 @@ import imageSize from 'image-size'
 import { ISizeCalculationResult } from 'image-size/dist/types/interface'
 import { Node } from 'unist'
 import { UnistImageNode, UnistNodeType } from '@/types/node'
+import { getPlaiceholder } from 'plaiceholder'
 
 async function addProps(imageNode: UnistImageNode): Promise<void> {
   let res: ISizeCalculationResult
@@ -13,6 +14,7 @@ async function addProps(imageNode: UnistImageNode): Promise<void> {
     const buffer = Buffer.from(arrayBuffer)
 
     res = await imageSize(buffer)
+    blur64 = (await getPlaiceholder(buffer)).base64
     ;(imageNode.type = 'mdxJsxFlowElement'),
       (imageNode.name = 'Image'),
       (imageNode.attributes = [
@@ -20,6 +22,9 @@ async function addProps(imageNode: UnistImageNode): Promise<void> {
         { type: 'mdxJsxAttribute', name: 'src', value: imageNode.url },
         { type: 'mdxJsxAttribute', name: 'width', value: res.width },
         { type: 'mdxJsxAttribute', name: 'height', value: res.height },
+        { type: 'mdxJsxAttribute', name: 'quality', value: 100 },
+        { type: 'mdxJsxAttribute', name: 'placeholder', value: 'blur' },
+        { type: 'mdxJsxAttribute', name: 'blurDataURL', value: blur64 },
       ])
   }
 }
