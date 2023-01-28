@@ -1,7 +1,7 @@
 ---
 title: Obsidian，Hugo
 date: 2023-01-04T18:07:41
-tags: [APP, Hugo, Obsidian]
+tags: [Hugo, Obsidian]
 image: 'https://pic.mcac.cc/202301042234833.png'
 slug: '20230104180741'
 ---

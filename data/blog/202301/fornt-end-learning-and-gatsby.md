@@ -1,7 +1,7 @@
 ---
 title: 前端的一些学习和 Gatsby 的使用
 date: 2023-01-14T01:32:16
-tags: [React, APP]
+tags: [Gatsby, React]
 image: 'https://pic.mcac.cc/202301181331217.png'
 slug: '20230114013216'
 ---
@@ -202,7 +202,7 @@ for (const post of posts) {
       <div className="flex w-full flex-col border-opacity-50">
         <div className="divider text-xl font-bold">{year}</div>
         {Array.from(timeMap.get(year).keys()).map((month) => (
-          <div className="card my-3 bg-base-100 shadow-xl">
+          <div className="card bg-base-100 my-3 shadow-xl">
             <div className="card-body">
               <span className={'text-primary text-3xl font-bold'}>{month}</span>
               {timeMap
@@ -214,7 +214,7 @@ for (const post of posts) {
                       className={'text-lg hover:text-xl'}
                       to={post.frontmatter.slug ? '/' + post.frontmatter.slug : post.fields.slug}
                     >
-                      <span className={'mr-3 text-primary-content/25'}>
+                      <span className={'text-primary-content/25 mr-3'}>
                         {post.frontmatter.date}
                       </span>
                       <span className={'text-primary-content/75'}>{post.frontmatter.title}</span>
