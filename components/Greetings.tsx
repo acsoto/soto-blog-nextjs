@@ -42,15 +42,16 @@ const Greetings = () => {
         Hi Friends,
       </h1>
       <div className={'my-3 leading-6 text-gray-500 dark:text-soto-400 lg:w-3/5'}>
-        Welcome! I’m <b>Zhou Zihang</b>. 🥳
+        Welcome! I’m <b>Zhou Zihang</b>. <i className="twa twa-partying-face inline-block" />
         <br />
         SOTO is a convenient way to refer to me on social media.
         <br />
         This is a place where I share my life, thoughts, and other stuff that might be interesting.
         <br />
-        <br />
-        I am now living in China 🇨🇳 and am a senior at Beihang University, studying computer science
-        and technology, and I plan to go abroad next year for my master's degree.
+        <br />I am now living in China <i className="twa twa-flag-china inline-block" />
+        {` `}
+        and am a senior at Beihang University, studying computer science and technology, and I plan
+        to go abroad next year for my master's degree.
         <br />
         <br />I am running a Minecraft server from 2014 to now, which is probably the origin of my
         interest in programming. If you are interested, feel free to type{' '}
@@ -59,7 +60,8 @@ const Greetings = () => {
         </a>{' '}
         in Minecraft and have fun.
         <br />
-        <br />I have a Shiba Inu 🐶 named doudou. You can see him{' '}
+        <br />I have a Shiba Inu <i className="twa twa-dog-face inline-block" /> named doudou. You
+        can see him{' '}
         <a
           className="text-blue-300 hover:text-blue-400"
           href="https://www.instagram.com/puppydoudou/"
