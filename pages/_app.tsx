@@ -3,8 +3,6 @@ import '@/css/prism.css'
 import '@/css/twemoji-amazing.css'
 import 'katex/dist/katex.css'
 
-import '@fontsource/inter/variable-full.css'
-
 import { ThemeProvider } from 'next-themes'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
