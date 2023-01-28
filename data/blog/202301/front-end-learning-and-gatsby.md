@@ -16,7 +16,7 @@ slug: '20230114013216'
 
 但是我又想做一个能直接返回一个 svg 文件的 api，类似于 [GitHub 上的数据统计](https://github.com/anuraghazra/github-readme-stats)，这样可以方便的插到 html 里面，如（我放到自己 vercel 上了）：
 
-![](https://githubstats.zzhgo.com/api?username=acsoto&count_private=true&show_icons=true&theme=merko&bg_color=DEG&text_color=ABB581)
+<img src="https://githubstats.zzhgo.com/api?username=acsoto&count_private=true&show_icons=true&theme=merko&bg_color=DEG&text_color=ABB581"/>
 
 傻傻分不清楚 js 前端后端的区别，在研究这个 API 的过程中，我就不知不觉转移到了研究 AC 官网 wiki(用 vitepress 做的)如何能和官网主页用 vue 集成一下，因为此前几乎没有任何前端知识，搞不清楚一大堆的 js 框架都是干什么的，研究这个研究了很久，最后以 css 实在是太麻烦和样式相互乱覆盖告终。
 

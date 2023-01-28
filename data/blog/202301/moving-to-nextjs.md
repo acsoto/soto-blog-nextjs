@@ -19,7 +19,7 @@ Thanks to [timlrx's starter](https://github.com/timlrx/tailwind-nextjs-starter-b
 I modified something else except for changing designs from the starter to my last version.
 
 - **Dark Mode**: Changed background `#22272E` and text color `ADBAC7` in dark mode with Github dark dimmed style. Changed cards and buttons hovering color to `bg-opacity-10`
-- **Images**: Using `NextJS Images` in `PostCard` and the cover of posts. It helped minified the size of the original images. However, because it requires me to offer width and depth in advance, It is a little challenging to apply it in markdown files. Maybe I would use `mdx` but I still don't want to break pure markdown files.
+- **Images**: Using `NextJS Images` in `PostCard` and the cover of posts. It helped minified the size of the original images. However, because it requires me to offer width and depth in advance, It is a little challenging to apply it in markdown files. Maybe I would use `mdx` but I still don't want to break pure markdown files. I will talk about this later.
 - **Minor Modifications**
   - Greetings with gradient background color text and Twemoji. <i className="twa twa-partying-face inline-block" /> (Inspired by [Leo](https://www.leohuynh.dev))
   - Two columns post cards layout on the large screen.
@@ -109,6 +109,84 @@ Actually, we can just use third part API and JSX to design components and use th
 ```
 
 <TOCInline toc={props.toc} asDisclosure />
+
+## NextJS Images[^1]
+
+[^1]: https://nextjs.org/docs/basic-features/image-optimization
+
+The problem is that I use remote images that are hosted on Aliyun OSS. So when rendering markdown files, I can not get `depth` and `height` in advance, which is necessary for NextJS Images.
+
+So If I want to change `img` to `NextImage`, I have to get images metadata before the rendering process. I use [image-size](https://www.npmjs.com/package/image-size?activeTab=readme) to get metadata. (Referring [this post](https://nikolovlazar.com/blog/generating-blur-for-dynamic-images-nextjs))
+
+First, visit all nodes to get `img` nodes and `addProps` for them.
+
+**Note**: Use `async`, `await`, `Promise`.
+
+```ts {2} {24}
+import { visit } from 'unist-util-visit'
+import imageSize from 'image-size'
+import { ISizeCalculationResult } from 'image-size/dist/types/interface'
+
+const remarkImgToJsx = () => {
+  // @ts-ignore
+  return async function transformer(tree: Node): Promise<Node> {
+    const images: UnistImageNode[] = []
+
+    visit(
+      tree,
+      (node: UnistNodeType) =>
+        node.type === 'paragraph' && node.children.some((n) => n.type === 'image'),
+      (node: UnistNodeType) => {
+        const imageNode = node.children.find((n) => n.type === 'image') as UnistImageNode
+        images.push(imageNode)
+        // Change node types from p to div to avoid nesting error
+        node.type = 'div'
+        node.children = [imageNode]
+      }
+    )
+
+    for (const image of images) {
+      await addProps(image)
+    }
+  }
+}
+```
+
+`addProps` (blur placeholder is calculated by [plaiceholder](https://github.com/joe-bell/plaiceholder))
+
+```ts {9,10}
+async function addProps(imageNode: UnistImageNode): Promise<void> {
+  let res: ISizeCalculationResult
+  let blur64: string
+  if (imageNode.url.startsWith('http') && !imageNode.url.endsWith('svg')) {
+    const imageRes = await fetch(imageNode.url)
+    const arrayBuffer = await imageRes.arrayBuffer()
+    const buffer = Buffer.from(arrayBuffer)
+
+    res = await imageSize(buffer)
+    blur64 = (await getPlaiceholder(buffer)).base64
+    ;(imageNode.type = 'mdxJsxFlowElement'),
+      (imageNode.name = 'Image'),
+      (imageNode.attributes = [
+        { type: 'mdxJsxAttribute', name: 'alt', value: imageNode.alt },
+        { type: 'mdxJsxAttribute', name: 'src', value: imageNode.url },
+        { type: 'mdxJsxAttribute', name: 'width', value: res.width },
+        { type: 'mdxJsxAttribute', name: 'height', value: res.height },
+        { type: 'mdxJsxAttribute', name: 'quality', value: 100 },
+        { type: 'mdxJsxAttribute', name: 'placeholder', value: 'blur' },
+        { type: 'mdxJsxAttribute', name: 'blurDataURL', value: blur64 },
+      ])
+  }
+}
+```
+
+Now, every original image has been changed from:
+
+```html
+<p><img src="..." /></p>
+```
+
+to NexJS Images, which is on-demand image resizing.
 
 ## Domain Blocked
 
