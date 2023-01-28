@@ -85,6 +85,6 @@ module.exports = withBundleAnalyzer({
     return config
   },
   images: {
-    domains: ['pic.mcac.cc'],
+    domains: ['pic.mcac.cc', 'githubstats.zzhgo.com'],
   },
 })
