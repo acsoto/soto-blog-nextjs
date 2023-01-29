@@ -28,7 +28,7 @@ async function addProps(imageNode: UnistImageNode): Promise<void> {
         {
           type: 'mdxJsxAttribute',
           name: 'blurDataURL',
-          value: `data:image/svg+xml;base64,${siteMetadata.blur64}`,
+          value: `data:image/png;base64,${siteMetadata.blur64}`,
         },
       ])
   }
