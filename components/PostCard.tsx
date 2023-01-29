@@ -11,7 +11,7 @@ const PostCard = ({ post }: { post: FrontMatter }) => {
           src={image}
           className="aspect-video w-full object-cover"
           width={imageMetadata.width}
-          height={imageMetadata.height}
+          height={(imageMetadata.width * 9) / 16}
           alt=""
           placeholder="blur"
           blurDataURL={imageMetadata.blurDataURL}
