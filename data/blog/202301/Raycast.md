@@ -63,11 +63,20 @@ do shell script "open http://localhost:1313"
 
 ## 其他功能
 
-| Functions  |                 Screenshots                  |
-| :--------: | :------------------------------------------: |
-| 剪切板历史 | ![](https://pic.mcac.cc/202301040017318.png) |
-|   计算器   | ![](https://pic.mcac.cc/202301040018234.png) |
-|  内置字典  | ![](https://pic.mcac.cc/202301042158529.png) |
+<table>
+<tr>
+  <td className="text-center">剪切板历史</td>
+  <td className="w-3/4">![](https://pic.mcac.cc/202301040017318.png)</td>
+</tr>
+<tr>
+  <td className="text-center">计算器</td>
+  <td className="w-3/4">![](https://pic.mcac.cc/202301040018234.png)</td>
+</tr>
+<tr>
+  <td className="text-center">内置字典</td>
+  <td className="w-3/4">![](https://pic.mcac.cc/202301042158529.png)</td>
+</tr>
+</table>
 
 另外还有可以替换著名付费软件的分屏，但是我不用。
 
@@ -77,15 +86,32 @@ do shell script "open http://localhost:1313"
 
 装了几个很方便的社区插件
 
-|                                                                  Extensions                                                                   |                 Screenshots                  |
-| :-------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------: |
-|                          [AppleMusic](https://www.raycast.com/fedevitaledev/music) 可以快速播放歌单/加入资料库/喜欢                           | ![](https://pic.mcac.cc/202301040039801.png) |
-|                                       [Safari](https://www.raycast.com/loris/safari) 这个直接搜历史记录                                       | ![](https://pic.mcac.cc/202301042159601.png) |
-|                              [Quick Event](https://www.raycast.com/mblode/quick-event) 速建日程(可惜不支持汉语)                               | ![](https://pic.mcac.cc/202301042149577.png) |
-| [GitHub Repository Search](https://www.raycast.com/thomas/github-repository-search) 快速去仓库，另外还有快速 Git 操作的插件，我用不到就没装。 | ![](https://pic.mcac.cc/202301042149577.png) |
-|               [JetBrains Toolbox Recent Projects](https://www.raycast.com/gdsmith/jetbrains) 这个也很方便，可以快速打开某个项目               | ![](https://pic.mcac.cc/202301042155859.png) |
-|                   [Visual Studio Code - Project Manager](https://www.raycast.com/MarkusLanger/vscode-project-manager) 同上                    | ![](https://pic.mcac.cc/202301042246228.png) |
-|                                 [Obsidian](https://www.raycast.com/marcjulian/obsidian) 可以快速搜笔记/开仓库                                 | ![](https://pic.mcac.cc/202301042246261.png) |
+<table>
+<tr>
+  <td className="text-center">[AppleMusic](https://www.raycast.com/fedevitaledev/music) 可以快速播放歌单/加入资料库/喜欢</td>
+  <td className="w-3/4">![](https://pic.mcac.cc/202301040039801.png)</td>
+</tr>
+<tr>
+  <td className="text-center">[Safari](https://www.raycast.com/loris/safari) 这个直接搜历史记录</td>
+  <td className="w-3/4">![](https://pic.mcac.cc/202301040038775.png)</td>
+</tr>
+<tr>
+  <td className="text-center">[Quick Event](https://www.raycast.com/mblode/quick-event) 速建日程(可惜不支持汉语) </td>
+  <td className="w-3/4">![](https://pic.mcac.cc/202301042159601.png)</td>
+</tr>
+<tr>
+  <td className="text-center">[GitHub Repository Search](https://www.raycast.com/thomas/github-repository-search) 快速去仓库，另外还有快速 Git 操作的插件。 </td>
+  <td className="w-3/4">![](https://pic.mcac.cc/202301042149577.png) </td>
+</tr>
+<tr>
+  <td className="text-center">[JetBrains Toolbox Recent Projects](https://www.raycast.com/gdsmith/jetbrains) 这个也很方便，可以快速打开某个项目 </td>
+  <td className="w-3/4">![](https://pic.mcac.cc/202301042155859.png) </td>
+</tr>
+<tr>
+  <td className="text-center"> [Obsidian](https://www.raycast.com/marcjulian/obsidian) 可以快速搜笔记/开仓库</td>
+  <td className="w-3/4">![](https://pic.mcac.cc/202301042246261.png)</td>
+</tr>
+</table>
 
 ## 彩蛋
 

@@ -12,7 +12,9 @@ slug: '20230114013216'
 
 事情是从 3 天前开始的，给 AC 服务器加了一个 bStats 数据统计，因为想要做一个数据图就研究了一下 html 和 js ，最终用 jquery 和 highcharts 做了这样一个图出来放到了官网。
 
+<div className="w-1/2">
 ![](https://pic.mcac.cc/202301140136639.png)
+</div>
 
 但是我又想做一个能直接返回一个 svg 文件的 api，类似于 [GitHub 上的数据统计](https://github.com/anuraghazra/github-readme-stats)，这样可以方便的插到 html 里面，如（我放到自己 vercel 上了）：
 
@@ -34,7 +36,9 @@ const App = () => (
 
 此时的我如下图所示：
 
+<div className="w-1/2">
 ![](https://pic.mcac.cc/202301102057443.png)
+</div>
 
 研究了一段时间之后大概知道了 React 是干什么的，于是开始试图找个框架试一下，最后在 Next.js 和 Gatsby 中选了 Gatsby，因为据说现成的东西比较多适合个人用。
 
@@ -193,7 +197,7 @@ for (const post of posts) {
 }
 ```
 
-按照年-月生成卡片
+按照年-月生成卡片 (注意此处我没有设置 map 的 key，在最新代码中已经重新设置)
 
 ```jsx
 {
@@ -338,7 +342,9 @@ return (
 
 效果:
 
+<div className="w-2/3">
 ![](https://pic.mcac.cc/202301181354718.png)
+</div>
 
 ## 集成豆瓣数据的尝试
 
