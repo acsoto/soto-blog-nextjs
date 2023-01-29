@@ -4,27 +4,32 @@ import { ISizeCalculationResult } from 'image-size/dist/types/interface'
 import { Node } from 'unist'
 import { UnistImageNode, UnistNodeType } from '@/types/node'
 import { getPlaiceholder } from 'plaiceholder'
+import { siteMetadata } from '@/data/siteMetadata'
 
 async function addProps(imageNode: UnistImageNode): Promise<void> {
   let res: ISizeCalculationResult
   let blur64: string
-  if (imageNode.url.startsWith('http') && !imageNode.url.endsWith('svg')) {
-    const imageRes = await fetch(imageNode.url)
-    const arrayBuffer = await imageRes.arrayBuffer()
-    const buffer = Buffer.from(arrayBuffer)
+  if (imageNode.url.startsWith('https://pic.mcac.cc/')) {
+    const res = await fetch(imageNode.url + '?x-oss-process=image/info')
+    const json = await res.json()
 
-    res = await imageSize(buffer)
-    blur64 = (await getPlaiceholder(buffer)).base64
+    const height = json.ImageHeight.value
+    const width = json.ImageWidth.value
+
     ;(imageNode.type = 'mdxJsxFlowElement'),
       (imageNode.name = 'Image'),
       (imageNode.attributes = [
         { type: 'mdxJsxAttribute', name: 'alt', value: imageNode.alt },
         { type: 'mdxJsxAttribute', name: 'src', value: imageNode.url },
-        { type: 'mdxJsxAttribute', name: 'width', value: res.width },
-        { type: 'mdxJsxAttribute', name: 'height', value: res.height },
+        { type: 'mdxJsxAttribute', name: 'width', value: width },
+        { type: 'mdxJsxAttribute', name: 'height', value: height },
         { type: 'mdxJsxAttribute', name: 'quality', value: 100 },
         { type: 'mdxJsxAttribute', name: 'placeholder', value: 'blur' },
-        { type: 'mdxJsxAttribute', name: 'blurDataURL', value: blur64 },
+        {
+          type: 'mdxJsxAttribute',
+          name: 'blurDataURL',
+          value: `data:image/svg+xml;base64,${siteMetadata.blur64}`,
+        },
       ])
   }
 }

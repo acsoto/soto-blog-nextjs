@@ -18,6 +18,8 @@ export let siteMetadata = {
   linkedin: 'https://www.linkedin.com',
   instagram: 'https://instagram.com/atksoto',
   locale: 'en-US',
+  blur64:
+    'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII=',
   analytics: {
     // If you want to use an analytics provider you have to add it to the
     // content security policy in the `next.config.js` file.

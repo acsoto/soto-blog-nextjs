@@ -3,6 +3,8 @@ import PageTitle from '@/components/PageTitle'
 import generateRss from '@/lib/generate-rss'
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import { formatSlug, getAllFilesFrontMatter, getFileBySlug, getFiles } from '@/lib/mdx'
+import { addImgMetadata } from '@/lib/add-img-metadata'
+import { FrontMatter } from '@/types/md'
 
 const DEFAULT_LAYOUT = 'PostLayout'
 
@@ -36,6 +38,10 @@ export async function getStaticProps({ params }) {
     const rss = generateRss(allPosts)
     fs.writeFileSync('./public/feed.xml', rss)
   }
+
+  const frontMatter: FrontMatter = post.frontMatter
+
+  await addImgMetadata([frontMatter])
 
   return { props: { post, authorDetails, prev, next } }
 }

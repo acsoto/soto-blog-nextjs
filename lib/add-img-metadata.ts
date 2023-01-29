@@ -1,21 +1,18 @@
 import { FrontMatter } from '@/types/md'
-import imageSize from 'image-size'
-import { getPlaiceholder } from 'plaiceholder'
+import { siteMetadata } from '@/data/siteMetadata'
 
 export async function addImgMetadata(posts: FrontMatter[]) {
   for (const post of posts) {
     if (post.image) {
-      const imageRes = await fetch(post.image)
-      const arrayBuffer = await imageRes.arrayBuffer()
-      const buffer = Buffer.from(arrayBuffer)
-      const res = await imageSize(buffer)
-      const height = res.height || 1600
-      const width = res.width || 900
-      const blur64 = (await getPlaiceholder(buffer)).base64 || ''
+      const res = await fetch(post.image + '?x-oss-process=image/info')
+      const json = await res.json()
+
+      const height = json.ImageHeight.value
+      const width = json.ImageWidth.value
       post.imageMetadata = {
         height: height,
         width: width,
-        blurDataURL: blur64,
+        blurDataURL: `data:image/png;base64,${siteMetadata.blur64}`,
       }
     }
   }

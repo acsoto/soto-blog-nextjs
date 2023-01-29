@@ -9,7 +9,7 @@ import formatDate from '@/lib/utils/formatDate'
 import Image from 'next/image'
 
 export default function PostLayout({ frontMatter, authorDetails, children }) {
-  const { slug, date, title, image, tags } = frontMatter
+  const { slug, date, title, image, tags, imageMetadata } = frontMatter
 
   return (
     <SectionContainer>
@@ -48,7 +48,15 @@ export default function PostLayout({ frontMatter, authorDetails, children }) {
                     ))}
                 </div>
               </dl>
-              <Image className="rounded-xl" src={image} width={1600} height={900} alt="" />
+              <Image
+                className="rounded-xl"
+                src={image}
+                width={imageMetadata.width}
+                height={imageMetadata.height}
+                alt=""
+                placeholder="blur"
+                blurDataURL={imageMetadata.blurDataURL}
+              />
             </div>
           </header>
           <div className="prose max-w-none pt-10 pb-8 prose-img:rounded-xl dark:prose-dark lg:prose-lg">

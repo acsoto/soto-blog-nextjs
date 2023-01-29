@@ -7,8 +7,6 @@ import PostCard from '@/components/PostCard'
 import Greetings from '@/components/Greetings'
 import Divider from '@/components/Divider'
 import { FrontMatter } from '@/types/md'
-import imageSize from 'image-size'
-import { getPlaiceholder } from 'plaiceholder'
 import { addImgMetadata } from '@/lib/add-img-metadata'
 
 const MAX_DISPLAY = 10
