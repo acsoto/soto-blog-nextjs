@@ -188,6 +188,29 @@ Now, every original image has been changed from:
 
 to NexJS Images, which is on-demand image resizing.
 
+**Note**: fetching remote images means that the server gets data first and the building time of the site will be much longer.
+
+After doing these, I find that the performance of the site on the cloud is good, but the local dev version takes a long time to refresh, which drives me crazy.
+
+Then I find that my image hoster can offer `width` and `height` directly by calling API, which will help me save refreshing and building time.
+
+For example, if I call an image with URL `?x-oss-process=image/info`, I can get:
+
+```json
+{
+  "FileSize": { "value": "4152561" },
+  "Format": { "value": "jpg" },
+  "FrameCount": { "value": "1" },
+  "ImageHeight": { "value": "3712" },
+  "ImageWidth": { "value": "5568" },
+  "ResolutionUnit": { "value": "2" },
+  "XResolution": { "value": "72/1" },
+  "YResolution": { "value": "72/1" }
+}
+```
+
+The hoster can do some
+
 ## Domain Blocked
 
 In China, the domain `vercel.app` is banned. But I found that a guy's website totally on Vercel can work perfectly. I tested it and find that in most areas of China, the website is accessible. But mine breaks(I set A and CNAME with my domain). Without VPN, I can not even access it. I spent two hours checking why. I even sent an email to the guy to ask if there is something to be managed that I haven't mentioned. It turned out that my domain `zzhgo.com` is banned by GFW in China. It is so depressing. So I can only change my domain to `atksoto.com`.
