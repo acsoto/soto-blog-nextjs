@@ -2,18 +2,19 @@ import Link from '@/components/Link'
 import formatDate from '@/lib/utils/formatDate'
 import Image from 'next/image'
 import { FrontMatter } from '@/types/md'
-
 const PostCard = ({ post }: { post: FrontMatter }) => {
-  const { slug, date, title, summary, tags, image } = post
+  const { slug, date, title, summary, tags, image, imageMetadata } = post
   return (
     <Link href={`/blog/${slug}`}>
       <article className="mx-auto overflow-hidden rounded-xl shadow-md duration-300 hover:scale-105 dark:bg-dark-100">
         <Image
           src={image}
           className="aspect-video w-full object-cover"
-          width="1600"
-          height="900"
+          width={imageMetadata.width}
+          height={imageMetadata.height}
           alt=""
+          placeholder="blur"
+          blurDataURL={imageMetadata.blurDataURL}
         />
         <div className="p-3">
           <h2 className="text-xl font-bold">{title || slug}</h2>

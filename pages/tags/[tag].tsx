@@ -8,6 +8,8 @@ import fs from 'fs'
 import path from 'path'
 import PostCard from '@/components/PostCard'
 import Divider from '@/components/Divider'
+import imageSize from 'image-size'
+import { getPlaiceholder } from 'plaiceholder'
 
 const root = process.cwd()
 
@@ -39,6 +41,21 @@ export async function getStaticProps({ params }) {
     const rssPath = path.join(root, 'public', 'tags', params.tag)
     fs.mkdirSync(rssPath, { recursive: true })
     fs.writeFileSync(path.join(rssPath, 'feed.xml'), rss)
+  }
+
+  for (const post of filteredPosts) {
+    if (post.image) {
+      const imageRes = await fetch(post.image)
+      const arrayBuffer = await imageRes.arrayBuffer()
+      const buffer = Buffer.from(arrayBuffer)
+      const res = await imageSize(buffer)
+      const blur64 = (await getPlaiceholder(buffer)).base64
+      post.imageMetadata = {
+        height: res.height,
+        width: res.width,
+        blurDataURL: blur64,
+      }
+    }
   }
 
   return { props: { posts: filteredPosts, tag: params.tag } }
