@@ -114,15 +114,15 @@ Actually, we can just use third part API and JSX to design components and use th
 
 [^1]: https://nextjs.org/docs/basic-features/image-optimization
 
-The problem is that I use remote images that are hosted on Aliyun OSS. So when rendering markdown files, I can not get `depth` and `height` in advance, which is necessary for NextJS Images.
+The problem is that I use remote images that are hosted on Aliyun OSS. So when rendering markdown files, I can ~~not~~ (I find I can later) get `depth` and `height` in advance, which is necessary for NextJS Images. So If I want to change `img` to `NextImage`, I have to get images metadata before the rendering process. I use [image-size](https://www.npmjs.com/package/image-size?activeTab=readme) to get metadata and [plaiceholder](https://github.com/joe-bell/plaiceholder) to get `blur64` of the image (Referring [this post](https://nikolovlazar.com/blog/generating-blur-for-dynamic-images-nextjs))
 
-So If I want to change `img` to `NextImage`, I have to get images metadata before the rendering process. I use [image-size](https://www.npmjs.com/package/image-size?activeTab=readme) to get metadata. (Referring [this post](https://nikolovlazar.com/blog/generating-blur-for-dynamic-images-nextjs))
+Visit all nodes (We need to use [unist-util-visit](https://github.com/syntax-tree/unist-util-visit)) to get `img` nodes and `addProps` for them. `visit` lets us find the image nodes (in markdown, an image will be transferred to `p` node and `img` node). The first parameter is `tree`; the second is the function that filters nodes; the third parameter is the function that does something to nodes.[^2]
 
-First, visit all nodes to get `img` nodes and `addProps` for them.
+[^2]: Content as structured data https://unifiedjs.com
 
 **Note**: Use `async`, `await`, `Promise`.
 
-```ts {2} {24}
+```ts:remark-img-to-jsx.ts {2} {24}
 import { visit } from 'unist-util-visit'
 import imageSize from 'image-size'
 import { ISizeCalculationResult } from 'image-size/dist/types/interface'
@@ -152,9 +152,9 @@ const remarkImgToJsx = () => {
 }
 ```
 
-`addProps` (blur placeholder is calculated by [plaiceholder](https://github.com/joe-bell/plaiceholder))
+`addProps` replaces the original attributes of image nodes with the NextJS Image attributes (blur placeholder is calculated by [plaiceholder](https://github.com/joe-bell/plaiceholder))
 
-```ts {9,10}
+```ts:remark-img-to-jsx.ts {9,10}
 async function addProps(imageNode: UnistImageNode): Promise<void> {
   let res: ISizeCalculationResult
   let blur64: string
@@ -209,7 +209,24 @@ For example, if I call an image with URL `?x-oss-process=image/info`, I can get:
 }
 ```
 
-The hoster can do some
+The hoster can do some image processing but it can not offer `blur64` like what `plaiceholder` does. So I use this [website](https://png-pixel.com) offered by NextJS docs to get a fixed `blur64` and apply it.
+
+```ts
+const res = await fetch(post.image + '?x-oss-process=image/info')
+const json = await res.json()
+
+const height = json.ImageHeight.value
+const width = json.ImageWidth.value
+post.imageMetadata = {
+  height: height,
+  width: width,
+  blurDataURL: `data:image/png;base64,${siteMetadata.blur64}`,
+}
+```
+
+```ts:siteMetadata.ts
+blur64:   'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII=',
+```
 
 ## Domain Blocked
 
