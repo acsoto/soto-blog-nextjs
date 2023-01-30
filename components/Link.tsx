@@ -2,19 +2,12 @@
 import Link from 'next/link'
 import { AnchorHTMLAttributes, DetailedHTMLProps } from 'react'
 
-const CustomLink = ({
-  href,
-  ...rest
-}: DetailedHTMLProps<AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>) => {
+const CustomLink = ({ href, ...rest }) => {
   const isInternalLink = href && href.startsWith('/')
   const isAnchorLink = href && href.startsWith('#')
 
   if (isInternalLink) {
-    return (
-      <Link href={href}>
-        <a {...rest} />
-      </Link>
-    )
+    return <Link href={href} {...rest}></Link>
   }
 
   if (isAnchorLink) {
