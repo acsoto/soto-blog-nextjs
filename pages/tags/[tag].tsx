@@ -8,8 +8,6 @@ import fs from 'fs'
 import path from 'path'
 import PostCard from '@/components/PostCard'
 import Divider from '@/components/Divider'
-import imageSize from 'image-size'
-import { getPlaiceholder } from 'plaiceholder'
 import { addImgMetadata } from '@/lib/add-img-metadata'
 
 const root = process.cwd()

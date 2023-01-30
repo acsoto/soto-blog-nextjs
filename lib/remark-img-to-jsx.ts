@@ -1,14 +1,9 @@
 import { visit } from 'unist-util-visit'
-import imageSize from 'image-size'
-import { ISizeCalculationResult } from 'image-size/dist/types/interface'
 import { Node } from 'unist'
 import { UnistImageNode, UnistNodeType } from '@/types/node'
-import { getPlaiceholder } from 'plaiceholder'
 import { siteMetadata } from '@/data/siteMetadata'
 
 async function addProps(imageNode: UnistImageNode): Promise<void> {
-  let res: ISizeCalculationResult
-  let blur64: string
   if (imageNode.url.startsWith('https://pic.mcac.cc/')) {
     const res = await fetch(imageNode.url + '?x-oss-process=image/info')
     const json = await res.json()
