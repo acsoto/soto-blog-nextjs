@@ -70,13 +70,15 @@ for (const post of posts) {
 
 There are so many files from the original starter I haven't added types. So bugs may still exist. I plan to upgrade React and NextJS after I fully migrate to TypeScript.
 
+After migrating to TypeScript, I tried to upgrade React and Next again but it still had bugs in the client end. I finally figured out why. It's because the starter uses [Preact](https://preactjs.com) in the building process. However, Preact doesn't yet shim the new hooks in React 18. So I just removed it and the upgrade succeeded.
+
 ## Using MarkdownX
 
 Despite `mdx`, we can use its features in `md` files without the need to change the filename extension. But it is a bit annoying to edit JSX code in `md` files without auto-completion.
 
 With this starter and React framework, It's easy to use JSX in a markdown file directly. For example:
 
-<div className="grid grid-cols-2 gap-3 ">
+<div className="grid grid-cols-2 gap-3">
 <div>![](https://pic.mcac.cc/202301281557064.png)</div>
 <div>![](https://pic.mcac.cc/202301242342680.png)</div>
 </div>
@@ -84,7 +86,7 @@ With this starter and React framework, It's easy to use JSX in a markdown file d
 source code:
 
 ```tsx
-<div className="grid grid-cols-2 gap-3 ">
+<div className="grid grid-cols-2 gap-3">
   <div>![](https://pic.mcac.cc/202301281557064.png)</div>
   <div>![](https://pic.mcac.cc/202301242342680.png)</div>
 </div>
