@@ -1,6 +1,5 @@
 import '@/css/tailwind.css'
 import '@/css/prism.css'
-import '@/css/twemoji-amazing.css'
 import 'katex/dist/katex.css'
 
 import { ThemeProvider } from 'next-themes'

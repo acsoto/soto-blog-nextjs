@@ -7,6 +7,7 @@ import Pre from './Pre'
 import { BlogNewsletterForm } from './NewsletterForm'
 import { FrontMatter, PageLayout } from '@/types/md'
 import Script from 'next/script'
+import Emoji from '@/components/twemoji'
 
 export const MDXComponents = {
   Image,
@@ -14,6 +15,7 @@ export const MDXComponents = {
   TOCInline,
   a: CustomLink,
   pre: Pre,
+  Emoji,
   BlogNewsletterForm: BlogNewsletterForm,
   // @ts-ignore
   wrapper: ({ components, layout, ...rest }) => {
