@@ -7,6 +7,7 @@ import Pre from './Pre'
 import { FrontMatter } from '@/types/md'
 import Script from 'next/script'
 import Emoji from '@/components/twemoji'
+import Icon from '@/components/icons'
 
 export const MDXComponents = {
   Image,
@@ -15,6 +16,7 @@ export const MDXComponents = {
   a: CustomLink,
   pre: Pre,
   Emoji,
+  Icon,
 }
 
 interface MdxLayoutRendererProps {
