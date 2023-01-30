@@ -8,16 +8,12 @@ import kebabCase from '@/lib/utils/kebabCase'
 import formatDate from '@/lib/utils/formatDate'
 import Image from 'next/image'
 
-export default function PostLayout({ frontMatter, authorDetails, children }) {
+export default function PostLayout({ frontMatter, children }) {
   const { slug, date, title, image, tags, imageMetadata } = frontMatter
 
   return (
     <SectionContainer>
-      <BlogSeo
-        url={`${siteMetadata.siteUrl}/blog/${slug}`}
-        authorDetails={authorDetails}
-        {...frontMatter}
-      />
+      <BlogSeo url={`${siteMetadata.siteUrl}/blog/${slug}`} {...frontMatter} />
       <ScrollTopAndComment />
       <article>
         <div className="mx-auto xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">

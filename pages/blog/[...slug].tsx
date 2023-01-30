@@ -5,8 +5,7 @@ import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import { formatSlug, getAllFilesFrontMatter, getFileBySlug, getFiles } from '@/lib/mdx'
 import { addImgMetadata } from '@/lib/add-img-metadata'
 import { FrontMatter } from '@/types/md'
-
-const DEFAULT_LAYOUT = 'PostLayout'
+import PostLayout from '@/layouts/PostLayout'
 
 export async function getStaticPaths() {
   const posts = getFiles('blog')
@@ -22,16 +21,8 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const allPosts = await getAllFilesFrontMatter('blog')
-  const postIndex = allPosts.findIndex((post) => formatSlug(post.slug) === params.slug.join('/'))
-  const prev = allPosts[postIndex + 1] || null
-  const next = allPosts[postIndex - 1] || null
+  // const postIndex = allPosts.findIndex((post) => formatSlug(post.slug) === params.slug.join('/'))
   const post = await getFileBySlug('blog', params.slug.join('/'))
-  const authorList = ['default']
-  const authorPromise = authorList.map(async (author) => {
-    const authorResults = await getFileBySlug('authors', [author])
-    return authorResults.frontMatter
-  })
-  const authorDetails = await Promise.all(authorPromise)
 
   // rss
   if (allPosts.length > 0) {
@@ -43,24 +34,18 @@ export async function getStaticProps({ params }) {
 
   await addImgMetadata([frontMatter])
 
-  return { props: { post, authorDetails, prev, next } }
+  return { props: { post } }
 }
 
-export default function Blog({ post, authorDetails, prev, next }) {
+export default function Blog({ post }) {
   const { mdxSource, toc, frontMatter } = post
 
   return (
     <>
       {frontMatter.draft !== true ? (
-        <MDXLayoutRenderer
-          layout={frontMatter.layout || DEFAULT_LAYOUT}
-          toc={toc}
-          mdxSource={mdxSource}
-          frontMatter={frontMatter}
-          authorDetails={authorDetails}
-          prev={prev}
-          next={next}
-        />
+        <PostLayout frontMatter={frontMatter}>
+          <MDXLayoutRenderer toc={toc} mdxSource={mdxSource} frontMatter={frontMatter} />
+        </PostLayout>
       ) : (
         <div className="mt-24 text-center">
           <PageTitle>
