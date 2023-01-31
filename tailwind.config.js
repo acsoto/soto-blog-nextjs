@@ -26,7 +26,7 @@ module.exports = {
         14: '3.5rem',
       },
       fontFamily: {
-        sans: ['Helvetica', 'Arial', ...defaultTheme.fontFamily.sans],
+        sans: ['-apple-system', 'system-ui', 'Arial', 'Helvetica', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         dark: {
