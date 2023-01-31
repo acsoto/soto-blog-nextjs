@@ -9,7 +9,7 @@ import Divider from '@/components/Divider'
 import { FrontMatter } from '@/types/md'
 import { addImgMetadata } from '@/lib/add-img-metadata'
 
-const MAX_DISPLAY = 10
+const MAX_DISPLAY = 6
 
 export async function getStaticProps() {
   const posts: FrontMatter[] = await getAllFilesFrontMatter('blog')
