@@ -7,7 +7,7 @@ const GitHubCard = ({ repo }: { repo: string }) => {
   return (
     <Link href={link}>
       <Image
-        className="w-2/3 overflow-hidden rounded-xl shadow-2xl hover:scale-105"
+        className="overflow-hidden rounded-xl shadow-2xl hover:scale-105 lg:w-2/3"
         src={img}
         alt={repo}
         width={1200}
