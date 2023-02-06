@@ -76,5 +76,11 @@ module.exports = withBundleAnalyzer({
   },
   images: {
     domains: ['pic.mcac.cc', 'githubstats.zzhgo.com', 'opengraph.githubassets.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**.doubanio.com',
+      },
+    ],
   },
 })
