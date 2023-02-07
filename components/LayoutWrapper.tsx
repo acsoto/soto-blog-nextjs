@@ -7,6 +7,7 @@ import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
 import Image from 'next/image'
 import { ReactNode } from 'react'
+import Logo from '../public/static/images/logo.png'
 
 const LayoutWrapper = ({ children }: { children: ReactNode }) => {
   return (
@@ -18,10 +19,11 @@ const LayoutWrapper = ({ children }: { children: ReactNode }) => {
               <div className="flex items-center justify-between gap-3 ">
                 <Image
                   className="rounded-md"
-                  src="/static/images/logo.png"
+                  src={Logo}
                   alt="logo"
                   width={36}
                   height={36}
+                  placeholder="blur"
                 />
                 {typeof siteMetadata.headerTitle === 'string' ? (
                   <div className="hidden px-2 text-2xl font-bold sm:block">
