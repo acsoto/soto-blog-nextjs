@@ -4,7 +4,12 @@ import { UnistImageNode, UnistNodeType } from '@/types/node'
 import { siteMetadata } from '@/data/siteMetadata'
 
 async function addProps(imageNode: UnistImageNode): Promise<void> {
-  if (imageNode.url.startsWith('https://pic.mcac.cc/')) {
+  if (
+    imageNode.url.startsWith('https://pic.mcac.cc/') &&
+    imageNode.url.toLowerCase().endsWith('.png') &&
+    imageNode.url.toLowerCase().endsWith('.jpg') &&
+    imageNode.url.toLowerCase().endsWith('.jpeg')
+  ) {
     const res = await fetch(imageNode.url + '?x-oss-process=image/info')
     const json = await res.json()
 
