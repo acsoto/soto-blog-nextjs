@@ -3,6 +3,8 @@ import Typed from 'typed.js'
 import SocialIcon from '@/components/social-icons'
 import { siteMetadata } from '@/data/siteMetadata'
 import Emoji from '@/components/twemoji'
+import Link from 'next/link'
+
 const Greetings = () => {
   // Create reference to store the DOM element containing the animation
   const el = React.useRef(null)
@@ -73,9 +75,9 @@ const Greetings = () => {
         <div className="type-wrap">
           <span style={{ whiteSpace: 'pre' }} ref={el} />
           <br />
-          {/*<Link className="text-blue-300 hover:text-blue-400" href="/about">*/}
-          {/*  See more about me*/}
-          {/*</Link>*/}
+          <Link className="text-blue-300 hover:text-blue-400" href="/about">
+            See more about me
+          </Link>
         </div>
         <br />
         Happy reading!
@@ -86,8 +88,6 @@ const Greetings = () => {
           <SocialIcon kind="instagram" href={siteMetadata.instagram} size={6} />
           <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} size={6} />
           <SocialIcon kind="github" href={siteMetadata.github} size={6} />
-          <span>RSS feed:</span>
-          <SocialIcon kind="rss" href="/feed.xml" size={6} />
         </div>
       </div>
     </div>
