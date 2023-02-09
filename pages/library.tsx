@@ -1,6 +1,9 @@
 import Data from '@/data/tofu.json'
 import Link from 'next/link'
 import Image from 'next/image'
+import PageTitle from '@/components/PageTitle'
+import { siteMetadata } from '@/data/siteMetadata'
+import { PageSeo } from '@/components/SEO'
 
 export async function getStaticProps() {
   const nodes = []
@@ -29,6 +32,8 @@ export async function getStaticProps() {
 export default function Library({ nodes }) {
   return (
     <>
+      <PageSeo title={`Library - ${siteMetadata.author}`} description="SOTO-BLOG Tags" />
+      <PageTitle>Library</PageTitle>
       <div className="mb-4 rounded-xl border border-gray-100 bg-gray-50 p-5 dark:border-gray-700 dark:bg-gray-800">
         <ol className="divider-gray-200 divide-y dark:divide-gray-700">
           {nodes.map((node, index) => {

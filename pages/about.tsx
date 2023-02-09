@@ -15,14 +15,20 @@ import Nginx from '../components/icons/nginx.svg'
 import TypeScript from '../components/icons/typescript.svg'
 import PodcastCover from '../public/static/images/podcast-cover.png'
 import Image from 'next/image'
+import PageTitle from '@/components/PageTitle'
+import { siteMetadata } from '@/data/siteMetadata'
+import { PageSeo } from '@/components/SEO'
 
 export default function About() {
   return (
     <>
-      <h1 className="text-5xl font-bold">About</h1>
+      <PageSeo title={`About - ${siteMetadata.author}`} description={siteMetadata.description} />
+      <PageTitle>About</PageTitle>
       <Divider />
       <div className="prose dark:prose-dark lg:prose-lg">
-        <p>Hi, my name is Zhou Zihang. I'm a computer science student now.</p>
+        <p>
+          Hi, my name is <b>Zhou Zihang</b>. I'm a computer science student now.
+        </p>
         <p>
           Since I was a child, I was crazy about Minecraft. Whenever I found repetitive work, I
           would rather solve it by coding, and it was then that I realized how much I enjoy solving
@@ -113,46 +119,49 @@ export default function About() {
             <span>2 apps based on swift</span>
           </li>
         </ul>
+
         <h2>About This Site</h2>
         <div>
-          It's hosted on <a href="https://vercel.com">Vercel</a> and built with{' '}
-          <a href="https://nextjs.org">
-            <i className="inline-block">
-              <NextJS className="h-6 w-6" />
-            </i>
-          </a>{' '}
-          and{' '}
-          <a href="https://tailwindcss.com">
-            <i className="inline-block">
-              <TailWindCSS className="h-6 w-6" />
-            </i>
-          </a>
-          .<br />I started it with{' '}
-          <a href="https://github.com/acsoto/soto-blog-gatsby">my previous gatsby version</a> and{' '}
-          <a href="https://github.com/timlrx/tailwind-nextjs-starter-blog">
-            Tailwind Nextjs Starter Blog
-          </a>
-          .
-          <br />
-          If you are finding inspiration, you can see my these 2 posts about this site.
-          <ul>
-            <li>
-              <Link href="blog/202301/front-end-learning-and-gatsby">
-                前端的一些学习和 Gatsby 的使用
-              </Link>
-            </li>
-            <li>
-              <Link href="blog/202301/moving-to-nextjs">Moving to NextJS</Link>
-            </li>
-          </ul>
-          The repository is shown below.
           <GitHubCard repo="acsoto/soto-blog-nextjs" />
+          <div>
+            It's hosted on <a href="https://vercel.com">Vercel</a> and built with{' '}
+            <a href="https://nextjs.org">
+              <i className="inline-block">
+                <NextJS className="h-6 w-6" />
+              </i>
+            </a>{' '}
+            and{' '}
+            <a href="https://tailwindcss.com">
+              <i className="inline-block">
+                <TailWindCSS className="h-6 w-6" />
+              </i>
+            </a>
+            <br />I started it with my previous{' '}
+            <a href="https://github.com/acsoto/soto-blog-gatsby">Gatsby version</a> and{' '}
+            <a href="https://github.com/timlrx/tailwind-nextjs-starter-blog">
+              Tailwind Nextjs Starter Blog
+            </a>
+            .
+            <br />
+            If you are finding inspiration, you can see my these 2 posts about this site.
+            <ul>
+              <li>
+                <Link href="blog/202301/front-end-learning-and-gatsby">
+                  前端的一些学习和 Gatsby 的使用
+                </Link>
+              </li>
+              <li>
+                <Link href="blog/202301/moving-to-nextjs">Moving to NextJS</Link>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <h2>Podcast</h2>
 
-        <div>
+        <div className="lg:flex lg:flex-row">
           <Image
+            className="rounded lg:basis-1/4"
             src={PodcastCover}
             alt="Podcast"
             width="256"
@@ -160,13 +169,15 @@ export default function About() {
             quality="100"
             placeholder="blur"
           />
-          <div>
+          <div className="lg:basis-3/4 lg:p-8">
             I and my friends have a mandarin conversation podcast talking about books and movies.
             <br />
             You can access it with{' '}
             <a href="https://podcasts.apple.com/us/podcast/就是奇谈/id1670887501">Apple Podcast</a>
             {` `}and{` `}
-            <a href="https://open.spotify.com/show/7L3SZKRRb0LgBm90PgY6Xd">Spotify</a>.
+            <a href="https://open.spotify.com/show/7L3SZKRRb0LgBm90PgY6Xd">Spotify</a>.<br />
+            RSS feed:{` `}
+            <a href="https://feed.xyzfm.space/f8fvn3qbq4y3">小宇宙</a>
           </div>
         </div>
 

@@ -4,6 +4,7 @@ import { siteMetadata } from '@/data/siteMetadata'
 import Link from '@/components/Link'
 import Divider from '@/components/Divider'
 import { FrontMatter } from '@/types/md'
+import PageTitle from '@/components/PageTitle'
 
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter('blog')
@@ -30,6 +31,7 @@ export default function Archive({ posts }) {
   return (
     <>
       <PageSeo title={`Archive - ${siteMetadata.author}`} description={siteMetadata.description} />
+      <PageTitle>Archive</PageTitle>
       <div>
         {Array.from(timeMap.keys()).map((year) => {
           return (
