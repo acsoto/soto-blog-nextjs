@@ -48,9 +48,9 @@ module.exports = {
           css: {
             color: theme('colors.gray.700'),
             a: {
-              color: theme('colors.blue.500'),
+              color: theme('colors.blue.400'),
               '&:hover': {
-                color: `${theme('colors.blue.600')} !important`,
+                color: `${theme('colors.blue.300')} !important`,
               },
               code: { color: theme('colors.blue.400') },
             },
@@ -116,9 +116,9 @@ module.exports = {
           css: {
             color: theme('colors.gray.300'),
             a: {
-              color: theme('colors.blue.500'),
+              color: theme('colors.blue.400'),
               '&:hover': {
-                color: `${theme('colors.blue.400')} !important`,
+                color: `${theme('colors.blue.300')} !important`,
               },
               code: { color: theme('colors.blue.400') },
             },
