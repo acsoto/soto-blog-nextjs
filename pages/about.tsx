@@ -1,6 +1,20 @@
 import Divider from '@/components/Divider'
 import Link from 'next/link'
 import GitHubCard from '@/components/GitHubCard'
+import CPU from '../components/icons/CPU.svg'
+import Java from '../components/icons/java.svg'
+import Takeaway from '../components/icons/takeaway.svg'
+import Pet from '../components/icons/pets.svg'
+import Swift from '../components/icons/swift.svg'
+import NextJS from '../components/icons/nextjs.svg'
+import TailWindCSS from '../components/icons/tailwindcss.svg'
+import ReactIcon from '../components/icons/react.svg'
+import MySQL from '../components/icons/mysql.svg'
+import Django from '../components/icons/django.svg'
+import Nginx from '../components/icons/nginx.svg'
+import TypeScript from '../components/icons/typescript.svg'
+import PodcastCover from '../public/static/images/podcast-cover.png'
+import Image from 'next/image'
 
 export default function About() {
   return (
@@ -19,16 +33,101 @@ export default function About() {
           technology and coding can significantly impact our world.
         </p>
         <h2>Technical Skills</h2>
-        <p>
-          Programming Languages: C, Java, Python, SQL, Swift, Verilog, Latex...
+        <div>
+          <b>Programming Languages:</b> C, Java, Python, HTML, JavaScript, Swift, Verilog...
           <br />
-          Frameworks & Tools: Numpy, Pandas, Matplotlib, Seaborn, Django, Git, Vim, Tensorflow...
-        </p>
+          <b>Frameworks & Tools:</b>
+          <span className="ml-2 space-x-2">
+            <i className="inline-block">
+              <ReactIcon className="h-6 w-6" />
+            </i>
+            <i className="inline-block">
+              <Django className="h-6 w-6" />
+            </i>
+            <i className="inline-block">
+              <MySQL className="h-6 w-6" />
+            </i>
+            <i className="inline-block">
+              <Nginx className="h-6 w-6" />
+            </i>
+            <i className="inline-block">
+              <TypeScript className="h-6 w-6" />
+            </i>
+            <i className="inline-block">
+              <TailWindCSS className="h-6 w-6" />
+            </i>
+          </span>
+        </div>
+        <h2>Projects</h2>
+        <ul>
+          <li>
+            <i className="inline-block">
+              <CPU className="h-6 w-6" />
+            </i>
+            <a
+              className="mx-2 font-bold"
+              href="https://github.com/acsoto/BUAA-Computer-Organization"
+            >
+              MIPS-CPU
+            </a>
+            <span>Pipeline CPU based on verilog</span>
+          </li>
+          <li>
+            <i className="inline-block">
+              <Java className="h-6 w-6" />
+            </i>
+            <a className="mx-2 font-bold" href="https://github.com/acsoto/BUAA-Compiler">
+              Alxa-Compiler
+            </a>
+            <span>SysY to PCODE Compiler based on Java</span>
+          </li>
+          <li>
+            <i className="inline-block">
+              <Takeaway className="h-6 w-6" />
+            </i>
+            <a className="mx-2 font-bold" href="https://github.com/acsoto/TakeawayDelivery">
+              TakeawayDelivery
+            </a>
+            <span>Takeaway delivery platform based on Django, Vue, Flutter</span>
+          </li>
+          <li>
+            <i className="inline-block">
+              <Pet className="h-6 w-6" />
+            </i>
+            <a className="mx-2 font-bold" href="https://github.com/PetCharm/petcharm_server">
+              PetCharm
+            </a>
+            <span>Pet platform server based on Django</span>
+          </li>
+          <li>
+            <i className="inline-block">
+              <Swift className="h-6 w-6" />
+            </i>
+            <a className="mx-2 font-bold" href="https://github.com/acsoto/Memo">
+              Memo
+            </a>
+            &
+            <a className="mx-2 font-bold" href="https://github.com/acsoto/IoTMonitor">
+              IoTMonitor
+            </a>
+            <span>2 apps based on swift</span>
+          </li>
+        </ul>
         <h2>About This Site</h2>
         <div>
           It's hosted on <a href="https://vercel.com">Vercel</a> and built with{' '}
-          <a href="https://nextjs.org">NextJS</a> and{' '}
-          <a href="https://tailwindcss.com">TailwindCSS</a>.<br />I started it with{' '}
+          <a href="https://nextjs.org">
+            <i className="inline-block">
+              <NextJS className="h-6 w-6" />
+            </i>
+          </a>{' '}
+          and{' '}
+          <a href="https://tailwindcss.com">
+            <i className="inline-block">
+              <TailWindCSS className="h-6 w-6" />
+            </i>
+          </a>
+          .<br />I started it with{' '}
           <a href="https://github.com/acsoto/soto-blog-gatsby">my previous gatsby version</a> and{' '}
           <a href="https://github.com/timlrx/tailwind-nextjs-starter-blog">
             Tailwind Nextjs Starter Blog
@@ -49,6 +148,28 @@ export default function About() {
           The repository is shown below.
           <GitHubCard repo="acsoto/soto-blog-nextjs" />
         </div>
+
+        <h2>Podcast</h2>
+
+        <div>
+          <Image
+            src={PodcastCover}
+            alt="Podcast"
+            width="256"
+            height="256"
+            quality="100"
+            placeholder="blur"
+          />
+          <div>
+            I and my friends have a mandarin conversation podcast talking about books and movies.
+            <br />
+            You can access it with{' '}
+            <a href="https://podcasts.apple.com/us/podcast/就是奇谈/id1670887501">Apple Podcast</a>
+            {` `}and{` `}
+            <a href="https://open.spotify.com/show/7L3SZKRRb0LgBm90PgY6Xd">Spotify</a>.
+          </div>
+        </div>
+
         <h2>My Favorite</h2>
         <h3>Books & Movies</h3>
         <div>
