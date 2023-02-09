@@ -25,7 +25,7 @@ export default function About() {
       <PageSeo title={`About - ${siteMetadata.author}`} description={siteMetadata.description} />
       <PageTitle>About</PageTitle>
       <Divider />
-      <div className="prose dark:prose-dark lg:prose-lg">
+      <div className="prose max-w-none dark:prose-dark lg:prose-lg">
         <p>
           Hi, my name is <b>Zhou Zihang</b>. I'm a computer science student now.
         </p>
