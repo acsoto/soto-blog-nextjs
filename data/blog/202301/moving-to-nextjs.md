@@ -130,7 +130,6 @@ import imageSize from 'image-size'
 import { ISizeCalculationResult } from 'image-size/dist/types/interface'
 
 const remarkImgToJsx = () => {
-  // @ts-ignore
   return async function transformer(tree: Node): Promise<Node> {
     const images: UnistImageNode[] = []
 

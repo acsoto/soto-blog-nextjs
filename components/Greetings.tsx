@@ -14,6 +14,7 @@ const Greetings = () => {
   React.useEffect(() => {
     const options = {
       strings: [
+        'I was born in 2000.',
         'I was raised in Alxa, Inner Mongolia.',
         'I like 🏊‍♂️ / 🏃 / 🏸.',
         'I like 進撃の巨人.',
@@ -28,56 +29,49 @@ const Greetings = () => {
     }
 
     // elRef refers to the <span> rendered below
-    // @ts-ignore
     typed.current = new Typed(el.current, options)
 
     return () => {
       // Make sure to destroy Typed instance during cleanup
       // to prevent memory leaks
-      // @ts-ignore
       typed.current.destroy()
     }
   }, [])
 
   return (
-    <div className="lg:mt-10 lg:mb-40">
+    <div className="lg:mt-10 lg:mb-10">
       <h1 className="bg-gradient-to-r from-lime-500 to-yellow-400 bg-clip-text text-7xl font-extrabold text-transparent dark:to-blue-500">
         Hi Friends,
       </h1>
-      <div className={'my-3 leading-6 text-gray-500 dark:text-soto-400 lg:w-3/5'}>
-        Welcome! I’m <b>Zhou Zihang</b>. <Emoji kind="partyingFace" />
+      <div className="prose dark:prose-dark lg:prose-lg">
+        <div>
+          Welcome! I’m <b>Zhou Zihang</b>. <Emoji kind="partyingFace" />
+          <br />
+          SOTO is a convenient way to refer to me on social media.
+          <br />
+          This is a place where I share my life, thoughts, and other stuff that might be
+          interesting.
+        </div>
         <br />
-        SOTO is a convenient way to refer to me on social media.
+        <div>
+          I am now living in China <Emoji kind={'chinaFlag'} />.{` `}
+          and am a senior at Beihang University, studying computer science and technology, and I
+          plan to go abroad next year for my master's degree.
+        </div>
         <br />
-        This is a place where I share my life, thoughts, and other stuff that might be interesting.
-        <br />
-        <br />I am now living in China <Emoji kind={'chinaFlag'} />.{` `}
-        and am a senior at Beihang University, studying computer science and technology, and I plan
-        to go abroad next year for my master's degree.
-        <br />
-        <br />I am running a Minecraft server from 2014 to now, which is probably the origin of my
-        interest in programming. If you are interested, feel free to type{' '}
-        <a className="text-blue-300 hover:text-blue-400" href="https://www.mcac.cc/">
-          mcac.cc
-        </a>{' '}
-        in Minecraft and have fun.
-        <br />
-        <br />I have a Shiba Inu <Emoji kind={'dog'} /> named doudou. You can see him{' '}
-        <a
-          className="text-blue-300 hover:text-blue-400"
-          href="https://www.instagram.com/puppydoudou/"
-        >
-          here
-        </a>
-        .
-        <br />
+        <div>
+          I am running a Minecraft server from 2014 to now, which is probably the origin of my
+          interest in programming. If you are interested, feel free to type{' '}
+          <a href="https://www.mcac.cc/">mcac.cc</a> in Minecraft and have fun.
+          <br />
+          <br />I have a Shiba Inu <Emoji kind={'dog'} /> named doudou. You can see him on his{' '}
+          <a href="https://www.instagram.com/puppydoudou/">instagram</a>.
+        </div>
         <br />
         <div className="type-wrap">
           <span style={{ whiteSpace: 'pre' }} ref={el} />
           <br />
-          <Link className="text-blue-300 hover:text-blue-400" href="/about">
-            See more about me
-          </Link>
+          <Link href="/about">See more about me</Link>
         </div>
         <br />
         Happy reading!
