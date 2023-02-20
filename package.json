@@ -60,7 +60,7 @@
     "prettier": "^2.8.3",
     "prettier-plugin-tailwindcss": "^0.2.2",
     "socket.io": "^4.6.0",
-    "socket.io-client": "^4.5.4",
+    "socket.io-client": "^4.6.0",
     "typescript": "4.9.5"
   },
   "lint-staged": {
