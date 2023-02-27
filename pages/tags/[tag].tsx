@@ -8,7 +8,7 @@ import fs from 'fs'
 import path from 'path'
 import PostCard from '@/components/PostCard'
 import Divider from '@/components/Divider'
-import { addImgMetadata } from '@/lib/add-img-metadata'
+import { getImgProps } from '@/lib/get-img-props'
 
 const root = process.cwd()
 
@@ -42,7 +42,9 @@ export async function getStaticProps({ params }) {
     fs.writeFileSync(path.join(rssPath, 'feed.xml'), rss)
   }
 
-  await addImgMetadata(filteredPosts)
+  for (const post of filteredPosts) {
+    post.imgProps = await getImgProps(post.image)
+  }
 
   return { props: { posts: filteredPosts, tag: params.tag } }
 }

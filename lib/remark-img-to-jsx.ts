@@ -1,7 +1,7 @@
 import { visit } from 'unist-util-visit'
 import { Node } from 'unist'
 import { UnistImageNode, UnistNodeType } from '@/types/node'
-import { siteMetadata } from '@/data/siteMetadata'
+import { getImgProps } from '@/lib/get-img-props'
 
 async function addProps(imageNode: UnistImageNode): Promise<void> {
   if (
@@ -10,25 +10,21 @@ async function addProps(imageNode: UnistImageNode): Promise<void> {
       imageNode.url.toLowerCase().endsWith('.jpg') ||
       imageNode.url.toLowerCase().endsWith('.jpeg'))
   ) {
-    const res = await fetch(imageNode.url + '?x-oss-process=image/info')
-    const json = await res.json()
-
-    const height = json.ImageHeight.value
-    const width = json.ImageWidth.value
+    const imgProps = await getImgProps(imageNode.url)
 
     ;(imageNode.type = 'mdxJsxFlowElement'),
       (imageNode.name = 'Image'),
       (imageNode.attributes = [
         { type: 'mdxJsxAttribute', name: 'alt', value: imageNode.alt },
         { type: 'mdxJsxAttribute', name: 'src', value: imageNode.url },
-        { type: 'mdxJsxAttribute', name: 'width', value: width },
-        { type: 'mdxJsxAttribute', name: 'height', value: height },
+        { type: 'mdxJsxAttribute', name: 'width', value: imgProps.width },
+        { type: 'mdxJsxAttribute', name: 'height', value: imgProps.height },
         { type: 'mdxJsxAttribute', name: 'quality', value: 100 },
         { type: 'mdxJsxAttribute', name: 'placeholder', value: 'blur' },
         {
           type: 'mdxJsxAttribute',
           name: 'blurDataURL',
-          value: `data:image/png;base64,${siteMetadata.blur64}`,
+          value: imgProps.blurDataURL,
         },
       ])
   }

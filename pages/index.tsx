@@ -7,7 +7,7 @@ import PostCard from '@/components/PostCard'
 import Greetings from '@/components/Greetings'
 import Divider from '@/components/Divider'
 import { FrontMatter } from '@/types/md'
-import { addImgMetadata } from '@/lib/add-img-metadata'
+import { getImgProps } from '@/lib/get-img-props'
 
 const MAX_DISPLAY = 6
 
@@ -15,7 +15,9 @@ export async function getStaticProps() {
   const posts: FrontMatter[] = await getAllFilesFrontMatter('blog')
   const showingPosts = posts.slice(0, MAX_DISPLAY)
 
-  await addImgMetadata(showingPosts)
+  for (const post of showingPosts) {
+    post.imgProps = await getImgProps(post.image)
+  }
 
   return { props: { showingPosts } }
 }

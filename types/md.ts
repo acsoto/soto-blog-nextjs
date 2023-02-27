@@ -13,9 +13,5 @@ export interface FrontMatter {
   image?: string
   authors?: string[]
   slug?: string
-  imageMetadata?: {
-    width: number
-    height: number
-    blurDataURL: string
-  }
+  imgProps?
 }

@@ -3,9 +3,9 @@ import PageTitle from '@/components/PageTitle'
 import generateRss from '@/lib/generate-rss'
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import { formatSlug, getAllFilesFrontMatter, getFileBySlug, getFiles } from '@/lib/mdx'
-import { addImgMetadata } from '@/lib/add-img-metadata'
 import { FrontMatter } from '@/types/md'
 import PostLayout from '@/layouts/PostLayout'
+import { getImgProps } from '@/lib/get-img-props'
 
 export async function getStaticPaths() {
   const posts = getFiles('blog')
@@ -32,7 +32,7 @@ export async function getStaticProps({ params }) {
 
   const frontMatter: FrontMatter = post.frontMatter
 
-  await addImgMetadata([frontMatter])
+  frontMatter.imgProps = await getImgProps(frontMatter.image)
 
   return { props: { post } }
 }
