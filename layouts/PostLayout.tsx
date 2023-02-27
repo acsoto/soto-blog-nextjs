@@ -55,7 +55,7 @@ export default function PostLayout({ frontMatter, children }) {
               />
             </div>
           </header>
-          <div className="prose max-w-none py-8 prose-img:rounded-xl dark:prose-dark lg:prose-lg">
+          <div className="prose max-w-none py-8 dark:prose-dark lg:prose-lg prose-img:rounded-xl">
             {children}
           </div>
         </div>
