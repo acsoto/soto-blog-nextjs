@@ -3,7 +3,7 @@ title: 天空之城，米店和XLD
 date: 2021-12-28 01:24:00
 tags: [Music]
 categories: [日常]
-image: https://pic.mcac.cc/soto/202112280125409.jpg
+image: https://pic.mcac.cc/202302280830739.png
 ---
 
 现在是凌晨 1:26，刚水完领导力的报告，听着天空之城。
