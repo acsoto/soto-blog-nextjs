@@ -15,7 +15,7 @@
     "@next/bundle-analyzer": "^13.2.3",
     "@tailwindcss/forms": "^0.5.3",
     "@tailwindcss/typography": "^0.5.9",
-    "@vercel/analytics": "^0.1.8",
+    "@vercel/analytics": "^0.1.11",
     "autoprefixer": "^10.4.13",
     "esbuild": "^0.17.5",
     "github-slugger": "^2.0.0",
