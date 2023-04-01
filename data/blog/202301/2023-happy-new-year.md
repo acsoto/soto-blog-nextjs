@@ -2,7 +2,7 @@
 title: 新年快乐
 date: 2023-01-01T01:16:10
 tags: [随想]
-image: 'https://pic.mcac.cc/202301020105628.png'
+image: 'http://img.atksoto.com/2022/202301020105628.png'
 slug: '20230101011610'
 ---
 

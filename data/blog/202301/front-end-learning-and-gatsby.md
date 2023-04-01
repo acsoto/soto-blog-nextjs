@@ -2,7 +2,7 @@
 title: 前端的一些学习和 Gatsby 的使用
 date: 2023-01-14T01:32:16
 tags: [Gatsby, React]
-image: 'https://pic.mcac.cc/202301181331217.png'
+image: 'http://img.atksoto.com/2022/202301181331217.png'
 slug: '20230114013216'
 ---
 
@@ -13,7 +13,7 @@ slug: '20230114013216'
 事情是从 3 天前开始的，给 AC 服务器加了一个 bStats 数据统计，因为想要做一个数据图就研究了一下 html 和 js ，最终用 jquery 和 highcharts 做了这样一个图出来放到了官网。
 
 <div className="w-1/2">
-![](https://pic.mcac.cc/202301140136639.png)
+![](http://img.atksoto.com/2022/202301140136639.png)
 </div>
 
 但是我又想做一个能直接返回一个 svg 文件的 api，类似于 [GitHub 上的数据统计](https://github.com/anuraghazra/github-readme-stats)，这样可以方便的插到 html 里面，如（我放到自己 vercel 上了）：
@@ -37,7 +37,7 @@ const App = () => (
 此时的我如下图所示：
 
 <div className="w-1/2">
-![](https://pic.mcac.cc/202301102057443.png)
+![](http://img.atksoto.com/2022/202301102057443.png)
 </div>
 
 研究了一段时间之后大概知道了 React 是干什么的，于是开始试图找个框架试一下，最后在 Next.js 和 Gatsby 中选了 Gatsby，因为据说现成的东西比较多适合个人用。
@@ -99,7 +99,7 @@ Gatsby 比起直接用 hugo 这种博客生成器来说要自己做一些事情�
 
 [^3]: tailwindcss: https://tailwindcss.com/
 
-![](https://pic.mcac.cc/202301181344132.png)
+![](http://img.atksoto.com/2022/202301181344132.png)
 
 一旦开始弄点自己的有成就感的东西，还是很上头的，每天调调样式，几个小时就过去了。
 
@@ -114,9 +114,9 @@ Gatsby 比起直接用 hugo 这种博客生成器来说要自己做一些事情�
 ```js
 <section
   className="
-  prose prose-a:text-blue-500 hover:prose-a:text-blue-400
-  prose-img:rounded-xl
-  md:prose-lg lg:prose-xl
+  prose md:prose-lg lg:prose-xl
+  prose-a:text-blue-500
+  hover:prose-a:text-blue-400 prose-img:rounded-xl
   "
   dangerouslySetInnerHTML={{ __html: post.html }}
   itemProp="articleBody"
@@ -174,7 +174,7 @@ query BlogPostByTag($targetTag: String!) {
 }
 ```
 
-![](https://pic.mcac.cc/202301181347952.png)
+![](http://img.atksoto.com/2022/202301181347952.png)
 
 ## Archive 页面
 
@@ -234,7 +234,7 @@ for (const post of posts) {
 }
 ```
 
-![](https://pic.mcac.cc/202301181348896.png)
+![](http://img.atksoto.com/2022/202301181348896.png)
 
 ## 自定义 slug
 
@@ -343,7 +343,7 @@ return (
 效果:
 
 <div className="w-2/3">
-![](https://pic.mcac.cc/202301181354718.png)
+![](http://img.atksoto.com/2022/202301181354718.png)
 </div>
 
 ## 集成豆瓣数据的尝试
@@ -371,4 +371,4 @@ const url = node.interest.sharing_url
 
 呈现到页面上
 
-![](https://pic.mcac.cc/202301181347537.png)
+![](http://img.atksoto.com/2022/202301181347537.png)

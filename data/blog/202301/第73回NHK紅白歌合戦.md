@@ -3,7 +3,7 @@ title: 第73回NHK紅白歌合戦
 date: 2023-01-02T23:46:42
 tags: [Music]
 categories: []
-image: 'https://pic.mcac.cc/202301042347237.jpg'
+image: 'http://img.atksoto.com/2022/202301042347237.jpg'
 slug: '20230104234642'
 ---
 
@@ -29,7 +29,7 @@ slug: '20230104234642'
 
 ## Vaundy - 怪獣の花唄 & milet x Aimer x 幾田 りら x Vaundy - おもかげ
 
-![](https://pic.mcac.cc/202301050037024.webp)
+![](http://img.atksoto.com/2022/202301050037024.webp)
 
 这个真的是太惊喜了，当时国王排名裸の勇者就大爱，这场红白这首~~怪兽的花呗~~台风太好了，听到副歌声线找到了裸の勇者的熟悉感觉，也是 2000 年的，非常非常佩服。
 
@@ -41,7 +41,7 @@ slug: '20230104234642'
 
 幾田 りら出来我才知道这是谁，笑死，也算是 YOASOBI 来了吧。
 
-![](https://pic.mcac.cc/202301050040504.webp)
+![](http://img.atksoto.com/2022/202301050040504.webp)
 
 ## back number - アイラブユー & 高嶺の花子さん
 
@@ -65,7 +65,7 @@ slug: '20230104234642'
 
 - 发现浮云在给星野源打工
 
-![](https://pic.mcac.cc/202301050034369.png)
+![](http://img.atksoto.com/2022/202301050034369.png)
 
 - 日本迪士尼还挺好看的
 - 怎么这么多韩团

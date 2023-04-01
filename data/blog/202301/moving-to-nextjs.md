@@ -2,7 +2,7 @@
 title: Moving to NextJS
 date: 2023-01-28T15:40:54
 tags: [NextJS, React]
-image: 'https://pic.mcac.cc/202301281557064.png'
+image: 'http://img.atksoto.com/2022/202301281557064.png'
 slug: 20230128154054
 ---
 
@@ -34,7 +34,7 @@ When I was trying to upgrade some dependencies, I found it difficult to solve so
 
 ## Migrate To TypeScript
 
-<Image src="https://pic.mcac.cc/202301281627025.png" alt="" width={200} height={50}/>
+<Image src="http://img.atksoto.com/2022/202301281627025.png" alt="" width={200} height={50}/>
 
 As said in TypeScript Documents:
 
@@ -79,16 +79,16 @@ Despite `mdx`, we can use its features in `md` files without the need to change 
 With this starter and React framework, It's easy to use JSX in a markdown file directly. For example:
 
 <div className="grid grid-cols-2 gap-3">
-<div>![](https://pic.mcac.cc/202301281557064.png)</div>
-<div>![](https://pic.mcac.cc/202301242342680.png)</div>
+<div>![](http://img.atksoto.com/2022/202301281557064.png)</div>
+<div>![](http://img.atksoto.com/2022/202301242342680.png)</div>
 </div>
 
 source code:
 
 ```tsx
 <div className="grid grid-cols-2 gap-3">
-  <div>![](https://pic.mcac.cc/202301281557064.png)</div>
-  <div>![](https://pic.mcac.cc/202301242342680.png)</div>
+  <div>![](http://img.atksoto.com/2022/202301281557064.png)</div>
+  <div>![](http://img.atksoto.com/2022/202301242342680.png)</div>
 </div>
 ```
 

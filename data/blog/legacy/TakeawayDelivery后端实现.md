@@ -2,7 +2,7 @@
 title: TakeawayDelivery 后端实现
 date: 2021-12-07 19:14:00
 tags: [Project]
-image: https://pic.mcac.cc/soto/202112170131240.png
+image: http://img.atksoto.com/2022/soto/202112170131240.png
 slug: TakeawayDelivery-back
 ---
 
@@ -24,7 +24,7 @@ slug: TakeawayDelivery-back
 
 ## 数据库结构
 
-![数据库结构](https://pic.mcac.cc/soto-pictures/2021-12/SRvqwx.png)
+![数据库结构](http://img.atksoto.com/2022/soto-pictures/2021-12/SRvqwx.png)
 
 ## 后端实现接口
 
@@ -59,7 +59,7 @@ path('api/androidGetFoodEvaluateScore/', myapp.views.android_get_food_evaluate_s
 我们根据订单的配送时间是星期几，餐厅，配送地等信息通过深度学习预测订单送达时间
 我们通过手动构造数据集，训练了一个模型存到服务器，并在每次前端发送新的请求后对订单进行预计送达时间的计算。
 
-![](https://pic.mcac.cc/soto-pictures/2021-12/wzVMGd.png)
+![](http://img.atksoto.com/2022/soto-pictures/2021-12/wzVMGd.png)
 
 ```python
 def predict(model,dl):
@@ -75,7 +75,7 @@ def predict(model,dl):
 
 Food
 
-![Food](https://pic.mcac.cc/soto-pictures/2021-12/C1MOdS.png)
+![Food](http://img.atksoto.com/2022/soto-pictures/2021-12/C1MOdS.png)
 
 实现为
 
@@ -235,7 +235,7 @@ def get_information(request):
 
 我们对数据库的密码进行了加密，通过 Django 的 `make_password()` 和 `check_password()` 函数在传入和验证密码时候进行了加密解密操作。
 
-![数据库中加密的密码](https://pic.mcac.cc/soto-pictures/2021-12/lZOUAk.png)
+![数据库中加密的密码](http://img.atksoto.com/2022/soto-pictures/2021-12/lZOUAk.png)
 
 同时，由于我们的系统起初上线时密码为明文存储，我们会在老用户第一次登陆时通过其验证并为其加密。
 

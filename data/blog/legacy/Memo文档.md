@@ -1,6 +1,6 @@
 ---
 title: Memo文档
-image: https://pic.mcac.cc/202212310108055.png
+image: http://img.atksoto.com/2022/202212310108055.png
 tags: [Project]
 categories: [Coding]
 date: 2021-10-28 17:29:00
@@ -12,11 +12,11 @@ Memo 用于随时记录，记录生活中的某一刻，记录今天的心情，
 
 ## 图片
 
-![](https://pic.mcac.cc/soto-pictures/2021-12/OMRjEl.png)
+![](http://img.atksoto.com/2022/soto-pictures/2021-12/OMRjEl.png)
 
 （介绍及短评摘自豆瓣，侵删）
 
-![iPad适配](https://pic.mcac.cc/soto-pictures/2021-12/4qk5Hd.jpg)
+![iPad适配](http://img.atksoto.com/2022/soto-pictures/2021-12/4qk5Hd.jpg)
 
 Mac, iPad 适配
 
@@ -28,9 +28,9 @@ Mac, iPad 适配
 
 主页
 
-![观](https://pic.mcac.cc/soto-pictures/2021-12/nU8yrj.jpg)
+![观](http://img.atksoto.com/2022/soto-pictures/2021-12/nU8yrj.jpg)
 
-![记](https://pic.mcac.cc/soto-pictures/2021-12/4mxT4Y.jpg)
+![记](http://img.atksoto.com/2022/soto-pictures/2021-12/4mxT4Y.jpg)
 
 电影
 
@@ -40,13 +40,13 @@ Mac, iPad 适配
 
 当然，点击此方框，你可以进入到第二次标记的页面，记录下你的第二次观影以及新的感想
 
-![电影列表](https://pic.mcac.cc/soto-pictures/2021-12/somvRM.jpg)
+![电影列表](http://img.atksoto.com/2022/soto-pictures/2021-12/somvRM.jpg)
 
 书籍
 
 类似电影，这里是你的书单，你可以添加你看过的书籍，并且记录第 n 次阅读的体验，相信每一次阅读，都会发现不少新东西
 
-![书](https://pic.mcac.cc/soto-pictures/2021-12/v7ziTD.jpg)
+![书](http://img.atksoto.com/2022/soto-pictures/2021-12/v7ziTD.jpg)
 
 ## 功能
 
@@ -64,7 +64,7 @@ Mac, iPad 适配
 
 主要分为三个部分：Controller Model Views
 
-![源文件树](https://pic.mcac.cc/soto-pictures/2021-12/1Iyk57.jpg)
+![源文件树](http://img.atksoto.com/2022/soto-pictures/2021-12/1Iyk57.jpg)
 
 Controller
 
@@ -197,7 +197,7 @@ MarkList: Mark 列表，即展示电影和书籍列表
 
 使用 NavigationLink，向子界面：MarkDetail 传递 mark 的引用
 
-![](https://pic.mcac.cc/soto-pictures/2021-12/1qxgoz.png)
+![](http://img.atksoto.com/2022/soto-pictures/2021-12/1qxgoz.png)
 
 HomeView: 主界面
 
@@ -216,7 +216,7 @@ MarkDetail: 一个 Mark 的详情
 
 其中要进行 object 的解析，如果用户输入能索引本地数据集的一个条目上，将会展示此 object 的详情
 
-![](https://pic.mcac.cc/soto-pictures/2021-12/oEbVAd.png)
+![](http://img.atksoto.com/2022/soto-pictures/2021-12/oEbVAd.png)
 
 MarkAdd: Mark 增加界面
 
@@ -228,13 +228,13 @@ MarkToday: 标记今天界面
 
 以至于用户输入能够及时的反应在变量上并且写入 modelData
 
-![](https://pic.mcac.cc/soto-pictures/2021-12/Lp7xQ3.png)
+![](http://img.atksoto.com/2022/soto-pictures/2021-12/Lp7xQ3.png)
 
 Kit
 
 其他组件
 
-![其他组件](https://pic.mcac.cc/soto-pictures/2021-12/5YOzFK.png)
+![其他组件](http://img.atksoto.com/2022/soto-pictures/2021-12/5YOzFK.png)
 
 电影和书籍详情，时间线，圆形和方形图片，卡片组件等
 

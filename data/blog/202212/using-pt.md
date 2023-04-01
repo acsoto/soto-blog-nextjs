@@ -2,7 +2,7 @@
 title: 'PT站使用'
 date: 2022-12-31T11:02:00
 tags: [TV, Infuse, PT]
-image: 'https://pic.mcac.cc/202212311135000.png'
+image: 'http://img.atksoto.com/2022/202212311135000.png'
 ---
 
 在不考虑版权问题的情况下，使用 PT 站可以快速可靠高质量地下载到想要的资源。
@@ -13,19 +13,19 @@ image: 'https://pic.mcac.cc/202212311135000.png'
 
 找到需要的资源
 
-![](https://pic.mcac.cc/202212311118173.png)
+![](http://img.atksoto.com/2022/202212311118173.png)
 
 点击下载种子或者复制链接
 
-![](https://pic.mcac.cc/202212311118174.png)
+![](http://img.atksoto.com/2022/202212311118174.png)
 
 在 qbittorrent 中添加种子
 
-![](https://pic.mcac.cc/202212311118175.png)
+![](http://img.atksoto.com/2022/202212311118175.png)
 
 选好下载路径，开始下载
 
-![](https://pic.mcac.cc/202212311118176.png)
+![](http://img.atksoto.com/2022/202212311118176.png)
 
 注意，由于 pt 站基于用户之间相互传输文件，因此一般站点会对做种(你下载完毕之后放着供别人下载)有一定的要求，如 tjupt 要求做种一定的时间完成考核，byr 是要求上传和下载的比例。
 
@@ -35,20 +35,20 @@ image: 'https://pic.mcac.cc/202212311135000.png'
 
 将刚才的下载到的位置加入 infuse 的文件来源。
 
-![](https://pic.mcac.cc/202212311123526.png)
+![](http://img.atksoto.com/2022/202212311123526.png)
 
 infuse 会自动识别影视资源进行整理。
 
-![](https://pic.mcac.cc/202212311127641.png)
+![](http://img.atksoto.com/2022/202212311127641.png)
 
-![](https://pic.mcac.cc/202212311134610.png)
+![](http://img.atksoto.com/2022/202212311134610.png)
 
 对于一些识别失败的可以右键点击编辑信息手动选择
 
-![](https://pic.mcac.cc/202212311128108.png)
+![](http://img.atksoto.com/2022/202212311128108.png)
 
 对于一些剧集，源文件的命名可能会导致 infuse 将其识别为电影，这种情况可以修改原文件的名字，按照 infuse 的要求，电视剧应当命名带 S01E01 这样的字样来表示第几季第几集，为了不影响做种，可以在 qbtitorrent 中修改文件名。
 
-![](https://pic.mcac.cc/202212311129712.png)
+![](http://img.atksoto.com/2022/202212311129712.png)
 
 如果需要多端观看，如在 appleTV 上看，可以建 NAS，也可以在一个 Wi-Fi 环境下打开电脑的文件夹共享，通过 smb 等协议让其他设备访问。

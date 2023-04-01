@@ -1,6 +1,6 @@
 ---
 title: IoTMonitor
-image: 'https://pic.mcac.cc/202212310106349.png'
+image: 'http://img.atksoto.com/2022/202212310106349.png'
 date: 2021-11-28 02:54:12
 tags: [Project]
 categories: [Coding]
@@ -12,11 +12,11 @@ categories: [Coding]
 
 可以通过调用我们部署的服务器 api 及时获取开发板的温湿度数据，也可以发送开关电机的指令，并且可以设置温湿度超过某阈值后报警，同时有历史记录来提供任意时间段内好看的温湿度曲线
 
-![](https://pic.mcac.cc/soto-pictures/2021-12/IoTMonitor展示gif.gif)
+![](http://img.atksoto.com/2022/soto-pictures/2021-12/IoTMonitor展示gif.gif)
 
 ## 图片
 
-![](https://pic.mcac.cc/202212310106944.png)
+![](http://img.atksoto.com/2022/202212310106944.png)
 
 ## 简介
 
@@ -32,7 +32,7 @@ UI 整体使用卡片式扁平设计
 
 其中，温湿度会每秒自动进行更新，2 位小数点保留
 
-![](https://pic.mcac.cc/202212310106548.png)
+![](http://img.atksoto.com/2022/202212310106548.png)
 
 #### 历史记录
 
@@ -40,7 +40,7 @@ UI 整体使用卡片式扁平设计
 
 默认显示 2 天前到现在的曲线，第一次打开 app 时会同步一次
 
-![](https://pic.mcac.cc/202212310107635.png)
+![](http://img.atksoto.com/2022/202212310107635.png)
 
 #### 设置
 
@@ -48,7 +48,7 @@ UI 整体使用卡片式扁平设计
 
 同时，打开 app 后每次阈值的设置会被记录，以便查看设置情况
 
-![](https://pic.mcac.cc/202212310107745.png)
+![](http://img.atksoto.com/2022/202212310107745.png)
 
 ## 功能
 

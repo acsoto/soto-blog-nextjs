@@ -1,21 +1,21 @@
 ---
 title: AC又被黑了
 tags: []
-image: 'https://pic.mcac.cc/202212310105241.png'
+image: 'http://img.atksoto.com/2022/202212310105241.png'
 date: 2021-11-28 16:17:36
 ---
 
 下午突然看到服务器有人发
 
-![](https://pic.mcac.cc/202212310104240.png)
+![](http://img.atksoto.com/2022/202212310104240.png)
 
 仔细一看
 
-![](https://pic.mcac.cc/202212310104990.png)
+![](http://img.atksoto.com/2022/202212310104990.png)
 
 打开链接一看：
 
-![](https://pic.mcac.cc/202212310105241.png)
+![](http://img.atksoto.com/2022/202212310105241.png)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

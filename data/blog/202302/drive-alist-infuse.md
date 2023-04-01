@@ -2,7 +2,7 @@
 title: Web Drive as the source of Infuse
 date: 2023-02-05T16:21:03
 tags: [TV, Infuse]
-image: 'https://pic.mcac.cc/202302051711158.png'
+image: 'http://img.atksoto.com/2022/202302051711158.png'
 summary: ''
 slug: 20230205162103
 ---
@@ -17,25 +17,25 @@ Aliyun Drive is a good choice in China, which doesn't limit speeds. But we need 
 
 We can deploy it on a free web service like [replit](http://replit.com). There's one-click [replit deployment](https://github.com/alist-org/alist-replit) by alist. Click `Run on Replit`. Wait till it is finished and click `Run`. Url and password will be shown in the Console.
 
-![](https://pic.mcac.cc/202302051655349.png)
+![](http://img.atksoto.com/2022/202302051655349.png)
 
 Open it and login. The UI desgin is pretty good.
 
-![](https://pic.mcac.cc/202302051700141.png)
+![](http://img.atksoto.com/2022/202302051700141.png)
 
 ## Add Drive
 
 Follow the [offical docs](https://alist.nn.ci/guide/drivers/aliyundrive.html). I add [Aliyun Drive](https://www.aliyundrive.com/) here.
 
-![](https://pic.mcac.cc/202302051704260.png)
+![](http://img.atksoto.com/2022/202302051704260.png)
 
 I add a movie here as an example.
 
 ## As Infuse Source
 
-![](https://pic.mcac.cc/202302051707431.png)
+![](http://img.atksoto.com/2022/202302051707431.png)
 
-![](https://pic.mcac.cc/202302051707321.png)
+![](http://img.atksoto.com/2022/202302051707321.png)
 
 ## End
 

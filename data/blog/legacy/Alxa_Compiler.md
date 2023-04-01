@@ -1,6 +1,6 @@
 ---
 title: Alxa_Compiler(SysY to PCODE)
-image: 'https://pic.mcac.cc/202212310105664.png'
+image: 'http://img.atksoto.com/2022/202212310105664.png'
 tags: [Project]
 ShowToc: true
 date: 2021-11-16 16:29:00
@@ -388,7 +388,7 @@ So I changed some symbol of stop getting expression and modify the rules to divi
 
 Official errors defination
 
-![](https://pic.mcac.cc/soto/202112301422547.png)
+![](http://img.atksoto.com/2022/soto/202112301422547.png)
 
 ### Before Code
 

@@ -2,7 +2,7 @@
 title: 重拾RSS
 date: 2022-08-05 23:20:00
 tags: [APP]
-image: 'https://pic.mcac.cc/202301292228873.png'
+image: 'http://img.atksoto.com/2022/202301292228873.png'
 ---
 
 之前新鲜过一段时间的 RSS，还专门买了 Reeder，当时只是关注了少数派，知乎精选，几个微博，后来逐渐就不看了。因为爱看的东西比较分散，微信上看订阅号，在 TG 上看竹新社和 BBC，看少数派 APP，看知乎，看国家地理 app，偶尔就落了某个，所以最近又开始集中到 RSS 源，集中时间看，还是比分散着偶尔看这个偶尔看那个好很多。下面看看订阅的东西。
@@ -17,19 +17,19 @@ image: 'https://pic.mcac.cc/202301292228873.png'
 
 用 RSSHub 可以订阅 TG 频道，就不用专门去 TG 这么个聊天软件上看新闻了。
 
-![](https://pic.mcac.cc/soto/202208052335826.png)
+![](http://img.atksoto.com/2022/soto/202208052335826.png)
 
 另外还订阅了 RSSHub 的 BBC，这个比 BBC 自家的源的好处是有封面有全部内容
 
 fake news，仅供参考
 
-![](https://pic.mcac.cc/soto/202208052337222.png)
+![](http://img.atksoto.com/2022/soto/202208052337222.png)
 
 ## 图片类
 
 有些更新的很勤快，可以归到一个文件夹里，全是图片没有乱七八糟的东西的体验还是很好的。
 
-![](https://pic.mcac.cc/soto/202208052341595.png)
+![](http://img.atksoto.com/2022/soto/202208052341595.png)
 
 ## 感兴趣的
 

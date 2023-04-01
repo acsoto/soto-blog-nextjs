@@ -3,7 +3,7 @@ title: Raycast 体验
 date: 2023-01-03T23:54:03
 tags: [APP]
 categories: []
-image: 'https://pic.mcac.cc/202301040034085.png'
+image: 'http://img.atksoto.com/2022/202301040034085.png'
 slug: '20230103235403'
 ---
 
@@ -46,35 +46,35 @@ do shell script "open http://localhost:1313"
 
 美观好用，非常让人满意。
 
-![](https://pic.mcac.cc/202301040009617.png)
+![](http://img.atksoto.com/2022/202301040009617.png)
 
 ## 社区脚本
 
-![](https://pic.mcac.cc/202301040014993.png)
+![](http://img.atksoto.com/2022/202301040014993.png)
 
 安装插件很方便，除此以外一些简单的脚本可以在官方维护的这个库里找到 [raycast
 /script-commands](https://github.com/raycast/script-commands) 例如这个从当前文件夹打开终端就很方便，省的右键点击目录再打开了。
 
-![](https://pic.mcac.cc/202301040015940.png)
+![](http://img.atksoto.com/2022/202301040015940.png)
 
 这个图标太丑了，可以自己改一下。
 
-![](https://pic.mcac.cc/202301040015673.png)
+![](http://img.atksoto.com/2022/202301040015673.png)
 
 ## 其他功能
 
 <table>
 <tr>
   <td className="text-center">剪切板历史</td>
-  <td className="w-3/4">![](https://pic.mcac.cc/202301040017318.png)</td>
+  <td className="w-3/4">![](http://img.atksoto.com/2022/202301040017318.png)</td>
 </tr>
 <tr>
   <td className="text-center">计算器</td>
-  <td className="w-3/4">![](https://pic.mcac.cc/202301040018234.png)</td>
+  <td className="w-3/4">![](http://img.atksoto.com/2022/202301040018234.png)</td>
 </tr>
 <tr>
   <td className="text-center">内置字典</td>
-  <td className="w-3/4">![](https://pic.mcac.cc/202301042158529.png)</td>
+  <td className="w-3/4">![](http://img.atksoto.com/2022/202301042158529.png)</td>
 </tr>
 </table>
 
@@ -82,34 +82,34 @@ do shell script "open http://localhost:1313"
 
 ## 其他插件
 
-![](https://pic.mcac.cc/202301042151560.png)
+![](http://img.atksoto.com/2022/202301042151560.png)
 
 装了几个很方便的社区插件
 
 <table>
 <tr>
   <td className="text-center">[AppleMusic](https://www.raycast.com/fedevitaledev/music) 可以快速播放歌单/加入资料库/喜欢</td>
-  <td className="w-3/4">![](https://pic.mcac.cc/202301040039801.png)</td>
+  <td className="w-3/4">![](http://img.atksoto.com/2022/202301040039801.png)</td>
 </tr>
 <tr>
   <td className="text-center">[Safari](https://www.raycast.com/loris/safari) 这个直接搜历史记录</td>
-  <td className="w-3/4">![](https://pic.mcac.cc/202301040038775.png)</td>
+  <td className="w-3/4">![](http://img.atksoto.com/2022/202301040038775.png)</td>
 </tr>
 <tr>
   <td className="text-center">[Quick Event](https://www.raycast.com/mblode/quick-event) 速建日程(可惜不支持汉语) </td>
-  <td className="w-3/4">![](https://pic.mcac.cc/202301042159601.png)</td>
+  <td className="w-3/4">![](http://img.atksoto.com/2022/202301042159601.png)</td>
 </tr>
 <tr>
   <td className="text-center">[GitHub Repository Search](https://www.raycast.com/thomas/github-repository-search) 快速去仓库，另外还有快速 Git 操作的插件。 </td>
-  <td className="w-3/4">![](https://pic.mcac.cc/202301042149577.png) </td>
+  <td className="w-3/4">![](http://img.atksoto.com/2022/202301042149577.png) </td>
 </tr>
 <tr>
   <td className="text-center">[JetBrains Toolbox Recent Projects](https://www.raycast.com/gdsmith/jetbrains) 这个也很方便，可以快速打开某个项目 </td>
-  <td className="w-3/4">![](https://pic.mcac.cc/202301042155859.png) </td>
+  <td className="w-3/4">![](http://img.atksoto.com/2022/202301042155859.png) </td>
 </tr>
 <tr>
   <td className="text-center"> [Obsidian](https://www.raycast.com/marcjulian/obsidian) 可以快速搜笔记/开仓库</td>
-  <td className="w-3/4">![](https://pic.mcac.cc/202301042246261.png)</td>
+  <td className="w-3/4">![](http://img.atksoto.com/2022/202301042246261.png)</td>
 </tr>
 </table>
 
@@ -117,13 +117,13 @@ do shell script "open http://localhost:1313"
 
 confetti!
 
-![](https://pic.mcac.cc/202301042141088.gif)
+![](http://img.atksoto.com/2022/202301042141088.gif)
 
 [Rayso](https://www.ray.so)
 
 突然发现之前收藏的一个好看的代码截图工具网站也是 Raycast 维护的。同样的，右下角可以获取这个脚本。
 
-![](https://pic.mcac.cc/202301042143074.png)
+![](http://img.atksoto.com/2022/202301042143074.png)
 
 ## End
 
