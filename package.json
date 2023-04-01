@@ -42,7 +42,7 @@
     "unist-util-visit": "^4.1.2"
   },
   "devDependencies": {
-    "@svgr/webpack": "^6.5.1",
+    "@svgr/webpack": "^7.0.0",
     "@types/node": "18.15.10",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
