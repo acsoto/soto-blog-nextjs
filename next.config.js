@@ -75,7 +75,7 @@ module.exports = withBundleAnalyzer({
     return config
   },
   images: {
-    domains: ['pic.mcac.cc', 'githubstats.zzhgo.com', 'opengraph.githubassets.com'],
+    domains: ['img.atksoto.com', 'githubstats.zzhgo.com', 'opengraph.githubassets.com'],
     remotePatterns: [
       {
         protocol: 'https',
