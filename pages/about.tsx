@@ -13,8 +13,6 @@ import MySQL from '../components/icons/mysql.svg'
 import Django from '../components/icons/django.svg'
 import Nginx from '../components/icons/nginx.svg'
 import TypeScript from '../components/icons/typescript.svg'
-import PodcastCover from '../public/static/images/podcast-cover.png'
-import Image from 'next/image'
 import PageTitle from '@/components/PageTitle'
 import { siteMetadata } from '@/data/siteMetadata'
 import { PageSeo } from '@/components/SEO'
@@ -159,27 +157,27 @@ export default function About() {
 
         <h2>Podcast</h2>
 
-        <div className="lg:flex lg:flex-row">
-          <Image
-            className="rounded lg:basis-1/4"
-            src={PodcastCover}
-            alt="Podcast"
-            width="256"
-            height="256"
-            quality="100"
-            placeholder="blur"
-          />
-          <div className="lg:basis-3/4 lg:p-8">
-            I and my friends have a mandarin conversation podcast talking about books and movies.
-            <br />
-            You can access it with{' '}
-            <a href="https://podcasts.apple.com/us/podcast/就是奇谈/id1670887501">Apple Podcast</a>
-            {` `}and{` `}
-            <a href="https://open.spotify.com/show/7L3SZKRRb0LgBm90PgY6Xd">Spotify</a>.<br />
-            RSS feed:{` `}
-            <a href="https://feed.xyzfm.space/f8fvn3qbq4y3">小宇宙</a>
-          </div>
-        </div>
+        {/*<div className="lg:flex lg:flex-row">*/}
+        {/*  <Image*/}
+        {/*    className="rounded lg:basis-1/4"*/}
+        {/*    src={PodcastCover}*/}
+        {/*    alt="Podcast"*/}
+        {/*    width="256"*/}
+        {/*    height="256"*/}
+        {/*    quality="100"*/}
+        {/*    placeholder="blur"*/}
+        {/*  />*/}
+        {/*  <div className="lg:basis-3/4 lg:p-8">*/}
+        {/*    I and my friends have a mandarin conversation podcast talking about books and movies.*/}
+        {/*    <br />*/}
+        {/*    You can access it with{' '}*/}
+        {/*    <a href="https://podcasts.apple.com/us/podcast/就是奇谈/id1670887501">Apple Podcast</a>*/}
+        {/*    {` `}and{` `}*/}
+        {/*    <a href="https://open.spotify.com/show/7L3SZKRRb0LgBm90PgY6Xd">Spotify</a>.<br />*/}
+        {/*    RSS feed:{` `}*/}
+        {/*    <a href="https://feed.xyzfm.space/f8fvn3qbq4y3">小宇宙</a>*/}
+        {/*  </div>*/}
+        {/*</div>*/}
 
         <h2>My Favorite</h2>
         <h3>Books & Movies</h3>
