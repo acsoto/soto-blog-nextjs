@@ -1,9 +1,8 @@
 ---
-title: 【游记】初访西安
+title: 【游记】西安
 date: 2022-07-04 00:46:00
 tags: [游记]
 image: http://img.atksoto.com/2022/soto/202208090132048.jpeg
-slug: xian1
 ---
 
 ## DAY 1
