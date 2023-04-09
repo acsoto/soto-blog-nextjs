@@ -1,7 +1,7 @@
 ---
 title: 'PT站使用'
 date: 2022-12-31T11:02:00
-tags: [TV, Infuse, PT]
+tags: [TV]
 image: 'http://img.atksoto.com/2022/202212311135000.png'
 ---
 

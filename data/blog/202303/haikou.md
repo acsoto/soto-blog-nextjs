@@ -86,3 +86,9 @@ image: http://img.atksoto.com/2023/04/29ca6c31568cc8507ed545264173a82b.jpeg
 ![IMG_1861.jpeg](http://img.atksoto.com/2023/04/8c9d30cd860b89cc26d7a65cb03c7fd6.jpeg)
 
 ![IMG_1861.jpeg](http://img.atksoto.com/2023/04/a062ccafa00190cc54959faad50f4c31.jpeg)
+
+### 云
+
+返程时候的云很漂亮
+
+![](http://img.atksoto.com/2023/04/def30f1b5590190a6e82207f7f747ead.JPEG)

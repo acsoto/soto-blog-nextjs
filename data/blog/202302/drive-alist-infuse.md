@@ -1,7 +1,7 @@
 ---
 title: Web Drive as the source of Infuse
 date: 2023-02-05T16:21:03
-tags: [TV, Infuse]
+tags: [TV]
 image: 'http://img.atksoto.com/2022/202302051711158.png'
 summary: ''
 slug: 20230205162103

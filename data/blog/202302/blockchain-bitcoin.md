@@ -1,7 +1,7 @@
 ---
 title: 区块链和比特币
 date: 2023-02-08T16:45:32
-tags: [区块链]
+tags: []
 image: 'http://img.atksoto.com/2022/202302081652738.jpg'
 summary: ''
 slug: 20230208164532

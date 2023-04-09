@@ -1,7 +1,7 @@
 ---
 title: 前端的一些学习和 Gatsby 的使用
 date: 2023-01-14T01:32:16
-tags: [Gatsby, React]
+tags: [React]
 image: 'http://img.atksoto.com/2022/202301181331217.png'
 slug: '20230114013216'
 ---
