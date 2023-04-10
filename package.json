@@ -62,7 +62,7 @@
     "prettier-plugin-tailwindcss": "^0.2.4",
     "socket.io": "^4.6.1",
     "socket.io-client": "^4.6.1",
-    "typescript": "5.0.2"
+    "typescript": "5.0.4"
   },
   "lint-staged": {
     "*.+(js|jsx|ts|tsx)": [
