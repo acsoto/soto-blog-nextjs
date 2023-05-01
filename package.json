@@ -59,7 +59,7 @@
     "lint-staged": "^13.2.1",
     "next-remote-watch": "^2.0.0",
     "prettier": "^2.8.8",
-    "prettier-plugin-tailwindcss": "^0.2.7",
+    "prettier-plugin-tailwindcss": "^0.2.8",
     "socket.io": "^4.6.1",
     "socket.io-client": "^4.6.1",
     "typescript": "5.0.4"
