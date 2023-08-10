@@ -11,7 +11,7 @@ const Divider = ({ className, children }: { className?: string; children?: React
       </div>
     )
   }
-  return <hr className={`my-5 h-px border-0 bg-gray-200 dark:bg-gray-700 ${className || ''}`} />
+  return <hr className={`my-2 h-px border-0 bg-gray-200 dark:bg-gray-700 ${className || ''}`} />
 }
 
 export default Divider
