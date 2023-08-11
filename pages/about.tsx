@@ -1,6 +1,7 @@
 import Divider from '@/components/Divider'
 import Link from 'next/link'
 import GitHubCard from '@/components/GitHubCard'
+import BUAA from '../components/icons/BUAA.svg'
 import NextJS from '../components/icons/nextjs.svg'
 import TailWindCSS from '../components/icons/tailwindcss.svg'
 import ReactIcon from '../components/icons/react.svg'
@@ -20,9 +21,9 @@ export default function About() {
       <PageTitle>About</PageTitle>
       <Divider />
       <div className="prose max-w-none dark:prose-dark lg:prose-lg">
-        <p>
-          Hi, my name is <b>Zhou Zihang</b>. I'm a computer science student now.
-        </p>
+        {/*<p>*/}
+        {/*  Hi, my name is <b>Zhou Zihang</b>. I'm a computer science student now.*/}
+        {/*</p>*/}
         {/*<p>*/}
         {/*  Since I was a child, I was crazy about Minecraft. Whenever I found repetitive work, I*/}
         {/*  would rather solve it by coding, and it was then that I realized how much I enjoy solving*/}
@@ -34,10 +35,15 @@ export default function About() {
         {/*</p>*/}
 
         <h2>Education</h2>
-        <div className="space-x-4">
-          <span className="text-2xl font-bold">Beihang University</span>
-          <span className="text-xl">Bachelor</span>
-          <span className="text-xl text-gray-500">2019 - 2023</span>
+        <div className="flex flex-row gap-5">
+          <div>
+            <BUAA />
+          </div>
+          <div>
+            <div className="text-2xl font-extrabold">Beihang University</div>
+            <div className="text-lg">Bachelor | Computer Science & Technology</div>
+            <div className="text-lg text-gray-500">2019 - 2023</div>
+          </div>
         </div>
 
         <h2>Projects</h2>
@@ -46,6 +52,7 @@ export default function About() {
         <h2>Technical Skills</h2>
         <div>
           <b>Programming Languages:</b> C, Java, Python, HTML, JavaScript, Swift, Verilog...
+          <br />
           <br />
           <b>Frameworks & Tools:</b>
           <span className="ml-2 space-x-2">
