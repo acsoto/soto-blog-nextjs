@@ -1,7 +1,5 @@
 import React from 'react'
 import Typed from 'typed.js'
-import SocialIcon from '@/components/social-icons'
-import { siteMetadata } from '@/data/siteMetadata'
 import Emoji from '@/components/twemoji'
 import Link from 'next/link'
 
@@ -44,44 +42,37 @@ const Greetings = () => {
         Hi Friends,
       </h1>
       <div className="prose dark:prose-dark lg:prose-lg">
-        <div>
+        <p>
           Welcome! I’m <b>Zhou Zihang</b>. <Emoji kind="partyingFace" />
-          <br />
-          SOTO is a convenient way to refer to me on social media.
-          <br />
-          This is a place where I share my life, thoughts, and other stuff that might be
-          interesting.
-        </div>
-        <br />
-        <div>
-          I am now living in China <Emoji kind={'chinaFlag'} />.{` `}
-          and am a senior at Beihang University, studying computer science and technology, and I
-          plan to go abroad next year for my master's degree.
-        </div>
-        <br />
-        <div>
-          I am running a Minecraft server from 2014 to now, which is probably the origin of my
-          interest in programming. If you are interested, feel free to type{' '}
-          <a href="https://www.mcac.cc/">mcac.cc</a> in Minecraft and have fun.
-          <br />
-          <br />I have a Shiba Inu <Emoji kind={'dog'} /> named doudou. You can see him on his{' '}
+        </p>
+
+        <p>
+          "SOTO" is the abbreviation I use on social media. I currently live in China{` `}
+          <Emoji kind={'chinaFlag'} /> and have just graduated from Beihang University with a
+          bachelor's degree in Computer Science and Technology. I'm planning to study abroad in
+          Canada and am currently waiting for my visa.
+        </p>
+
+        <p>
+          I've been operating a Minecraft server since 2014, which is probably where my interest in
+          programming began. If you're interested, feel free to join by entering{' '}
+          <a href="https://www.mcac.cc/">mcac.cc</a> in client.
+        </p>
+
+        <p>
+          I have an adorable Shiba Inu <Emoji kind={'dog'} /> named doudou. You can see him on his{' '}
           <a href="https://www.instagram.com/puppydoudou/">instagram</a>.
-        </div>
-        <br />
+        </p>
+
         <div className="type-wrap">
           <span style={{ whiteSpace: 'pre' }} ref={el} />
           <br />
-          <Link href="/about">See more about me</Link>
-        </div>
-        <br />
-        Happy reading!
-        <br />
-        <br />
-        <div className="flex flex-row gap-2">
-          <span>Contact me:</span>
-          <SocialIcon kind="instagram" href={siteMetadata.instagram} size={6} />
-          <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} size={6} />
-          <SocialIcon kind="github" href={siteMetadata.github} size={6} />
+
+          <p>
+            This website is used to introduce myself, publish some regular blogs, document my travel
+            diaries, as well as record books, movies, and music I've experienced. Feel free to{' '}
+            <Link href="/about"> get to know me better.</Link>
+          </p>
         </div>
       </div>
     </div>
