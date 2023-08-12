@@ -1,14 +1,12 @@
+'use client'
 import Link from 'next/link'
 import GitHubCard from '@/components/GitHubCard'
-import NextJS from '../components/icons/nextjs.svg'
-import TailWindCSS from '../components/icons/tailwindcss.svg'
-import { siteMetadata } from '@/data/siteMetadata'
-import { PageSeo } from '@/components/SEO'
+import NextJS from '/components/icons/nextjs.svg'
+import TailWindCSS from '/components/icons/tailwindcss.svg'
 
 export default function About() {
   return (
     <>
-      <PageSeo title={`About - ${siteMetadata.author}`} description={siteMetadata.description} />
       <div className="prose max-w-none dark:prose-dark lg:prose-lg">
         {/*<p>*/}
         {/*  Hi, my name is <b>Zhou Zihang</b>. I'm a computer science student now.*/}
