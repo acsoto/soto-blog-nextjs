@@ -7,7 +7,6 @@ import Divider from '@/components/Divider'
 import PageTitle from '@/components/PageTitle'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import { FrontMatter } from '@/types/md'
-import { getImgProps } from '@/lib/get-img-props'
 import PostCard from '@/components/PostCard'
 
 export async function getStaticProps() {
@@ -16,9 +15,9 @@ export async function getStaticProps() {
   const MAX_DISPLAY = 6
   const showingPosts = posts.slice(0, MAX_DISPLAY)
 
-  for (const post of showingPosts) {
-    post.imgProps = await getImgProps(post.image)
-  }
+  // for (const post of showingPosts) {
+  //   post.imgProps = await getImgProps(post.image)
+  // }
 
   return { props: { tags, posts, showingPosts } }
 }
@@ -43,7 +42,7 @@ export default function Blog({ tags, posts, showingPosts }) {
 
   return (
     <>
-      <PageSeo title={`Tags - ${siteMetadata.author}`} description="SOTO-BLOG Tags" />
+      <PageSeo title={`Blog - ${siteMetadata.author}`} description="SOTO-BLOG" />
       <div className="space-y-10">
         <div>
           <PageTitle>Recent Posts</PageTitle>

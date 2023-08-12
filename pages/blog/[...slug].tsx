@@ -3,9 +3,7 @@ import PageTitle from '@/components/PageTitle'
 import generateRss from '@/lib/generate-rss'
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import { formatSlug, getAllFilesFrontMatter, getFileBySlug, getFiles } from '@/lib/mdx'
-import { FrontMatter } from '@/types/md'
 import PostLayout from '@/layouts/PostLayout'
-import { getImgProps } from '@/lib/get-img-props'
 
 export async function getStaticPaths() {
   const posts = getFiles('blog')
@@ -29,10 +27,6 @@ export async function getStaticProps({ params }) {
     const rss = generateRss(allPosts)
     fs.writeFileSync('./public/feed.xml', rss)
   }
-
-  const frontMatter: FrontMatter = post.frontMatter
-
-  frontMatter.imgProps = await getImgProps(frontMatter.image)
 
   return { props: { post } }
 }

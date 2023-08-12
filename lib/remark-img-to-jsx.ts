@@ -1,31 +1,22 @@
 import { visit } from 'unist-util-visit'
 import { Node } from 'unist'
 import { UnistImageNode, UnistNodeType } from '@/types/node'
-import { getImgProps } from '@/lib/get-img-props'
 
 async function addProps(imageNode: UnistImageNode): Promise<void> {
   if (
-    imageNode.url.startsWith('https://pic.mcac.cc/') &&
+    imageNode.url.startsWith('https://img.atksoto.com/') &&
     (imageNode.url.toLowerCase().endsWith('.png') ||
       imageNode.url.toLowerCase().endsWith('.jpg') ||
       imageNode.url.toLowerCase().endsWith('.jpeg'))
   ) {
-    const imgProps = await getImgProps(imageNode.url)
-
     ;(imageNode.type = 'mdxJsxFlowElement'),
       (imageNode.name = 'Image'),
       (imageNode.attributes = [
         { type: 'mdxJsxAttribute', name: 'alt', value: imageNode.alt },
         { type: 'mdxJsxAttribute', name: 'src', value: imageNode.url },
-        { type: 'mdxJsxAttribute', name: 'width', value: imgProps.width },
-        { type: 'mdxJsxAttribute', name: 'height', value: imgProps.height },
+        { type: 'mdxJsxAttribute', name: 'width', value: 1600 },
+        { type: 'mdxJsxAttribute', name: 'height', value: 900 },
         { type: 'mdxJsxAttribute', name: 'quality', value: 100 },
-        { type: 'mdxJsxAttribute', name: 'placeholder', value: 'blur' },
-        {
-          type: 'mdxJsxAttribute',
-          name: 'blurDataURL',
-          value: imgProps.blurDataURL,
-        },
       ])
   }
 }
