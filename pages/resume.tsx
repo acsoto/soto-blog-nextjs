@@ -5,6 +5,7 @@ import MySQL from '../components/icons/mysql.svg'
 import Django from '../components/icons/django.svg'
 import Nginx from '../components/icons/nginx.svg'
 import TypeScript from '../components/icons/typescript.svg'
+import TensorFlow from '../components/icons/tensorflow.svg'
 import { siteMetadata } from '@/data/siteMetadata'
 import { PageSeo } from '@/components/SEO'
 import Projects from '@/components/Projects'
@@ -15,7 +16,7 @@ export default function Resume() {
       <PageSeo title={`Resume - ${siteMetadata.author}`} description={siteMetadata.description} />
 
       <div className="prose max-w-none dark:prose-dark lg:prose-lg">
-        <h2 className="text-center">Zhou Zihang</h2>
+        <h2 className="text-center font-extrabold">Zhou Zihang</h2>
         <hr />
 
         <h2>Education</h2>
@@ -32,32 +33,40 @@ export default function Resume() {
 
         <hr />
 
-        <h2>Technical Skills</h2>
+        <h2>Skills</h2>
         <div>
-          <b>Programming Languages:</b> C, Java, Python, HTML, JavaScript, Swift, Verilog...
-          <br />
-          <br />
-          <b>Frameworks & Tools:</b>
-          <span className="ml-2 space-x-2">
-            <i className="inline-block">
-              <ReactIcon className="h-6 w-6" />
-            </i>
-            <i className="inline-block">
-              <Django className="h-6 w-6" />
-            </i>
-            <i className="inline-block">
-              <MySQL className="h-6 w-6" />
-            </i>
-            <i className="inline-block">
-              <Nginx className="h-6 w-6" />
-            </i>
-            <i className="inline-block">
-              <TypeScript className="h-6 w-6" />
-            </i>
-            <i className="inline-block">
-              <TailWindCSS className="h-6 w-6" />
-            </i>
-          </span>
+          <p>
+            <b>Programming Languages:</b> C, Java, Python, JavaScript, HTML, Swift, Verilog.
+          </p>
+          <p>
+            <b>Frameworks & Tools:</b>
+            <span className="ml-2 space-x-2">
+              <i className="inline-block">
+                <ReactIcon className="h-6 w-6" />
+              </i>
+              <i className="inline-block">
+                <Django className="h-6 w-6" />
+              </i>
+              <i className="inline-block">
+                <MySQL className="h-6 w-6" />
+              </i>
+              <i className="inline-block">
+                <Nginx className="h-6 w-6" />
+              </i>
+              <i className="inline-block">
+                <TypeScript className="h-6 w-6" />
+              </i>
+              <i className="inline-block">
+                <TailWindCSS className="h-6 w-6" />
+              </i>
+              <i className="inline-block">
+                <TensorFlow className="h-6 w-6" />
+              </i>
+            </span>
+          </p>
+          <p>
+            <b>Languages:</b> Chinese (Native), English (TOEFL 108)
+          </p>
         </div>
 
         <hr />

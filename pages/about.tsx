@@ -14,6 +14,31 @@ export default function About() {
         {/*  Hi, my name is <b>Zhou Zihang</b>. I'm a computer science student now.*/}
         {/*</p>*/}
 
+        <h2>Travel Journey</h2>
+        <p>
+          I love traveling.
+          <br />
+          You can find my photo travelogues, as well as VLOGs, under my
+          {` `}
+          <Link href="/tags/游记">Travel Tag.</Link>
+        </p>
+
+        <h2>My Shelf</h2>
+        <b>Books & Movies</b>
+        <p>
+          I watch and read all kinds of stuff.
+          <br />
+          You can see what I'm watching or reading recently at{` `}
+          <Link href="/library">Library Page.</Link>
+        </p>
+        <b>Music</b>
+        <p>
+          I listen to music all the time.
+          <br />
+          You can see what I'm listening recently at{` `}
+          <Link href="/music">Music Page.</Link>
+        </p>
+
         <h2>About This Site</h2>
         <div>
           <GitHubCard repo="acsoto/soto-blog-nextjs" />
@@ -71,22 +96,6 @@ export default function About() {
         {/*    <a href="https://feed.xyzfm.space/f8fvn3qbq4y3">小宇宙</a>*/}
         {/*  </div>*/}
         {/*</div>*/}
-
-        <h2>My Favorite</h2>
-        <h3>Books & Movies</h3>
-        <p>
-          I watch and read all kinds of stuff.
-          <br />
-          You can see what I'm watching or reading recently at{` `}
-          <Link href="/library">Library Page</Link>
-        </p>
-        <h3>Music</h3>
-        <p>
-          I listen to music all the time.
-          <br />
-          You can see what I'm listening recently at{` `}
-          <Link href="/music">Music Page</Link>
-        </p>
       </div>
     </>
   )
