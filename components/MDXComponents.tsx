@@ -1,15 +1,13 @@
-import { useMemo } from 'react'
-import { getMDXComponent } from 'mdx-bundler/client'
+import TOCInline from 'pliny/ui/TOCInline'
+import Pre from 'pliny/ui/Pre'
+import type { MDXComponents } from 'mdx/types'
 import Image from './Image'
 import CustomLink from './Link'
-import TOCInline from './TOCInline'
-import Pre from './Pre'
-import { FrontMatter } from '@/types/md'
 import Script from 'next/script'
 import Emoji from '@/components/twemoji'
 import GitHubCard from '@/components/GitHubCard'
 
-export const MDXComponents = {
+export const components: MDXComponents = {
   Image,
   Script,
   TOCInline,
@@ -17,16 +15,4 @@ export const MDXComponents = {
   a: CustomLink,
   pre: Pre,
   Emoji,
-}
-
-interface MdxLayoutRendererProps {
-  mdxSource: string
-  frontMatter: FrontMatter
-  [key: string]: any
-}
-
-export const MDXLayoutRenderer = ({ mdxSource, ...rest }: MdxLayoutRendererProps) => {
-  const MDXLayout = useMemo(() => getMDXComponent(mdxSource), [mdxSource])
-
-  return <MDXLayout components={MDXComponents} {...rest} />
 }

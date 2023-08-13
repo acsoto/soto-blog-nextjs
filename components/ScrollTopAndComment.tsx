@@ -1,3 +1,5 @@
+'use client'
+
 import { useEffect, useState } from 'react'
 
 const ScrollTopAndComment = () => {
@@ -17,7 +19,7 @@ const ScrollTopAndComment = () => {
     window.scrollTo({ top: 0 })
   }
   const handleScrollToComment = () => {
-    document.getElementById('comment').scrollIntoView()
+    document.getElementById('comment')?.scrollIntoView()
   }
   return (
     <div
@@ -39,7 +41,6 @@ const ScrollTopAndComment = () => {
       {/*</button>*/}
       <button
         aria-label="Scroll To Top"
-        type="button"
         onClick={handleScrollTop}
         className="rounded-full bg-gray-200 p-2 text-gray-500 transition-all hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-400 dark:hover:bg-gray-600"
       >

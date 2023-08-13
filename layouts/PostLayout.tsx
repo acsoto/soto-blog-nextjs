@@ -1,19 +1,22 @@
 import Link from '@/components/Link'
 import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'
-import { BlogSeo } from '@/components/SEO'
-import { siteMetadata } from '@/data/siteMetadata'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
-import kebabCase from '@/lib/utils/kebabCase'
-import formatDate from '@/lib/utils/formatDate'
 import Image from 'next/image'
+import { siteMetadata } from '@/data/siteMetadata'
 
-export default function PostLayout({ frontMatter, children }) {
-  const { slug, date, title, image, tags } = frontMatter
+const postDateTemplate: Intl.DateTimeFormatOptions = {
+  weekday: 'long',
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+}
+
+export default function PostLayout({ content, children }) {
+  const { date, title, image, tags } = content
 
   return (
     <SectionContainer>
-      <BlogSeo url={`${siteMetadata.siteUrl}/blog/${slug}`} {...frontMatter} />
       <ScrollTopAndComment />
       <article>
         <div className="mx-auto xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
@@ -26,7 +29,9 @@ export default function PostLayout({ frontMatter, children }) {
                 <div>
                   <dt className="sr-only">Published on</dt>
                   <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                    <time dateTime={date}>{formatDate(new Date(date))}</time>
+                    <time dateTime={date}>
+                      {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
+                    </time>
                   </dd>
                 </div>
                 <div className="flex flex-row justify-center space-x-3">
@@ -37,7 +42,7 @@ export default function PostLayout({ frontMatter, children }) {
                         className={
                           'rounded-md border-2 bg-gradient-to-r from-lime-500 to-yellow-400 bg-clip-text px-2 text-sm font-bold text-transparent hover:text-gray-500'
                         }
-                        href={`/tags/${kebabCase(tag)}`}
+                        href={`/tags/${tag}`}
                       >
                         {tag}
                       </Link>

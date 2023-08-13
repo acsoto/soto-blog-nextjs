@@ -75,7 +75,7 @@ function createSearchIndex(allPosts) {
 export const Post = defineDocumentType(() => ({
   name: 'Post',
   filePathPattern: 'posts/**/*.md',
-  // contentType: 'Markdown',
+  contentType: 'mdx',
   fields: {
     title: { type: 'string', required: true },
     date: { type: 'date', required: true },
@@ -113,8 +113,9 @@ export const Post = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: 'data',
+  contentDirExclude: ['tofu.json'],
   documentTypes: [Post],
-  mdx: {
+  markdown: {
     cwd: process.cwd(),
     remarkPlugins: [
       remarkExtractFrontmatter,
