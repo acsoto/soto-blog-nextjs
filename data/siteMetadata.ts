@@ -1,5 +1,5 @@
 /** @type {import("pliny/config").PlinyConfig } */
-export let siteMetadata = {
+export const siteMetadata = {
   title: 'SOTO-BLOG',
   author: 'SOTO',
   headerTitle: 'SOTO',
@@ -83,5 +83,19 @@ export let siteMetadata = {
       // https://help.disqus.com/en/articles/1717111-what-s-a-shortname
       shortname: process.env.NEXT_PUBLIC_DISQUS_SHORTNAME,
     },
+  },
+  search: {
+    provider: 'kbar', // kbar or algolia
+    kbarConfig: {
+      searchDocumentsPath: 'search.json', // path to load documents to search
+    },
+    // provider: 'algolia',
+    // algoliaConfig: {
+    //   // The application ID provided by Algolia
+    //   appId: 'R2IYF7ETH7',
+    //   // Public API key: it is safe to commit it
+    //   apiKey: '599cec31baffa4868cae4e79f180729b',
+    //   indexName: 'docsearch',
+    // },
   },
 }

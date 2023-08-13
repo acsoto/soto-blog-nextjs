@@ -19,11 +19,13 @@ export default function Blog({ tags, posts }) {
       const month: string = new Date(post.date).toDateString().split(' ')[1]
       if (!timeMap.has(year)) {
         timeMap.set(year, new Map())
+      } else {
+        if (!timeMap.get(year)?.has(month)) {
+          timeMap.get(year)?.set(month, [])
+        } else {
+          timeMap.get(year)?.get(month)?.push(post)
+        }
       }
-      if (!timeMap.get(year).has(month)) {
-        timeMap.get(year).set(month, [])
-      }
-      timeMap.get(year).get(month).push(post)
     }
   }
 
@@ -72,7 +74,7 @@ export default function Blog({ tags, posts }) {
               <div key={year}>
                 <Divider>{year}</Divider>
                 <ol className="relative ml-3 border-l border-gray-200 dark:border-gray-700">
-                  {Array.from(timeMap.get(year).keys()).map((month) => (
+                  {Array.from(timeMap.get(year)?.keys() ?? []).map((month) => (
                     <li key={month} className="mb-10 ml-6">
                       <span className="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-soto-100 ring-8 ring-white dark:ring-dark">
                         <svg
@@ -95,8 +97,8 @@ export default function Blog({ tags, posts }) {
                       <div>
                         {timeMap
                           .get(year)
-                          .get(month)
-                          .map((post) => {
+                          ?.get(month)
+                          ?.map((post) => {
                             return (
                               <div className="text-lg font-bold" key={post.slug}>
                                 <span className={'mr-3 text-gray-300 dark:text-opacity-50'}>

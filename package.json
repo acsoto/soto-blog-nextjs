@@ -57,15 +57,11 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
     "file-loader": "^6.0.0",
-    "globby": "13.2.2",
     "husky": "^8.0.3",
     "inquirer": "^9.2.10",
     "lint-staged": "^13.2.3",
-    "next-remote-watch": "^2.0.0",
     "prettier": "^3.0.1",
     "prettier-plugin-tailwindcss": "^0.5.2",
-    "socket.io": "^4.7.2",
-    "socket.io-client": "^4.7.2",
     "typescript": "5.1.6"
   },
   "resolutions": {

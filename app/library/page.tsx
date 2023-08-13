@@ -4,7 +4,18 @@ import Image from 'next/image'
 import PageTitle from '@/components/PageTitle'
 
 async function getNodes() {
-  const nodes = []
+  type Node = {
+    type: string
+    title: string
+    stars: string | null
+    date: string
+    cover: string
+    url: string
+    comment: string
+  }
+
+  const nodes: Node[] = []
+
   let count = 0
   for (const i of Data.interest.reverse()) {
     if (i.status === 'done') {

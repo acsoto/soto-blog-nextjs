@@ -27,14 +27,14 @@ export default function About() {
           I watch and read all kinds of stuff.
           <br />
           You can see what I'm watching or reading recently at{` `}
-          <Link href="/app/library/page">Library Page.</Link>
+          <Link href="/library">Library Page.</Link>
         </p>
         <b>Music</b>
         <p>
           I listen to music all the time.
           <br />
           You can see what I'm listening recently at{` `}
-          <Link href="/app/music/page">Music Page.</Link>
+          <Link href="/music">Music Page.</Link>
         </p>
 
         <h2>About This Site</h2>

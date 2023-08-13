@@ -7,7 +7,7 @@ interface PageSeoProps {
   description: string
 }
 export function PageSeo({ title, description }: PageSeoProps) {
-  let router = useRouter()
+  const router = useRouter()
   return (
     <Head>
       <title>{title}</title>
@@ -37,12 +37,12 @@ interface BlogSeoProps {
 }
 
 export function BlogSeo(props: BlogSeoProps) {
-  let router = useRouter()
+  const router = useRouter()
 
-  let { title, summary, date, url, image } = props
-  let publishedAt = new Date(date).toISOString()
+  const { title, summary, date, url, image } = props
+  const publishedAt = new Date(date).toISOString()
 
-  let structuredData = {
+  const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     mainEntityOfPage: {

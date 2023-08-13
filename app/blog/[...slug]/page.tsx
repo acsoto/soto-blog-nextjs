@@ -7,9 +7,57 @@ import { MDXLayoutRenderer } from 'pliny/mdx-components'
 import { coreContent, sortPosts } from 'pliny/utils/contentlayer'
 import { allPosts, Post } from 'contentlayer/generated'
 import PostLayout from '@/layouts/PostLayout'
+import { Metadata } from 'next'
+import { siteMetadata } from '@/data/siteMetadata'
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string[] }
+}): Promise<Metadata | undefined> {
+  const slug = decodeURI(params.slug.join('/'))
+  const post = allPosts.find((p) => p.slug === slug)
+  if (!post) {
+    return
+  }
+
+  const publishedAt = new Date(post.date).toISOString()
+  const modifiedAt = new Date(post.lastmod || post.date).toISOString()
+  let imageList = [siteMetadata.socialBanner]
+  if (post.images) {
+    imageList = typeof post.images === 'string' ? [post.images] : post.images
+  }
+  const ogImages = imageList.map((img) => {
+    return {
+      url: img.includes('http') ? img : siteMetadata.siteUrl + img,
+    }
+  })
+
+  return {
+    title: post.title,
+    description: post.summary,
+    openGraph: {
+      title: post.title,
+      description: post.summary,
+      siteName: siteMetadata.title,
+      locale: 'en_US',
+      type: 'article',
+      publishedTime: publishedAt,
+      modifiedTime: modifiedAt,
+      url: './',
+      images: ogImages,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.summary,
+      images: imageList,
+    },
+  }
+}
 
 export const generateStaticParams = async () => {
-  const paths = allPosts.map((p) => ({ slug: p.slug.split('/') }))
+  const paths = allPosts.map((p) => ({ slug: p.slug?.split('/') }))
 
   return paths
 }

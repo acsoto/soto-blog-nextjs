@@ -1,8 +1,9 @@
 import Link from '@/components/Link'
 import Image from 'next/image'
 import { Post } from 'contentlayer/generated'
+import { CoreContent } from 'pliny/utils/contentlayer'
 
-const PostCard = ({ post }: { post: Post }) => {
+const PostCard = ({ post }: { post: CoreContent<Post> }) => {
   const { slug, date, title, summary, tags, image } = post
   return (
     <Link href={`/blog/${slug}`}>
@@ -15,14 +16,14 @@ const PostCard = ({ post }: { post: Post }) => {
           alt=""
         />
         <div className="p-3">
-          <h2 className="text-xl font-bold">{title || slug}</h2>
+          <h2 className="text-xl font-extrabold">{title || slug}</h2>
           <section className="text-gray-500">
             <p>{summary}</p>
           </section>
-          <span className="text-sm text-gray-600">
-            <time dateTime={date}>{date}</time>
+          <span className="ml-1 text-sm font-bold text-gray-600">
+            <time dateTime={date}>{new Date(date).toISOString().split('T')[0]}</time>
           </span>
-          <div className="mt-3 flex flex-row space-x-3">
+          <div className="mt-1 flex flex-row space-x-3">
             {tags &&
               tags.map((tag) => (
                 <div

@@ -7,7 +7,7 @@ const Greetings = () => {
   // Create reference to store the DOM element containing the animation
   const el = React.useRef(null)
   // Create reference to store the Typed instance itself
-  const typed = React.useRef(null)
+  const typed = React.useRef<Typed | null>(null)
 
   React.useEffect(() => {
     const options = {
@@ -32,7 +32,7 @@ const Greetings = () => {
     return () => {
       // Make sure to destroy Typed instance during cleanup
       // to prevent memory leaks
-      typed.current.destroy()
+      typed.current?.destroy()
     }
   }, [])
 

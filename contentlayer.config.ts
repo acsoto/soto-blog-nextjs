@@ -1,6 +1,5 @@
 import { ComputedFields, defineDocumentType, makeSource } from 'contentlayer/source-files'
 import { writeFileSync } from 'fs'
-import { slug } from 'github-slugger'
 import path from 'path'
 // Remark packages
 import remarkGfm from 'remark-gfm'
@@ -47,7 +46,7 @@ function createTagCount(allPosts) {
   allPosts.forEach((file) => {
     if (file.tags && file.draft !== true) {
       file.tags.forEach((tag) => {
-        const formattedTag = slug(tag)
+        const formattedTag = tag
         if (formattedTag in tagCount) {
           tagCount[formattedTag] += 1
         } else {
@@ -83,7 +82,7 @@ export const Post = defineDocumentType(() => ({
     lastmod: { type: 'date' },
     draft: { type: 'boolean' },
     summary: { type: 'string' },
-    image: { type: 'string' },
+    image: { type: 'string', required: true },
     images: { type: 'list', of: { type: 'string' } },
     authors: { type: 'list', of: { type: 'string' } },
     layout: { type: 'string' },
@@ -116,7 +115,7 @@ export default makeSource({
   contentDirExclude: ['tofu.json'],
   documentTypes: [Post],
   markdown: {
-    cwd: process.cwd(),
+    // cwd: process.cwd(),
     remarkPlugins: [
       remarkExtractFrontmatter,
       remarkGfm,

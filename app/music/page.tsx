@@ -27,6 +27,7 @@ export default function Page() {
         {playlists.map((playlist) => {
           return (
             <iframe
+              title={playlist}
               key={playlist}
               className="mt-3 w-full"
               allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
