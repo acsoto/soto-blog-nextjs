@@ -8,7 +8,7 @@ import { coreContent, sortPosts } from 'pliny/utils/contentlayer'
 import { allPosts, Post } from 'contentlayer/generated'
 import PostLayout from '@/layouts/PostLayout'
 import { Metadata } from 'next'
-import { siteMetadata } from '@/data/siteMetadata'
+import siteMetadata from '@/data/siteMetadata'
 
 export async function generateMetadata({
   params,

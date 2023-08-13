@@ -1,5 +1,5 @@
 /** @type {import("pliny/config").PlinyConfig } */
-export const siteMetadata = {
+const siteMetadata = {
   title: 'SOTO-BLOG',
   author: 'SOTO',
   headerTitle: 'SOTO',
@@ -99,3 +99,5 @@ export const siteMetadata = {
     // },
   },
 }
+
+module.exports = siteMetadata

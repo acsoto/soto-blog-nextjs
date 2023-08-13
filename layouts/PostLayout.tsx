@@ -3,7 +3,7 @@ import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import Image from 'next/image'
-import { siteMetadata } from '@/data/siteMetadata'
+import siteMetadata from '@/data/siteMetadata'
 
 const postDateTemplate: Intl.DateTimeFormatOptions = {
   weekday: 'long',
