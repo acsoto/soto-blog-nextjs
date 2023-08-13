@@ -2,7 +2,6 @@
 title: Alxa_Compiler(SysY to PCODE)
 image: 'http://img.atksoto.com/2022/202212310105664.png'
 tags: [Project]
-ShowToc: true
 date: 2021-11-16 16:29:00
 ---
 

@@ -3,7 +3,6 @@ title: Moving to NextJS
 date: 2023-01-28T15:40:54
 tags: [React]
 image: 'http://img.atksoto.com/2022/202301281557064.png'
-slug: 20230128154054
 ---
 
 Still learning JS and TS and solving blog problems, I moved the blog from Gatsby to NextJS.

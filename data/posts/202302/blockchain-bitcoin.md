@@ -4,7 +4,6 @@ date: 2023-02-08T16:45:32
 tags: []
 image: 'http://img.atksoto.com/2022/202302081652738.jpg'
 summary: ''
-slug: 20230208164532
 ---
 
 ## 基本原理[^1]

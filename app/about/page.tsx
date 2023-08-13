@@ -63,10 +63,10 @@ export default function About() {
             If you are finding inspiration, you can see my these 2 posts about this site.
             <ul>
               <li>
-                <Link href="blog/202301/front-end-learning-and-gatsby">About Gatsby</Link>
+                <Link href="posts/202301/front-end-learning-and-gatsby">About Gatsby</Link>
               </li>
               <li>
-                <Link href="blog/202301/moving-to-nextjs">About NextJS</Link>
+                <Link href="posts/202301/moving-to-nextjs">About NextJS</Link>
               </li>
             </ul>
           </div>

@@ -1,31 +1,18 @@
-import Link from '@/components/Link'
-import { PageSeo } from '@/components/SEO'
-import { siteMetadata } from '@/data/siteMetadata'
-import { getAllTags } from '@/lib/tags'
-import kebabCase from '@/lib/utils/kebabCase'
-import Divider from '@/components/Divider'
+'use client'
 import PageTitle from '@/components/PageTitle'
-import { getAllFilesFrontMatter } from '@/lib/mdx'
-import { FrontMatter } from '@/types/md'
 import PostCard from '@/components/PostCard'
+import Link from '@/components/Link'
+import Divider from '@/components/Divider'
+import { Post } from 'contentlayer/generated'
 
-export async function getStaticProps() {
-  const posts = await getAllFilesFrontMatter('blog')
-  const tags = await getAllTags('blog')
+export default function Blog({ tags, posts }) {
   const MAX_DISPLAY = 6
   const showingPosts = posts.slice(0, MAX_DISPLAY)
 
-  // for (const post of showingPosts) {
-  //   post.imgProps = await getImgProps(post.image)
-  // }
+  const tagKeys = Object.keys(tags)
+  const sortedTags = tagKeys.sort((a, b) => tags[b] - tags[a])
 
-  return { props: { tags, posts, showingPosts } }
-}
-
-export default function Blog({ tags, posts, showingPosts }) {
-  const sortedTags = Object.keys(tags).sort((a, b) => tags[b] - tags[a])
-
-  const timeMap: Map<string, Map<string, Array<FrontMatter>>> = new Map()
+  const timeMap: Map<string, Map<string, Array<Post>>> = new Map()
   for (const post of posts) {
     if (post.date !== null) {
       const year: string = new Date(post.date).getFullYear().toString()
@@ -42,7 +29,6 @@ export default function Blog({ tags, posts, showingPosts }) {
 
   return (
     <>
-      <PageSeo title={`Blog - ${siteMetadata.author}`} description="SOTO-BLOG" />
       <div className="space-y-10">
         <div>
           <PageTitle>Recent Posts</PageTitle>
@@ -67,7 +53,7 @@ export default function Blog({ tags, posts, showingPosts }) {
                   key={t}
                   className="overflow-hidden rounded-md border-2 text-2xl font-bold duration-300 hover:scale-110"
                 >
-                  <Link href={`/tags/${kebabCase(t)}`}>
+                  <Link href={`/tags/${t}`}>
                     <span className="p-2 text-soto-100">{t.toUpperCase()}</span>
                     <span className="bg-gray-100 p-2 text-gray-500 dark:bg-gray-700 dark:text-soto-400">
                       {tags[t]}

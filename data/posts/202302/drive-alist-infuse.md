@@ -4,7 +4,6 @@ date: 2023-02-05T16:21:03
 tags: [TV]
 image: 'http://img.atksoto.com/2022/202302051711158.png'
 summary: ''
-slug: 20230205162103
 ---
 
 I'm gonna leave home for school. Before that, I used my own mobile hard drives and my MacBook as the source of Infuse running on Apple TV at home. Now, After I leave, there's no device at home serving as a server. It will be hard for my parents to watch things easily on Apple TV. Therefore, It's time to set out a web drive service.

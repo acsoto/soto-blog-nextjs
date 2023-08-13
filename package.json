@@ -1,15 +1,14 @@
 {
   "name": "soto-blog-nextjs",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
-    "start": "export NODE_ENV=development && next-remote-watch ./data",
-    "dev": "next dev",
-    "build": "next build",
+    "start": "next dev",
+    "dev": "cross-env INIT_CWD=$PWD next dev",
+    "build": "cross-env INIT_CWD=$PWD next build && cross-env NODE_OPTIONS='--experimental-json-modules' node ./scripts/postbuild.mjs",
     "serve": "next start",
     "analyze": "cross-env ANALYZE=true next build",
-    "lint": "next lint --fix --dir pages --dir components --dir lib --dir layouts --dir scripts",
-    "prepare": "husky install"
+    "lint": "next lint --fix --dir pages --dir components --dir lib --dir layouts --dir scripts"
   },
   "dependencies": {
     "@next/bundle-analyzer": "^13.4.13",
@@ -17,12 +16,16 @@
     "@tailwindcss/typography": "^0.5.9",
     "@vercel/analytics": "^1.0.2",
     "autoprefixer": "^10.4.14",
+    "contentlayer": "^0.3.4",
+    "date-fns": "^2.30.0",
     "esbuild": "^0.19.1",
     "github-slugger": "^2.0.0",
     "gray-matter": "^4.0.2",
     "mdx-bundler": "^9.2.1",
     "next": "13.4.13",
+    "next-contentlayer": "^0.3.4",
     "next-themes": "^0.2.1",
+    "pliny": "^0.1.1",
     "postcss": "^8.4.27",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -45,6 +48,8 @@
     "@types/node": "20.4.10",
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.1.0",
+    "@typescript-eslint/parser": "^6.1.0",
     "cross-env": "^7.0.3",
     "dedent": "^1.5.1",
     "eslint": "^8.47.0",
@@ -62,6 +67,15 @@
     "socket.io": "^4.7.2",
     "socket.io-client": "^4.7.2",
     "typescript": "5.1.6"
+  },
+  "resolutions": {
+    "@opentelemetry/api": "1.4.1",
+    "@opentelemetry/core": "1.13.0",
+    "@opentelemetry/exporter-trace-otlp-grpc": "0.39.1",
+    "@opentelemetry/resources": "1.13.0",
+    "@opentelemetry/sdk-trace-base": "1.13.0",
+    "@opentelemetry/sdk-trace-node": "1.13.0",
+    "@opentelemetry/semantic-conventions": "1.13.0"
   },
   "lint-staged": {
     "*.+(js|jsx|ts|tsx)": [

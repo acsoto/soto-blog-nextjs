@@ -6,7 +6,7 @@ import { formatSlug, getAllFilesFrontMatter, getFileBySlug, getFiles } from '@/l
 import PostLayout from '@/layouts/PostLayout'
 
 export async function getStaticPaths() {
-  const posts = getFiles('blog')
+  const posts = getFiles('posts')
   return {
     paths: posts.map((p) => ({
       params: {
@@ -18,9 +18,9 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const allPosts = await getAllFilesFrontMatter('blog')
+  const allPosts = await getAllFilesFrontMatter('posts')
   // const postIndex = allPosts.findIndex((post) => formatSlug(post.slug) === params.slug.join('/'))
-  const post = await getFileBySlug('blog', params.slug.join('/'))
+  const post = await getFileBySlug('posts', params.slug.join('/'))
 
   // rss
   if (allPosts.length > 0) {

@@ -1,9 +1,8 @@
 import Link from '@/components/Link'
-import formatDate from '@/lib/utils/formatDate'
 import Image from 'next/image'
-import { FrontMatter } from '@/types/md'
+import { Post } from 'contentlayer/generated'
 
-const PostCard = ({ post }: { post: FrontMatter }) => {
+const PostCard = ({ post }: { post: Post }) => {
   const { slug, date, title, summary, tags, image } = post
   return (
     <Link href={`/blog/${slug}`}>
@@ -21,7 +20,7 @@ const PostCard = ({ post }: { post: FrontMatter }) => {
             <p>{summary}</p>
           </section>
           <span className="text-sm text-gray-600">
-            <time dateTime={date}>{formatDate(date)}</time>
+            <time dateTime={date}>{date}</time>
           </span>
           <div className="mt-3 flex flex-row space-x-3">
             {tags &&
