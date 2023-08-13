@@ -18,10 +18,10 @@ const ContentSecurityPolicy = `
 
 const securityHeaders = [
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
-  {
-    key: 'Content-Security-Policy',
-    value: ContentSecurityPolicy.replace(/\n/g, ''),
-  },
+  // {
+  //   key: 'Content-Security-Policy',
+  //   value: ContentSecurityPolicy.replace(/\n/g, ''),
+  // },
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy
   {
     key: 'Referrer-Policy',
@@ -67,13 +67,13 @@ module.exports = () => {
     },
     images: {
       domains: ['img.atksoto.com', 'githubstats.zzhgo.com', 'opengraph.githubassets.com'],
+      remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: '**.doubanio.com',
+        },
+      ],
     },
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: '**.doubanio.com',
-      },
-    ],
     experimental: {
       appDir: true,
     },

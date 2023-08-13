@@ -2,10 +2,8 @@ import Data from '@/data/tofu.json'
 import Link from 'next/link'
 import Image from 'next/image'
 import PageTitle from '@/components/PageTitle'
-import { siteMetadata } from '@/data/siteMetadata'
-import { PageSeo } from '@/components/SEO'
 
-export async function getStaticProps() {
+async function getNodes() {
   const nodes = []
   let count = 0
   for (const i of Data.interest.reverse()) {
@@ -24,15 +22,14 @@ export async function getStaticProps() {
     }
   }
 
-  return {
-    props: { nodes },
-  }
+  return nodes
 }
 
-export default function Library({ nodes }) {
+export default async function Page() {
+  const nodes = await getNodes()
+
   return (
     <>
-      <PageSeo title={`Library - ${siteMetadata.author}`} description="SOTO-BLOG Tags" />
       <PageTitle>Library</PageTitle>
       <div className="mb-4 rounded-xl border border-gray-100 bg-gray-50 p-5 dark:border-gray-700 dark:bg-gray-800">
         <ol className="divider-gray-200 divide-y dark:divide-gray-700">

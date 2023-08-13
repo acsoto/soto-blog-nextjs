@@ -12,7 +12,7 @@ import BlogPage from './blog-page'
 //   return { props: { tags, posts, showingPosts } }
 // }
 
-export default async function Blog() {
+export default async function Page() {
   const sortedPosts = sortPosts(allPosts)
   const posts = allCoreContent(sortedPosts)
   const tags = tagData as Record<string, number>

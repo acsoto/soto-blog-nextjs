@@ -1,20 +1,16 @@
-import BUAA from '../components/icons/BUAA.svg'
-import TailWindCSS from '../components/icons/tailwindcss.svg'
-import ReactIcon from '../components/icons/react.svg'
-import MySQL from '../components/icons/mysql.svg'
-import Django from '../components/icons/django.svg'
-import Nginx from '../components/icons/nginx.svg'
-import TypeScript from '../components/icons/typescript.svg'
-import TensorFlow from '../components/icons/tensorflow.svg'
-import { siteMetadata } from '@/data/siteMetadata'
-import { PageSeo } from '@/components/SEO'
+import BUAA from '@/components/icons/BUAA.svg'
+import TailWindCSS from '@/components/icons/tailwindcss.svg'
+import ReactIcon from '@/components/icons/react.svg'
+import MySQL from '@/components/icons/mysql.svg'
+import Django from '@/components/icons/django.svg'
+import Nginx from '@/components/icons/nginx.svg'
+import TypeScript from '@/components/icons/typescript.svg'
+import TensorFlow from '@/components/icons/tensorflow.svg'
 import Projects from '@/components/Projects'
 
-export default function Resume() {
+export default function Page() {
   return (
     <>
-      <PageSeo title={`Resume - ${siteMetadata.author}`} description={siteMetadata.description} />
-
       <div className="prose max-w-none dark:prose-dark lg:prose-lg">
         <h2 className="text-center font-extrabold">Zhou Zihang</h2>
         <hr />

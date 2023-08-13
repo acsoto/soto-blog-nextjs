@@ -1,7 +1,7 @@
 ---
 title: 天空之城，米店和XLD
 date: 2021-12-28 01:24:00
-tags: [Music]
+tags: [Page]
 categories: [日常]
 image: http://img.atksoto.com/2022/202302280830739.png
 ---

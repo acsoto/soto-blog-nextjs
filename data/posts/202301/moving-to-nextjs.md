@@ -91,7 +91,7 @@ source code:
 </div>
 ```
 
-The problem is my previous embedded Spotify and Apple Music iframe doesn't work.
+The problem is my previous embedded Spotify and Apple Page iframe doesn't work.
 
 If I directly copy the code Apple offers, it'll show:
 

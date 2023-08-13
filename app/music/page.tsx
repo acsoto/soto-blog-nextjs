@@ -1,9 +1,7 @@
-import { siteMetadata } from '@/data/siteMetadata'
-import { PageSeo } from '@/components/SEO'
 import PageTitle from '@/components/PageTitle'
 import Divider from '@/components/Divider'
 
-export default function Music() {
+export default function Page() {
   const playlists = [
     'https://embed.music.apple.com/us/playlist/202308/pl.u-EdAVvWVuDbMd6lo',
     'https://embed.music.apple.com/us/playlist/202307/pl.u-r2yBJG4sRgj4Z1W',
@@ -17,7 +15,6 @@ export default function Music() {
 
   return (
     <>
-      <PageSeo title={`Music - ${siteMetadata.author}`} description={siteMetadata.description} />
       <PageTitle>Music Playlists</PageTitle>
       <Divider />
       <div className="prose max-w-none dark:prose-dark lg:prose-lg">

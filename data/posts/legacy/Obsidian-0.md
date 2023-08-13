@@ -110,7 +110,7 @@ Obsidian 不同于 Typora 的一点是图片不是很好处理，Obsidian 的方
 ```bash
   1 #!/bin/bash
   2 rm -rf /Users/soto/Documents/HexoBlog/source/_posts
-  3 cp -r /Users/soto/Library/Mobile\ Documents/iCloud\~md\~obsidian/Documents/>
+  3 cp -r /Users/soto/Page/Mobile\ Documents/iCloud\~md\~obsidian/Documents/>
     笔记/HexoBlog /Users/soto/Documents/HexoBlog/source/_posts
   4 cd /Users/soto/Documents/HexoBlog
   5 hexo g
