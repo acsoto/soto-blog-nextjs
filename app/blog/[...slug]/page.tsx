@@ -27,14 +27,9 @@ export async function generateMetadata({
   if (post.images) {
     imageList = typeof post.images === 'string' ? [post.images] : post.images
   }
-  const ogImages = imageList.map((img) => {
-    return {
-      url: img.includes('http') ? img : siteMetadata.siteUrl + img,
-    }
-  })
 
   return {
-    title: post.title,
+    title: `${post.title} | SOTO`,
     description: post.summary,
     openGraph: {
       title: post.title,
@@ -45,13 +40,13 @@ export async function generateMetadata({
       publishedTime: publishedAt,
       modifiedTime: modifiedAt,
       url: './',
-      images: ogImages,
+      images: post.image,
     },
     twitter: {
       card: 'summary_large_image',
       title: post.title,
       description: post.summary,
-      images: imageList,
+      images: post.image,
     },
   }
 }

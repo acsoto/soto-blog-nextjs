@@ -7,7 +7,9 @@ import Nginx from '@/components/icons/nginx.svg'
 import TypeScript from '@/components/icons/typescript.svg'
 import TensorFlow from '@/components/icons/tensorflow.svg'
 import Projects from '@/components/Projects'
+import { genPageMetadata } from '../seo'
 
+export const metadata = genPageMetadata({ title: 'Resume' })
 export default function Page() {
   return (
     <>

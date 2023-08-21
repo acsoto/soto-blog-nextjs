@@ -2,7 +2,9 @@ import Data from '@/data/tofu.json'
 import Link from 'next/link'
 import Image from 'next/image'
 import PageTitle from '@/components/PageTitle'
+import { genPageMetadata } from '../seo'
 
+export const metadata = genPageMetadata({ title: 'Library' })
 async function getNodes() {
   type Node = {
     type: string

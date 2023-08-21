@@ -3,9 +3,23 @@ import { allCoreContent } from 'pliny/utils/contentlayer'
 import tagData from 'app/tag-data.json'
 import PostCard from '@/components/PostCard'
 import Divider from '@/components/Divider'
+import { genPageMetadata } from '../../seo'
+import siteMetadata from '@/data/siteMetadata'
+import { Metadata } from 'next'
 
-const root = process.cwd()
-
+export async function generateMetadata({ params }: { params: { tag: string } }): Promise<Metadata> {
+  const tag = decodeURIComponent(params.tag)
+  return genPageMetadata({
+    title: `Tag - ${tag}`,
+    description: `${siteMetadata.title} ${tag} tagged content`,
+    alternates: {
+      canonical: './',
+      types: {
+        'application/rss+xml': `${siteMetadata.siteUrl}/tags/${tag}/feed.xml`,
+      },
+    },
+  })
+}
 export const generateStaticParams = async () => {
   const tagCounts = tagData as Record<string, number>
   const tagKeys = Object.keys(tagCounts)

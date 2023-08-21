@@ -1,6 +1,8 @@
 import PageTitle from '@/components/PageTitle'
 import Divider from '@/components/Divider'
+import { genPageMetadata } from '../seo'
 
+export const metadata = genPageMetadata({ title: 'Music' })
 export default function Page() {
   const playlists = [
     'https://embed.music.apple.com/us/playlist/202308/pl.u-EdAVvWVuDbMd6lo',

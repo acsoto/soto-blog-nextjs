@@ -1,8 +1,10 @@
-'use client'
 import Link from 'next/link'
 import GitHubCard from '@/components/GitHubCard'
 import NextJS from '/components/icons/nextjs.svg'
 import TailWindCSS from '/components/icons/tailwindcss.svg'
+import { genPageMetadata } from '../seo'
+
+export const metadata = genPageMetadata({ title: 'About' })
 
 export default function About() {
   return (
