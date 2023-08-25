@@ -4,6 +4,7 @@ import path from 'path'
 // Remark packages
 import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
+import remarkFootnotes from 'remark-footnotes'
 import {
   extractTocHeadings,
   remarkCodeTitles,
@@ -114,7 +115,7 @@ export default makeSource({
   contentDirPath: 'data',
   contentDirExclude: ['tofu.json'],
   documentTypes: [Post],
-  markdown: {
+  mdx: {
     // cwd: process.cwd(),
     remarkPlugins: [
       remarkExtractFrontmatter,
@@ -122,6 +123,7 @@ export default makeSource({
       remarkCodeTitles,
       remarkMath,
       remarkImgToJsx,
+      remarkFootnotes,
     ],
     rehypePlugins: [
       rehypeSlug,
