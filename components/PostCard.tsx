@@ -2,6 +2,7 @@ import Link from '@/components/Link'
 import Image from 'next/image'
 import { Post } from 'contentlayer/generated'
 import { CoreContent } from 'pliny/utils/contentlayer'
+import siteMetadata from '@/data/siteMetadata'
 
 const PostCard = ({ post }: { post: CoreContent<Post> }) => {
   const { slug, date, title, summary, tags, image } = post
@@ -21,7 +22,12 @@ const PostCard = ({ post }: { post: CoreContent<Post> }) => {
             <p>{summary}</p>
           </section>
           <span className="ml-1 text-sm font-bold text-gray-600">
-            <time dateTime={date}>{new Date(date).toISOString().split('T')[0]}</time>
+            <time dateTime={date}>
+              {new Date(date).toLocaleDateString(
+                siteMetadata.locale,
+                siteMetadata.postDateTemplate
+              )}
+            </time>
           </span>
           <div className="mt-1 flex flex-row space-x-3">
             {tags &&

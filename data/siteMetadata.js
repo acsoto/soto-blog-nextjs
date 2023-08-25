@@ -19,6 +19,12 @@ const siteMetadata = {
   linkedin: 'https://www.linkedin.com',
   instagram: 'https://instagram.com/atksoto',
   locale: 'en-US',
+  postDateTemplate: {
+    // weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  },
   blur64:
     'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII=',
   analytics: {

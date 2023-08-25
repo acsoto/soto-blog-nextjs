@@ -5,13 +5,6 @@ import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import Image from 'next/image'
 import siteMetadata from '@/data/siteMetadata'
 
-const postDateTemplate: Intl.DateTimeFormatOptions = {
-  weekday: 'long',
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric',
-}
-
 export default function PostLayout({ content, children }) {
   const { date, title, image, tags } = content
 
@@ -30,7 +23,10 @@ export default function PostLayout({ content, children }) {
                   <dt className="sr-only">Published on</dt>
                   <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                     <time dateTime={date}>
-                      {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
+                      {new Date(date).toLocaleDateString(
+                        siteMetadata.locale,
+                        siteMetadata.postDateTemplate
+                      )}
                     </time>
                   </dd>
                 </div>
