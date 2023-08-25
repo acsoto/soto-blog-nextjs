@@ -97,10 +97,15 @@ export default function Blog({ tags, posts }) {
                           .get(year)
                           ?.get(month)
                           ?.map((post) => {
+                            const postDate = new Date(post.date)
+                            const year = postDate.getFullYear()
+                            const month = String(postDate.getMonth() + 1).padStart(2, '0')
+                            const day = String(postDate.getDate()).padStart(2, '0')
+                            const formattedDate = `${year}-${month}-${day}`
                             return (
                               <div className="text-lg font-bold" key={post.slug}>
                                 <span className={'mr-3 text-gray-300 dark:text-opacity-50'}>
-                                  {post.date.split('T')[0]}
+                                  {formattedDate}
                                 </span>
                                 <Link href={`/blog/${post.slug}`}>
                                   <span
