@@ -1,4 +1,5 @@
 import BUAA from '@/components/icons/BUAA.svg'
+import NUS from '@/components/icons/NUS.svg'
 import TailWindCSS from '@/components/icons/tailwindcss.svg'
 import ReactIcon from '@/components/icons/react.svg'
 import MySQL from '@/components/icons/mysql.svg'
@@ -18,14 +19,27 @@ export default function Page() {
         <hr />
 
         <h2>Education</h2>
-        <div className="flex flex-row gap-5">
-          <div>
-            <BUAA />
+        <div className="flex flex-col gap-5">
+          <div className="flex flex-row gap-5">
+            <div>
+              <BUAA className="h-20 w-28" />
+            </div>
+            <div>
+              <div className="text-2xl font-extrabold">Beihang University</div>
+              <div className="text-lg">Bachelor | Computer Science & Technology</div>
+              <div className="text-lg text-gray-500">2019 - 2023</div>
+            </div>
           </div>
-          <div>
-            <div className="text-2xl font-extrabold">Beihang University</div>
-            <div className="text-lg">Bachelor | Computer Science & Technology</div>
-            <div className="text-lg text-gray-500">2019 - 2023</div>
+
+          <div className="flex flex-row gap-5">
+            <div>
+              <NUS className="h-28 w-28" />
+            </div>
+            <div>
+              <div className="text-2xl font-extrabold">National University of Singapore</div>
+              <div className="text-lg">Master | Computer Engineering</div>
+              <div className="text-lg text-gray-500">2024 - now</div>
+            </div>
           </div>
         </div>
 
