@@ -10655,7 +10655,7 @@ __metadata:
     eslint-config-next: 14.0.3
     eslint-config-prettier: ^8.8.0
     eslint-plugin-prettier: ^5.0.0
-    github-slugger: ^1.4.0
+    github-slugger: ^2.0.0
     gray-matter: ^4.0.2
     husky: ^8.0.0
     image-size: 1.0.0
