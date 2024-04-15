@@ -6594,14 +6594,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"image-size@npm:1.0.0":
-  version: 1.0.0
-  resolution: "image-size@npm:1.0.0"
+"image-size@npm:1.1.1":
+  version: 1.1.1
+  resolution: "image-size@npm:1.1.1"
   dependencies:
     queue: 6.0.2
   bin:
     image-size: bin/image-size.js
-  checksum: 2d9d1edc43c0fa8effd27c44cd2d1b02ecc963219e78a76ac80b9d363f69c5aa19990cc23a323959ea510742ff07667e231f0852fd57eba5dc5b55432b58106d
+  checksum: 23b3a515dded89e7f967d52b885b430d6a5a903da954fce703130bfb6069d738d80e6588efd29acfaf5b6933424a56535aa7bf06867e4ebd0250c2ee51f19a4a
   languageName: node
   linkType: hard
 
@@ -10658,7 +10658,7 @@ __metadata:
     github-slugger: ^1.4.0
     gray-matter: ^4.0.2
     husky: ^8.0.0
-    image-size: 1.0.0
+    image-size: 1.1.1
     lint-staged: ^13.0.0
     next: 14.0.3
     next-contentlayer: 0.3.4
