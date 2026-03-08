@@ -230,4 +230,4 @@ blur64:   'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCA
 
 ## Domain Blocked
 
-In China, the domain `vercel.app` is banned. But I found that a guy's website totally on Vercel can work perfectly. I tested it and find that in most areas of China, the website is accessible. But mine breaks(I set A and CNAME with my domain). Without VPN, I can not even access it. I spent two hours checking why. I even sent an email to the guy to ask if there is something to be managed that I haven't mentioned. It turned out that my domain `zzhgo.com` is banned by GFW in China. It is so depressing. So I can only change my domain to `atksoto.com`.
+In China, the domain `vercel.app` is banned. But I found that a guy's website totally on Vercel can work perfectly. I tested it and find that in most areas of China, the website is accessible. But mine breaks(I set A and CNAME with my domain). Without VPN, I can not even access it. I spent two hours checking why. I even sent an email to the guy to ask if there is something to be managed that I haven't mentioned. It turned out that my domain `zzhgo.com` is banned by GFW in China. It is so depressing.
