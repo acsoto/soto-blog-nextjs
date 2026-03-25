@@ -1,13 +1,13 @@
 
 
-Due to the middleware dependencies being discontinued, it has been transitioned to [Astro](https://github.com/acsoto/soto-astro).
+This project is archived. The blog has since been migrated to [Astro](https://github.com/acsoto/soto-astro) after some of its middleware dependencies were discontinued.
 
 ---
 
 <h1 align="center">SOTO-BLOG</h1>
 
-Personal blog based on NextJS and TailwindCSS, which is rebuilt from my [legacy gatsby version](https://github.com/acsoto/soto-blog-gatsby).
+A personal blog built with Next.js and Tailwind CSS, rebuilt from the [legacy Gatsby version](https://github.com/acsoto/soto-blog-gatsby).
 
-Thanks to [timlrx's starter](https://github.com/timlrx/tailwind-nextjs-starter-blog), I don't need to manage data from scratch like dealing with tags in Gatsby.
+Thanks to [timlrx's starter](https://github.com/timlrx/tailwind-nextjs-starter-blog), I didn't have to rebuild the content system from scratch, especially around tag management.
 
 
